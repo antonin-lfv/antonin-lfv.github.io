@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="2.1" />
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="2.1">
+      <change beforePath="$PROJECT_DIR$/_posts/2020-07-20-epidemiologie-post.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-07-20-epidemiologie-post.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,14 +133,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="9027000" />
-    </task>
-    <task id="LOCAL-00220" summary="post">
-      <created>1630949272391</created>
-      <option name="number" value="00220" />
-      <option name="presentableId" value="LOCAL-00220" />
-      <option name="project" value="LOCAL" />
-      <updated>1630949272391</updated>
+      <workItem from="1631873347674" duration="9290000" />
     </task>
     <task id="LOCAL-00221" summary="post">
       <created>1630949376946</created>
@@ -476,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631886680552</updated>
     </task>
-    <option name="localTasksCounter" value="269" />
+    <task id="LOCAL-00269" summary="2.1">
+      <created>1631886839960</created>
+      <option name="number" value="00269" />
+      <option name="presentableId" value="LOCAL-00269" />
+      <option name="project" value="LOCAL" />
+      <updated>1631886839960</updated>
+    </task>
+    <option name="localTasksCounter" value="270" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
