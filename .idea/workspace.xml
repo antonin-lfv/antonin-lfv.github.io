@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="post">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/assets/.sass-cache/f0d95b89de15b5bf1d835ff6215054d518359daf/style.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/Icon&#10;" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +68,7 @@
       <recent name="$PROJECT_DIR$/assets/img/certif" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_sass" />
       <recent name="$PROJECT_DIR$/assets/img/certif" />
       <recent name="$PROJECT_DIR$/assets/img" />
       <recent name="$PROJECT_DIR$" />
@@ -129,21 +125,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="2898000" />
-    </task>
-    <task id="LOCAL-00195" summary="ml image">
-      <created>1628447216582</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1628447216582</updated>
-    </task>
-    <task id="LOCAL-00196" summary="certif">
-      <created>1628531715228</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1628531715229</updated>
+      <workItem from="1631873347674" duration="3475000" />
     </task>
     <task id="LOCAL-00197" summary="certif">
       <created>1628535179547</created>
@@ -474,7 +456,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631874964133</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="post">
+      <created>1631879035524</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1631879035525</updated>
+    </task>
+    <task id="LOCAL-00245" summary="post">
+      <created>1631879044177</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1631879044177</updated>
+    </task>
+    <option name="localTasksCounter" value="246" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,12 +530,12 @@
     <MESSAGE value="cybersecu" />
     <MESSAGE value="to do list" />
     <MESSAGE value="directory plotly" />
-    <MESSAGE value="post" />
     <MESSAGE value="bg" />
     <MESSAGE value="init" />
     <MESSAGE value="init new site version 2.1" />
     <MESSAGE value="init 2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="init 2.1" />
+    <MESSAGE value="post" />
+    <option name="LAST_COMMIT_MESSAGE" value="post" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
