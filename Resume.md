@@ -59,7 +59,16 @@ In last year *- University of Reims - France*
 
 # 🛠 Skills
 
-[**💻 Technology**](https://www.notion.so/3b9f517bfed5418b9b73edc96dc17341)
+### 💻 Technology
+
+|Language|Skills|Domains|
+|--------|------|-------|
+|Python|⭐️⭐️⭐️⭐️⭐️⭐️|Maths, AI, Data Science|
+|SQL|⭐️⭐️⭐️⭐|Database, Web|
+|R|⭐️⭐️⭐|Data Science, Maths|
+|C|⭐️⭐️⭐|Maths|
+|HTML/CSS/JS|⭐️⭐️⭐|Web|
+|PHP|⭐️⭐️⭐|Web, Database|
 
 Python is my "native" programming language for over 4 years. I used it first in school, for mathematics. And then I spread my skills in Artificial Intelligence, and Data Science domains.
 
