@@ -19,57 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts">
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/3d_px.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/aire_map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/ajout_annotations.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/animation_px.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/bar_exemple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/bar_go.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/bar_marge1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/bar_marge2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/basic_scatter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/champ_vect.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/correlation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/curseur_axe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/dendrogrames.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/exemple_simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/financial.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/heatmap_ff.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/hist_go.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/interpolation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/latex_tab.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/ligne_map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/lignes_flux.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/map_points_quake.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/marge_stats.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/neurones.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/nuage_de_points.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/pandas_tab.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/pie_exemple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/pie_go.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/plage_valeurs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/polar_bar_chart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/range_slider.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/rectangle_ligne.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/reg_line.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/reg_surfacique.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/scatter_map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/subplots_go.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/subplots_px1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/subplots_px2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/superposition_fig.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/surface.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/tsne.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/umap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/violin_go.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2020/11/17/plotly-tuto.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2020/11/17/plotly-tuto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2021/07/22/online-machine-learning-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2021/07/22/online-machine-learning-app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Resume/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/Resume/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,6 +137,7 @@
       <workItem from="1631907531507" duration="499000" />
       <workItem from="1631908809043" duration="67000" />
       <workItem from="1631908978200" duration="267000" />
+      <workItem from="1631909890066" duration="26000" />
     </task>
     <task id="LOCAL-00250" summary="2.1">
       <created>1631882726289</created>
