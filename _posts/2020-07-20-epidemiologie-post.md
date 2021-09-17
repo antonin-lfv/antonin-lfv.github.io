@@ -222,7 +222,7 @@ Simulation réalisée avec le modèle python.
 </p>
 <br/>
 
-# Le modèle __SIR__
+# Le modèle SIR
 
 
 
@@ -290,7 +290,7 @@ Le modèle crée en python est donc conforme au modèle mathématique.
 
 <br/>
 
-# Le modèle __SIDR__
+# Le modèle SIDR
 
 ## Modélisation mathématique SIDR
 
@@ -343,7 +343,7 @@ Les courbes des individus sains, décédés et immunisés sont assez similaires 
 
 <br/>
 
-<h1 align="center">Conclusion</h1>
+# Conclusion
 
 <br/>
 L'étude épidémiologique reste au final un domaine très théorique. Même si les résultats et observations obtenues sembles assez proches de la réalité et des modèles mathématique, ces modélisations ne prennent pas en compte certains autres facteurs, tels que la vaccination, la mise en quarantaine des individus dès qu'ils sont infectés, ou même le déplacement des individus dans la population. <br/>
