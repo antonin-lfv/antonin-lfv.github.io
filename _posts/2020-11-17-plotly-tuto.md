@@ -4,7 +4,7 @@ title: Plotly - Tutoriel
 ---
 Ce tutoriel à pour objectif de présenter le module <b>Plotly</b> qui est l'un des modules les plus utilisés pour faire de la visualisation de données avec Python. <br>
 Plotly étant le plus compliqué mais également le plus interactif. Il est construit sur 3 composantes principales, à savoir <b>plotly.express</b> qui est basé sur l'utilisation des dataframes pandas, et qui est simple et rapide, et <b>plotly.graph_objects</b> qui est beaucoup plus puissant, et beaucoup plus personnalisable, il est basé sur la POO et <b>plotly.figure_factory</b> qui est dédiée à la création de figure spécifiques qui seraient trop compliqué à developper avec les 2 autres composantes. <br>
-Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du [Repository](https://github.com/antonin-lfv/Plotly_tutorial) sous le nom <b>plotly_ex.py</b> .
+Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du [**Repository**](https://github.com/antonin-lfv/Plotly_tutorial) sous le nom <b>plotly_ex.py</b> .
 
 
 > Pour comprendre plus en détails comment plotly fonctionne, et pour personnaliser au maximum vos graphiques, je vous invite à consulter mon [**article**](https://github.com/antonin-lfv/Plotly_tutorial/blob/main/README.md) sur plotly. ( bientôt disponible )
@@ -87,7 +87,7 @@ pip install plotly
 ```
 <br/>
 
-Documentation [Plotly](https://plotly.com/python/) .
+Documentation [**Plotly**](https://plotly.com/python/) .
 <br/>
 
 # Importations

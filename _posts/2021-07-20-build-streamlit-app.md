@@ -6,11 +6,12 @@ title: Build Streamlit apps
 Cet article va vous montrer pas à pas comment créer votre première application grâce à Streamlit,
 et comment la mettre en ligne. Aucun prérequis n'est nécessaire.
 
+
 <br>
 
 # Étape 1 : créer un compte Streamlit sharing
 
-Avant toute chose, il vous faudra créer un compte sur le site de [Streamlit sharing](https://streamlit.io/sharing-sign-up). 
+Avant toute chose, il vous faudra créer un compte sur le site de [**Streamlit sharing**](https://streamlit.io/sharing-sign-up). 
 La validation de votre demande prend en général quelques jours a être traitée. Une fois validée, vous aurez accès à ce panel :
 
 ![Panel](https://user-images.githubusercontent.com/63207451/127782495-e65fe7fc-e0d4-4e5c-acc5-d9dab4aee6ea.png){: .mx-auto.d-block :}
@@ -23,7 +24,7 @@ Si vous venez seulement de vous inscrire vous pouvez tout de même suivre la sui
 
 - Si vous êtes à l'aise avec GIT, créez un repository, clonez le sur votre pc et ouvrez-le avec votre éditeur Python. 
 
-- Pour ceux qui ne seraient pas à l'aise avec GIT, téléchargez [Github Desktop](https://desktop.github.com), puis depuis le repository Github faites "Open with GitHub Desktop" comme ceci :
+- Pour ceux qui ne seraient pas à l'aise avec GIT, téléchargez [**Github Desktop**](https://desktop.github.com), puis depuis le repository Github faites "Open with GitHub Desktop" comme ceci :
 
 ![Click](https://user-images.githubusercontent.com/63207451/127778333-d54f590d-f83e-4413-ab4f-6b85284cae5a.png){: .mx-auto.d-block :}
 
@@ -132,7 +133,7 @@ On obtient finalement cette architecture :
 
 <br>
 
-Finalement, il ne reste plus qu'à déployer l'application. Pour cela, rendez-vous sur le site de [Streamlit Sharing](https://share.streamlit.io) et appuyez sur "New app" puis "From existing repo" :
+Finalement, il ne reste plus qu'à déployer l'application. Pour cela, rendez-vous sur le site de [**Streamlit Sharing**](https://share.streamlit.io) et appuyez sur "New app" puis "From existing repo" :
 
 ![newapp](https://user-images.githubusercontent.com/63207451/127779503-72433cc8-44de-4255-8b66-ef26565b760f.png){: .mx-auto.d-block :}
 

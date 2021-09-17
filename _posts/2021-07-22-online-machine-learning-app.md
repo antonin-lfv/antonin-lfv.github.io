@@ -15,7 +15,7 @@ En cas de bug important, veuillez me le signaler pour qu'il puisse Ãªtre corrigÃ
 
 <br>
 
-L'application est disponible [ici](https://share.streamlit.io/antonin-lfv/online_preprocessing_for_ml/main.py).
+L'application est disponible [**ici**](https://share.streamlit.io/antonin-lfv/online_preprocessing_for_ml/main.py).
 
 # Index
 

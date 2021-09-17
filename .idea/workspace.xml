@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="2.1">
-      <change beforePath="$PROJECT_DIR$/_posts/2021-07-22-online-machine-learning-app.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-07-22-online-machine-learning-app.md" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="2.1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,14 +131,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="9607000" />
-    </task>
-    <task id="LOCAL-00223" summary="post">
-      <created>1630949619894</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1630949619894</updated>
+      <workItem from="1631873347674" duration="9897000" />
     </task>
     <task id="LOCAL-00224" summary="post">
       <created>1630949769090</created>
@@ -478,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631886973772</updated>
     </task>
-    <option name="localTasksCounter" value="272" />
+    <task id="LOCAL-00272" summary="2.1">
+      <created>1631887553052</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1631887553053</updated>
+    </task>
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

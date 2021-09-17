@@ -12,21 +12,21 @@ C'est pour cela que j'ai décidé de rassembler des ressources pour faciliter la
 
 Par exemple, il existe des **moteurs de recherches** spécifiques à certaines catégories de données :
 
-- Pour de la [Classification](https://sci2s.ugr.es/keel/category.php?cat=clas)
+- Pour de la [**Classification**](https://sci2s.ugr.es/keel/category.php?cat=clas)
   &nbsp;
   
-- Pour de la [Regression](https://sci2s.ugr.es/keel/category.php?cat=reg)
+- Pour de la [**Regression**](https://sci2s.ugr.es/keel/category.php?cat=reg)
   &nbsp;
   
-- Dans le domaine de la [Physique](http://opendata.cern.ch/)
+- Dans le domaine de la [**Physique**](http://opendata.cern.ch/)
   Comme l'étude de la collision des atomes
   &nbsp;
   
-- Pour étudier le [Climat](https://www.ncdc.noaa.gov/data-access/quick-links)
+- Pour étudier le [**Climat**](https://www.ncdc.noaa.gov/data-access/quick-links)
   Comme étudier les précipitations, les indicateurs climatiques, etc.
   &nbsp;
   
-- Pour étudier l'[Homme](https://www.humanprogress.org/datasets/)
+- Pour étudier l'[**Homme**](https://www.humanprogress.org/datasets/)
   Comme étudier l'évolution des transports aériens, la criminalité, les maladies comme les cancers ou encore les technologies et communications
   &nbsp;
 
@@ -68,7 +68,7 @@ df = pd.read_table('your/path/dataset.dat', names=['x1','x2','x3'], sep=',' ,enc
 &nbsp;
 
 {: .box-note}
-**Note:** Le repo Github est disponible [ici](https://github.com/antonin-lfv/Gallery-of-Datasets#categories). Vous y trouverez d'autres catégories, et d'autres Datasets.
+**Note:** Le repo Github est disponible [**ici**](https://github.com/antonin-lfv/Gallery-of-Datasets#categories). Vous y trouverez d'autres catégories, et d'autres Datasets.
 
 
 

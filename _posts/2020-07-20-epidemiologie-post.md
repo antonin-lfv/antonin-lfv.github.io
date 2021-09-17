@@ -17,13 +17,13 @@ Ce modèle statistique sera ensuite comparé aux modèles mathématiques <b>SIR<
 
 # Liens utiles
 
-- Les [codes](https://github.com/antonin-lfv/simulation_virus_covid-19) du projet
+- Les [**codes**](https://github.com/antonin-lfv/simulation_virus_covid-19) du projet
 
-- Comprendre le [Modèle SIR](https://fr.wikipedia.org/wiki/Modèles_compartimentaux_en_épidémiologie). <br/>
+- Comprendre le [**Modèle SIR**](https://fr.wikipedia.org/wiki/Modèles_compartimentaux_en_épidémiologie). <br/>
 
-- Thèse de Derdei Bichara sur l'[étude de modèles épidémiologiques](https://tel.archives-ouvertes.fr/tel-00841444/file/BicharaPhDThesis.pdf): Stabilité, observation et estimation de paramètres.
+- Thèse de Derdei Bichara sur l'[**étude de modèles épidémiologiques**](https://tel.archives-ouvertes.fr/tel-00841444/file/BicharaPhDThesis.pdf): Stabilité, observation et estimation de paramètres.
 
-- Étude des [modèles épidémiologiques et du Ro](http://www.math.univ-metz.fr/~sallet/R0_EPICASA09.pdf)
+- Étude des [**modèles épidémiologiques et du Ro**](http://www.math.univ-metz.fr/~sallet/R0_EPICASA09.pdf)
 
 <br/>
 
@@ -71,7 +71,7 @@ Si vous n'avez jamais utilisé plotly pensez à le télécharger via la console 
 	pip install plotly
 
 
-Documentation [Plotly](https://plotly.com/python/) .
+Documentation [**Plotly**](https://plotly.com/python/) .
 
 À chaque exécution d'une fonction sous plotly, une page html s'ouvrira avec le résultat.
 
