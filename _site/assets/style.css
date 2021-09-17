@@ -31,7 +31,7 @@ a:hover { text-decoration: underline; }
 
 pre { border-left: 8px solid #fec92e; margin: 32px 0; padding-left: 16px; width: 75%; overflow-x: auto; }
 
-code { color: #777; font-size: 16px; padding: 1px 0; }
+code { color: #777; font-size: 16px; padding: 1px 0px; }
 
 .prose a { text-decoration: underline dotted; }
 .prose a:hover { text-decoration: underline; }
@@ -49,8 +49,7 @@ code { color: #777; font-size: 16px; padding: 1px 0; }
 .prose hr { color: #181818; border-style: solid; border-width: thin; margin-top: 0.5em; margin-bottom: 0.5em; }
 .prose dt { font-weight: bold; font-style: italic; line-height: 1.25; }
 .prose dd { font-style: italic; margin-bottom: 0.5em; }
-.prose table { border-collapse: collapse; display: block; width: 100%; margin-bottom: 1.5em; overflow: auto;
-  word-break: keep-all; }
+.prose table { border-collapse: collapse; display: block; width: 100%; margin-bottom: 1.5em; overflow: auto; word-break: normal; word-break: keep-all; }
 .prose table th { font-weight: bold; text-align: left; }
 .prose table th, .prose table td { padding: 16px 32px 16px 2px; border-top: 1px solid #181818; border-bottom: 1px solid #181818; }
 .prose table tr { background-color: #fff; border-top: 1px solid #181818; }
