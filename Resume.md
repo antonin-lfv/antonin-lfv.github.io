@@ -16,7 +16,6 @@ permalink: /Resume/
 
 🌐  [**Website**](https://antonin-lfv.github.io)
 
----
 
 <br>
 
@@ -34,7 +33,6 @@ France *– (Since 2019)*
 
 Mathematics courses for Secondary and High-School levels.
 
----
 
 <br>
 
@@ -56,7 +54,6 @@ Intensive two-year study course preparing for the competitive entrance examinati
 
 In last year *- University of Reims - France*
 
----
 
 <br>
 
@@ -80,7 +77,6 @@ Proficient
 
 High-school level
 
----
 
 <br>
 <br>
