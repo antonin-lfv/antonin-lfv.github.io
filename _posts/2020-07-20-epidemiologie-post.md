@@ -58,7 +58,7 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 4. [Le modèle SIDR](https://antonin-lfv.github.io/2020/07/20/epidemiologie-post.html#le-modèle-SIDR)
     1. [Modèle mathématique](https://antonin-lfv.github.io/2020/07/20/epidemiologie-post.html#Modélisation-mathématique-SIDR)
     2. [Comparaison SIDR / modèle Python](https://antonin-lfv.github.io/2020/07/20/epidemiologie-post.html#Comparaison-SIDR--modèle-python)
-5. [Conclusion](https://antonin-lfv.github.io/2020/07/20/epidemiologie-post.html#conclusion)
+5. [Conclusion](https://antonin-lfv.github.io/2020/07/20/epidemiologie-post.html#Conclusion)
 
 <br>
 
