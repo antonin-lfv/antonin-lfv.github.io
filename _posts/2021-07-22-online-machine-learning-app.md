@@ -19,21 +19,21 @@ L'application est disponible [ici](https://share.streamlit.io/antonin-lfv/online
 
 # Index
 
-1. [Interface](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Interface)
-    - [Accueil](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Accueil)
-    - [Chargement du dataset](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Chargement-du-dataset)
-    - [Analyse des colonnes](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Analyse-des-colonnes)
-    - [Matrice de corrélation](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Matrice-de-corrélation)
-    - [Section graphiques](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Section-graphiques)
-    - [Machine Learning](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Machine-Learning)
-        - [k-nearest neighbors](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#k-nearest-neighbors)
-        - [k-Means](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#K-Means)
-        - [Support Vector Machine](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Support-Vector-Machine)
-        - [PCA](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#PCA)
-        - [UMAP](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#UMAP)
-    - [Deep Learning](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Deep-Learning)
-        - [Transfert de style neuronal](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Transfert-de-style-neuronal)
-        - [GAN](https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#GAN)
+1. [Interface](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#interface)
+    - [Accueil](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#accueil)
+    - [Chargement du dataset](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#chargement-du-dataset)
+    - [Analyse des colonnes](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#analyse-des-colonnes)
+    - [Matrice de corrélation](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#matrice-de-corrélation)
+    - [Section graphiques](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#section-graphiques)
+    - [Machine Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#machine-learning)
+        - [k-nearest neighbors](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#k-nearest-neighbors)
+        - [k-Means](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#k-means)
+        - [Support Vector Machine](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#support-vector-machine)
+        - [PCA](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#pca)
+        - [UMAP](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#umap)
+    - [Deep Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#deep-learning)
+        - [Transfert de style neuronal](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#transfert-de-style-neuronal)
+        - [GAN](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#gan)
 
 
 <br/>

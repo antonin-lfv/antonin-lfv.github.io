@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cybersecurity Gitbook
+title: Cybersecu Gitbook
 ---
 
 Ce Gitbook rassemble diverses techniques de hacking, dans plusieurs domaines, notamment dans le but de savoir se protéger sur internet et aussi de savoir développer des outils en ligne capables de se defendre face à des cyber attaques.
