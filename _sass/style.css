@@ -72,7 +72,7 @@ pre {
   overflow-x: auto; }
 
 code {
-  color: #777;
+  color: #fec92e;
   font-size: 16px;
   padding: 1px 0px; }
 
@@ -223,7 +223,7 @@ code {
   color: #fff !important; }
 
 .text-accent {
-  color: #777; }
+  color: #fec92e; }
 
 /* Layout utilities */
 .container {
@@ -475,7 +475,7 @@ code {
   font-weight: bold;
   text-decoration: none !important; }
   .link-primary:hover {
-    color: #777;
+    color: #fec92e;
     text-decoration: none !important; }
 
 /*# sourceMappingURL=style.css.map */
