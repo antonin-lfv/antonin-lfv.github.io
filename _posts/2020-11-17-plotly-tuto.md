@@ -7,11 +7,6 @@ Plotly étant le plus compliqué mais également le plus interactif. Il est cons
 Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du [**Repository**](https://github.com/antonin-lfv/Plotly_tutorial) sous le nom <b>plotly_ex.py</b> .
 
 
-> Pour comprendre plus en détails comment plotly fonctionne, et pour personnaliser au maximum vos graphiques, je vous invite à consulter mon [**article**](https://github.com/antonin-lfv/Plotly_tutorial/blob/main/README.md) sur plotly. ( bientôt disponible )
-<br/>
-
-> Pour mettre en ligne un dashboard avec une page plotly, j'ai crée un [**repository**](https://github.com/antonin-lfv/app_stock_prices) à ce sujet.
-
 <br>
 
 # Index
