@@ -74,7 +74,7 @@ pre {
 code {
   color: #777;
   font-size: 16px;
-  padding: 1px 0px; }
+  padding: 1px 0; }
 
 .prose a {
   text-decoration: underline dotted; }
@@ -105,7 +105,7 @@ code {
   border-left: 8px solid #fec92e;
   font-style: italic; }
   .prose blockquote p {
-    font-size: 24px; }
+    font-size: 18px; }
   @media (min-width: 52em) {
     .prose blockquote {
       padding-left: 32px;
@@ -223,7 +223,7 @@ code {
   color: #fff !important; }
 
 .text-accent {
-  color: #777; }
+  color: #fec92e; }
 
 /* Layout utilities */
 .container {
@@ -475,7 +475,7 @@ code {
   font-weight: bold;
   text-decoration: none !important; }
   .link-primary:hover {
-    color: #777;
+    color: #fec92e;
     text-decoration: none !important; }
 
 /*# sourceMappingURL=style.css.map */
