@@ -18,6 +18,8 @@ permalink: /Resume/
 
 ---
 
+<br>
+
 # **👩🏻‍💻** Work experience
 
 ## Network internship
@@ -33,6 +35,8 @@ France *– (Since 2019)*
 Mathematics courses for Secondary and High-School levels.
 
 ---
+
+<br>
 
 # 📚 Education
 
@@ -53,6 +57,8 @@ Intensive two-year study course preparing for the competitive entrance examinati
 In last year *- University of Reims - France*
 
 ---
+
+<br>
 
 # 🛠 Skills
 
@@ -76,6 +82,9 @@ High-school level
 
 ---
 
+<br>
+<br>
+
 # 📜 Articles and Projects
 
 | Title           | Link        | Tags      |
@@ -86,6 +95,8 @@ High-school level
 | DashBoard Stock-prices     | [**lien**](https://www.notion.so/DashBoard-Stock-prices-7e7690a7d68d4d049bec92c125058e49#59f5307056fa439ca41ab3183a0b5a9f)  | **Graphics** |
 | CyberSecurity GitBook      | [**lien**](https://www.notion.so/CyberSecurity-GitBook-19f37dfeb6a94d0ba613b894c62eeb03#4f7be8ef93464d5491ab9c7f20ca6741)  | **CyberSecurity** |
 
+<br>
+<br>
 
 # 💭 Interests and hobbies
 
