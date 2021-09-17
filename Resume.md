@@ -8,13 +8,13 @@ permalink: /Resume/
 
 # 📞  Contact information
 
-📧  [Email address](mailto:antoninlefevre45@icloud.com)
+📧  [**Email address**](mailto:antoninlefevre45@icloud.com)
 
-🔗  [LinkedIn](https://www.linkedin.com/in/antonin-lefevre-0110/)
+🔗  [**LinkedIn**](https://www.linkedin.com/in/antonin-lefevre-0110/)
 
-🐙  [Github](https://github.com/antonin-lfv)
+🐙  [**Github**](https://github.com/antonin-lfv)
 
-🌐  [Website](https://antonin-lfv.github.io)
+🌐  [**Website**](https://antonin-lfv.github.io)
 
 ---
 
@@ -56,7 +56,7 @@ In last year *- University of Reims - France*
 
 # 🛠 Skills
 
-[💻 Technology](https://www.notion.so/3b9f517bfed5418b9b73edc96dc17341)
+[**💻 Technology**](https://www.notion.so/3b9f517bfed5418b9b73edc96dc17341)
 
 Python is my "native" programming language for over 4 years. I used it first in school, for mathematics. And then I spread my skills in Artificial Intelligence, and Data Science domains.
 
@@ -78,7 +78,14 @@ High-school level
 
 # 📜 Articles and Projects
 
-[Gallery](https://www.notion.so/b7e14210ef194bf799bdbfe4cd83dd28)
+| Title           | Link        | Tags      |
+|-------------------|-----------------|------|
+| Epidemiological Simulation | [**lien**](https://www.notion.so/Epidemiological-Simulation-0450afd101ef4ff7a6d7906babe3732b#8311c3472df54b5bb7030fc70a44652a)        | **Maths, Epidemiology, Simulation** |
+| Plotly tutorial            | [**lien**](https://www.notion.so/Plotly-tutorial-244f1ca6536d493b8462c1546d97d38e#f9904bdcd40849438c3bb95de15c78e1)     | **Simulation, Graphics** |
+| Online Machine Learning app| [**lien**](https://www.notion.so/Online-Machine-Learning-app-c6635fd0b789446a9b28f308d7beb9e9#7faa99db8fe7418dab1e7e41f0b3f3b3)  | **AI, Maths** |
+| DashBoard Stock-prices     | [**lien**](https://www.notion.so/DashBoard-Stock-prices-7e7690a7d68d4d049bec92c125058e49#59f5307056fa439ca41ab3183a0b5a9f)  | **Graphics** |
+| CyberSecurity GitBook      | [**lien**](https://www.notion.so/CyberSecurity-GitBook-19f37dfeb6a94d0ba613b894c62eeb03#4f7be8ef93464d5491ab9c7f20ca6741)  | **CyberSecurity** |
+
 
 # 💭 Interests and hobbies
 
