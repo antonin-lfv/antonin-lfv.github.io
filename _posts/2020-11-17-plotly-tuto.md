@@ -19,7 +19,7 @@ Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le c
 - [Plotly.Express](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#plotlyexpress)
     - [Scatter plot](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#scatter-plot)
         - [Exemple simple](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#Exemple-simple)
-        - [Superposition de figures](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#Superposition-de-figures)
+        - [Superposition de figures](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#superposition-de-figures)
         - [Subplots](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#subplots)
         - [Animations](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#animations)
         - [Range Slider](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#range-slider)
