@@ -131,28 +131,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="8673000" />
-    </task>
-    <task id="LOCAL-00217" summary="to do list">
-      <created>1630072098449</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1630072098449</updated>
-    </task>
-    <task id="LOCAL-00218" summary="directory plotly">
-      <created>1630948395848</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1630948395849</updated>
-    </task>
-    <task id="LOCAL-00219" summary="post">
-      <created>1630948999033</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1630948999033</updated>
+      <workItem from="1631873347674" duration="9027000" />
     </task>
     <task id="LOCAL-00220" summary="post">
       <created>1630949272391</created>
@@ -476,7 +455,28 @@
       <option name="project" value="LOCAL" />
       <updated>1631885995087</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <task id="LOCAL-00266" summary="2.1">
+      <created>1631886021656</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1631886021656</updated>
+    </task>
+    <task id="LOCAL-00267" summary="2.1">
+      <created>1631886054012</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1631886054012</updated>
+    </task>
+    <task id="LOCAL-00268" summary="2.1">
+      <created>1631886680552</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1631886680552</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
