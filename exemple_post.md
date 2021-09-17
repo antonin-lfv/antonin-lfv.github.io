@@ -1,8 +1,8 @@
----
-layout: post
-title:  "Markdown sample"
-date:   2016-09-04
----
+#---
+#layout: post
+#title:  "Markdown sample"
+#date:   2016-09-04
+#---
 
 ### Markdown test document
 

@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Plotly - Tutoriel</title>
+  <meta name="description" content="Ce tutoriel à pour objectif de présenter le module Plotly qui est l’un des modules les plus utilisés pour faire de la visualisation de données avec Python. P...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2020/11/17/plotly-tuto.html">
+  <link rel="alternate" type="application/rss+xml" title="Antonin LEFEVRE" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="border-bottom-thick px-2 clearfix">
+  <div class="left sm-width-full py-1 mt-1 mt-lg-0">
+    <a class="align-middle link-primary text-accent" href="/">
+      Antonin LEFEVRE
+    </a>
+  </div>
+  <div class="right sm-width-full">
+    <ul class="list-reset mt-lg-1 mb-2 mb-lg-1">
+      
+        
+        <li class="inline-block">
+          <a class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2" href="/about/">
+            About
+          </a>
+        </li>
+        
+      
+        
+        <li class="inline-block">
+          <a class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2" href="/certifications/">
+            Certifications
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</header>
+
+
+    <div>
+      <article class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="h0 col-9 sm-width-full py-4 mt-3 inline-block" itemprop="name headline">Plotly - Tutoriel</h1>
+  <div class="col-4 sm-width-full mt-1 border-top-thin ">
+    <p class="mb-3 py-2 bold h4"><time datetime="2020-11-17T00:00:00+01:00" itemprop="datePublished">Nov 17, 2020</time></p>
+  </div>
+
+  <div class="prose" itemprop="articleBody">
+      <p>Ce tutoriel à pour objectif de présenter le module <b>Plotly</b> qui est l’un des modules les plus utilisés pour faire de la visualisation de données avec Python. <br />
+Plotly étant le plus compliqué mais également le plus interactif. Il est construit sur 3 composantes principales, à savoir <b>plotly.express</b> qui est basé sur l’utilisation des dataframes pandas, et qui est simple et rapide, et <b>plotly.graph_objects</b> qui est beaucoup plus puissant, et beaucoup plus personnalisable, il est basé sur la POO et <b>plotly.figure_factory</b> qui est dédiée à la création de figure spécifiques qui seraient trop compliqué à developper avec les 2 autres composantes. <br />
+Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du <a href="https://github.com/antonin-lfv/Plotly_tutorial">Repository</a> sous le nom <b>plotly_ex.py</b> .</p>
+
+<blockquote>
+  <p>Pour comprendre plus en détails comment plotly fonctionne, et pour personnaliser au maximum vos graphiques, je vous invite à consulter mon <a href="https://github.com/antonin-lfv/Plotly_tutorial/blob/main/README.md"><strong>article</strong></a> sur plotly. ( bientôt disponible )
+<br /></p>
+</blockquote>
+
+<blockquote>
+  <p>Pour mettre en ligne un dashboard avec une page plotly, j’ai crée un <a href="https://github.com/antonin-lfv/app_stock_prices"><strong>repository</strong></a> à ce sujet.</p>
+</blockquote>
+
+<p><br /></p>
+
+<h1 id="index">Index</h1>
+
+<ul>
+  <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#plotlyexpress">Plotly.Express</a>
+    <ul>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#scatter-plot">Scatter plot</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Exemple-simple">Exemple simple</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Superposition-de-figures">Superposition de figures</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#subplots">Subplots</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#animations">Animations</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#range-slider">Range Slider</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#rectangles-et-lignes">Rectangles et lignes</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#marges-statistiques">Marges statistiques</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#curseurs">Curseurs</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#plot-3d">Plot 3D</a></li>
+        </ul>
+      </li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#bar-chart">Bar chart</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#premier-exemple">Premier exemple</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#indicateurs-marginaux">Indicateurs marginaux</a></li>
+        </ul>
+      </li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#pie-chart">Pie chart</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#exemple-basique">Exemple basique</a></li>
+        </ul>
+      </li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#polar-bar-charts">Polar bar charts</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Machine-learning">Machine Learning</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#regression-linéaire">Regression linéaire</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#umap">UMAP</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#t-sne">t-SNE</a></li>
+        </ul>
+      </li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#graphique-de-corrélation">Graphique de corrélation</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#plotlygraph_objects">Plotly.Graph_Objects</a>
+    <ul>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#subplots-Go">Subplots</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#scatter">Scatter</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#scatter-basique">Scatter basique</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#annotations">Annotations</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#droite-et-plage-de-valeurs">Droite et plage de valeurs</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#interpolation">Interpolation</a></li>
+        </ul>
+      </li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Financial-Chart">Financial Chart</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Pie-chart-Go">Pie chart</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Violin-chart">Violin chart</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Histogrammebar">Histogramme/Bar</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#graphiques-en-3d">Graphiques en 3D</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#surface">Surface</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#nuage-de-points">Nuage de points</a></li>
+        </ul>
+      </li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#réseau-de-neurones">Réseau de neurones</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#regression-surfacique-en-3d">Regression surfacique en 3D</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Maps">Maps</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Ligne-entre-Miami-et-Chicago">Ligne entre Miami et Chicago</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Air-colorée-sur-une-carte-triangle-des-bermudes">Air colorée sur une carte, triangle des bermudes</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Scatter-sur-une-map">Scatter sur une map</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Scatter-avec-ensemble-de-points">Scatter avec ensemble de points</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#plotlyfigure_factory">Plotly.figure_factory</a>
+    <ul>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Heatmap-avec-annotations">Heatmap avec annotations</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Dendrogrames">Dendrogrames</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Champ-vectoriel">Champ vectoriel</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Lignes-de-flux">Lignes de flux</a></li>
+      <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Création-dun-tableau">Création d’un tableau</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#À-la-main-avec-LaTex">À la main avec LaTex</a></li>
+          <li><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#À-partir-dun-dataframe-pandas">À partir d’un dataframe pandas</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="installation">Installation</h1>
+<p><br />
+Installation : <br />
+<br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">plotly</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p>Documentation <a href="https://plotly.com/python/">Plotly</a> .
+<br /></p>
+
+<h1 id="importations">Importations</h1>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">plotly.offline</span> <span class="kn">import</span> <span class="n">plot</span>  <span class="c1"># pour travailler en offline!
+</span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="n">px</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="n">go</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="n">sm</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_digits</span>
+<span class="kn">from</span> <span class="nn">umap</span> <span class="kn">import</span> <span class="n">UMAP</span> <span class="c1"># pip install umap-learn
+</span><span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="n">nx</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h1 id="plotlyexpress">Plotly.Express</h1>
+
+<p>Plotly express, importée en tant que <strong>px</strong>, est la partie de plotly permettant de créer rapidement et simplement n’importe quel graphique en 1 ligne de code. Son interet est notamment basé sur le fait qu’elle marche parfaitement bien avec les <strong>DataFrames</strong> de Pandas, mais on peut également travailler avec des listes ou tout autre type de données. Son utilisation est limitée notamment dans la conception de subplots. Vous verrez dans cette section quelles sont les fonctions les plus utiles de <strong>plotly express</strong>, et comment les personnaliser au maximum.
+<br /></p>
+
+<p>Voici la syntaxe globale d’un code utilisant plotly express :</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">chart_type</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="s">"layout_parameters or add annotations"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="s">"further graph parameters"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_xaxis</span><span class="p">()</span> <span class="c1"># ou update_yaxis
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_trace</span><span class="p">()</span> <span class="c1"># ajouter une figure avec graph_objects
+</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="scatter-plot">Scatter plot</h2>
+
+<h3 id="exemple-simple">Exemple simple</h3>
+
+<p>On personnalise les figures de plotly express suivant ce modèle :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">"sepal_width"</span><span class="p">,</span> <span class="c1"># nom de la colonne du dataframe
+</span>                 <span class="n">y</span><span class="o">=</span><span class="s">"sepal_length"</span><span class="p">,</span> <span class="c1"># nom de la colonne du dataframe
+</span>                 <span class="n">color</span><span class="o">=</span><span class="s">"species"</span><span class="p">,</span> <span class="c1"># nom de la colonne du dataframe
+</span>                 <span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Scatter avec px et ajout d'une figure avec Go"</span><span class="p">,</span>
+                  <span class="n">font_family</span><span class="o">=</span><span class="s">"Rockwell"</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s">'largeur sepales'</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s">'longueur sepales'</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_trace</span><span class="p">(</span>
+    <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s">"lines"</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">"gray"</span><span class="p">),</span>
+        <span class="n">name</span><span class="o">=</span><span class="s">"droite"</span><span class="p">,</span>
+        <span class="n">showlegend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># True par défaut
+</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p><img width="1419" alt="Capture d’écran 2021-05-18 à 09 39 56" src="https://user-images.githubusercontent.com/63207451/118611343-05dcf200-b7bd-11eb-98ba-cde2bcecf80e.png" /></p>
+
+<p><br /></p>
+
+<h3 id="superposition-de-figures">Superposition de figures</h3>
+
+<p>Si on veut superposer des courbes avec les données du même dataset on écrit :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s">"sepal_width"</span><span class="p">,</span> <span class="s">"sepal_length"</span><span class="p">,</span> <span class="s">"petal_width"</span><span class="p">],</span>
+              <span class="c1">#text="species_id" # pour ajouter l'id de l'espèce au dessus de chaque point
+</span>              <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s">"sepal_width"</span><span class="p">:</span><span class="s">"blue"</span><span class="p">,</span> 
+	      			  <span class="s">"sepal_length"</span><span class="p">:</span><span class="s">"black"</span><span class="p">,</span>
+				  <span class="s">"petal_width"</span><span class="p">:</span><span class="s">"green"</span> <span class="p">},</span> <span class="c1"># couleur de chaque ligne
+</span>            <span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1419" alt="Capture d’écran 2021-05-18 à 09 42 40" src="https://user-images.githubusercontent.com/63207451/118611691-6a984c80-b7bd-11eb-92cb-bf433f8fa8b7.png" />
+<br /></p>
+
+<h3 id="subplots">Subplots</h3>
+
+<p>On peut aussi séparer les figures en plusieurs, c’est le seul moyen de faire des subplots avec plotly express ! Il y a 2 types de subplots, soit en lignes, soit en colonnes, spécifié par le paramètre facet_col ou facet_row. Partons du code suivant :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s">"sepal_width"</span><span class="p">,</span> <span class="s">"sepal_length"</span><span class="p">,</span> <span class="s">"petal_width"</span><span class="p">],</span>
+              <span class="c1">#text="species_id" on ajoute ici l'id de l'espèce au dessus de chaque point
+</span>              <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s">"sepal_width"</span><span class="p">:</span><span class="s">"blue"</span><span class="p">,</span> 
+	      			  <span class="s">"sepal_length"</span><span class="p">:</span><span class="s">"black"</span><span class="p">,</span>
+				  <span class="s">"petal_width"</span><span class="p">:</span><span class="s">"green"</span> <span class="p">},</span> <span class="c1"># couleur de chaque ligne
+</span>            <span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Alors on obtient ces résultats en fonction du paramètre de séparation :</p>
+
+<p><br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>facet_col=”species”</th>
+      <th>facet_row=”species”</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img width="600" alt="Capture d’écran 2021-05-18 à 09 44 19" src="https://user-images.githubusercontent.com/63207451/118611980-a59a8000-b7bd-11eb-8ae9-2b8a673d7e5d.png" /></td>
+      <td><img width="600" alt="Capture d’écran 2021-05-18 à 09 45 25" src="https://user-images.githubusercontent.com/63207451/118612164-cb278980-b7bd-11eb-9586-abeb9e3a7fb9.png" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h3 id="animations">Animations</h3>
+
+<p>On fait bouger les points qui suivent l’évolution des données au fil des années :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">gapminder</span><span class="p">()</span>
+<span class="n">df_fr</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'country'</span><span class="p">]</span><span class="o">==</span><span class="s">'France'</span><span class="p">]</span>
+<span class="n">df_us</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'country'</span><span class="p">]</span><span class="o">==</span><span class="s">'United States'</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_fr</span><span class="p">,</span> <span class="n">df_us</span><span class="p">])</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s">"gdpPercap"</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s">"year"</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s">"country"</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s">"évolution pib france et USA"</span><span class="p">,</span>
+        <span class="n">range_x</span><span class="o">=</span><span class="p">[</span><span class="mi">1952</span><span class="p">,</span><span class="mi">2007</span><span class="p">],</span>
+        <span class="n">range_y</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'gdpPercap'</span><span class="p">].</span><span class="nb">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s">'gdpPercap'</span><span class="p">].</span><span class="nb">max</span><span class="p">()],</span>
+        <span class="n">animation_frame</span><span class="o">=</span><span class="s">"year"</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1403" alt="Capture d’écran 2021-05-18 à 09 49 41" src="https://user-images.githubusercontent.com/63207451/118612783-67519080-b7be-11eb-8bc7-9bc9e9c1c55d.png" />
+<br /></p>
+
+<h3 id="range-slider">Range Slider</h3>
+
+<p>Personnalisation des axes avec un range slider visible :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">carshare</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">"car_hours"</span><span class="p">,</span>
+              <span class="c1">#text="species_id" on ajoute ici l'id de l'espèce au dessus de chaque point
+</span>              <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s">"car_hours"</span><span class="p">:</span><span class="s">"black"</span><span class="p">},</span> <span class="c1"># couleur de chaque ligne
+</span>            <span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">rangeslider_visible</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1403" alt="Capture d’écran 2021-05-18 à 09 51 49" src="https://user-images.githubusercontent.com/63207451/118613064-ac75c280-b7be-11eb-8648-05aa6843c10b.png" />
+<br /></p>
+
+<h3 id="rectangles-et-lignes">Rectangles et lignes</h3>
+
+<p>On peut colorier une plage de valeurs, ou ajouter une ligne :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">stocks</span><span class="p">(</span><span class="n">indexed</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">facet_col</span><span class="o">=</span><span class="s">"company"</span><span class="p">,</span>
+              <span class="n">facet_col_wrap</span><span class="o">=</span><span class="mi">2</span> <span class="c1"># nombre de figure par ligne
+</span>              <span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_hline</span><span class="p">(</span> <span class="c1"># ou vline pour verticale avec x=...
+</span>              <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">"dot"</span><span class="p">,</span>
+              <span class="n">annotation_text</span><span class="o">=</span><span class="s">"1er janvier 2018"</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"bottom right"</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_vrect</span><span class="p">(</span> <span class="c1"># ou hrect pour horizontal
+</span>              <span class="n">x0</span><span class="o">=</span><span class="s">"2018-09-24"</span><span class="p">,</span> <span class="n">x1</span><span class="o">=</span><span class="s">"2018-12-18"</span><span class="p">,</span>
+              <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="c1"># numéro de la colonne (les figures de droites)
+</span>              <span class="n">annotation_text</span><span class="o">=</span><span class="s">"24/09 au 18/12 2018"</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"top left"</span><span class="p">,</span>
+              <span class="n">fillcolor</span><span class="o">=</span><span class="s">"red"</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_hrect</span><span class="p">(</span> <span class="c1"># ou hrect pour horizontal
+</span>              <span class="n">y0</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">y1</span><span class="o">=</span><span class="mf">1.7</span><span class="p">,</span>
+              <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># numéro de la colonne (les figures de droites)
+</span>              <span class="n">annotation_text</span><span class="o">=</span><span class="s">"1.1 à 1.7"</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"top right"</span><span class="p">,</span>
+              <span class="n">fillcolor</span><span class="o">=</span><span class="s">"blue"</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1403" alt="Capture d’écran 2021-05-18 à 09 52 53" src="https://user-images.githubusercontent.com/63207451/118613217-d4652600-b7be-11eb-8b8f-bdebc1c54626.png" />
+<br /></p>
+
+<h3 id="marges-statistiques">Marges statistiques</h3>
+
+<p>On ajoute un indicateur statistique sur chacune des variables du scatter :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">"sepal_length"</span><span class="p">,</span> <span class="c1"># données
+</span>                 <span class="n">color</span><span class="o">=</span><span class="s">"species"</span><span class="p">,</span> <span class="c1"># couleur par expèce
+</span>                 <span class="n">marginal_x</span><span class="o">=</span><span class="s">'box'</span><span class="p">,</span> <span class="c1"># marge en boxplot
+</span>                 <span class="n">marginal_y</span><span class="o">=</span><span class="s">'violin'</span><span class="p">,</span> <span class="c1"># marge en violon
+</span>                 <span class="n">trendline</span><span class="o">=</span><span class="s">"ols"</span> <span class="c1"># courbe de tendances
+</span>                 <span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br />
+<img width="1403" alt="Capture d’écran 2021-05-18 à 09 53 30" src="https://user-images.githubusercontent.com/63207451/118613295-e941b980-b7be-11eb-9930-e1c1a496e8f6.png" />
+<br /></p>
+
+<h3 id="curseurs">Curseurs</h3>
+
+<p>Curseurs qui apparaissent avec survol de la souris sur un point du graphique :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">gapminder</span><span class="p">().</span><span class="n">query</span><span class="p">(</span><span class="s">"continent=='Oceania'"</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">"year"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">"lifeExp"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"country"</span><span class="p">,</span>
+              <span class="n">title</span><span class="o">=</span><span class="s">"curseurs"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s">"markers+lines"</span><span class="p">)</span> <span class="c1"># courbe avec ligne et points apparent
+</span><span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">showspikes</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">showspikes</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1403" alt="Capture d’écran 2021-05-18 à 09 54 47" src="https://user-images.githubusercontent.com/63207451/118613484-168e6780-b7bf-11eb-9be4-204fb57f00ab.png" />
+<br /></p>
+
+<h3 id="plot-3d">Plot 3D</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">'sepal_length'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'sepal_width'</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="s">'petal_width'</span><span class="p">,</span>
+              <span class="n">color</span><span class="o">=</span><span class="s">'species'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s">'petal_length'</span><span class="p">,</span> <span class="n">size_max</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span><span class="n">symbol</span><span class="o">=</span><span class="s">'species'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1411" alt="Capture d’écran 2021-05-18 à 10 42 21" src="https://user-images.githubusercontent.com/63207451/118620412-c666d380-b7c5-11eb-87e6-346920499cca.png" />
+<br /></p>
+
+<h2 id="bar-chart">Bar chart</h2>
+
+<h3 id="premier-exemple">Premier exemple</h3>
+
+<p>Simple Barchart, on colorie sur une colonne et on sépare par couleur :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">tips</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">px</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+           <span class="n">x</span><span class="o">=</span><span class="s">"sex"</span><span class="p">,</span>
+           <span class="n">y</span><span class="o">=</span><span class="s">"total_bill"</span><span class="p">,</span>
+           <span class="n">color</span><span class="o">=</span><span class="s">"smoker"</span><span class="p">,</span>
+           <span class="n">barmode</span><span class="o">=</span><span class="s">"group"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span> <span class="n">marker_line_color</span><span class="o">=</span><span class="s">'rgb(8,48,107)'</span><span class="p">,</span>
+                  <span class="n">marker_line_width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1413" alt="Capture d’écran 2021-05-18 à 16 12 29" src="https://user-images.githubusercontent.com/63207451/118666930-da292e80-b7f3-11eb-98c8-860f7dada52b.png" />
+<br /></p>
+
+<h3 id="indicateurs-marginaux">Indicateurs marginaux</h3>
+
+<p>On va tester 2 types de marges, violon et boxplot, qu’on ajoute avec le paramètre marginal :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">"sepal_length"</span><span class="p">,</span>
+                   <span class="n">nbins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="c1"># on choisi le nombre de barres
+</span>		   <span class="n">marginal</span><span class="o">=</span><span class="s">''</span>
+                   <span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>marginal=’violin’</th>
+      <th>marginal=’box’</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img width="600" alt="Capture d’écran 2021-05-18 à 10 06 10" src="https://user-images.githubusercontent.com/63207451/118615088-ae408580-b7c0-11eb-8306-bc30dfbd6c46.png" /></td>
+      <td><img width="600" alt="Capture d’écran 2021-05-18 à 10 07 45" src="https://user-images.githubusercontent.com/63207451/118615324-e5af3200-b7c0-11eb-91e7-becb37f542fe.png" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h2 id="pie-chart">Pie chart</h2>
+
+<h3 id="exemple-basique">Exemple basique</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">tips</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">pie</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s">'tip'</span><span class="p">,</span> <span class="c1"># ce qu'on compte
+</span>             <span class="n">names</span><span class="o">=</span><span class="s">'day'</span><span class="p">,</span> <span class="c1"># sur quoi on tri
+</span>             <span class="n">color</span><span class="o">=</span><span class="s">'day'</span><span class="p">,</span>
+             <span class="n">hole</span><span class="o">=</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span> <span class="c1"># donut chart
+</span>             <span class="n">color_discrete_map</span><span class="o">=</span><span class="p">{</span><span class="s">'Thur'</span><span class="p">:</span><span class="s">'lightblue'</span><span class="p">,</span> <span class="c1"># couleur spécifique par valeur
+</span>                                 <span class="s">'Fri'</span><span class="p">:</span><span class="s">'lightred'</span><span class="p">,</span>
+                                 <span class="s">'Sat'</span><span class="p">:</span><span class="s">'gold'</span><span class="p">,</span>
+                                 <span class="s">'Sun'</span><span class="p">:</span><span class="s">'green'</span><span class="p">})</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 16 04 01" src="https://user-images.githubusercontent.com/63207451/118665541-ab5e8880-b7f2-11eb-903d-5a6ed3e70a11.png" />
+<br /></p>
+
+<h2 id="polar-bar-charts">Polar bar charts</h2>
+
+<p>On va représenter ici la force des vents, sur un diagramme polaire, avec la direction comme angle, et la force en taille :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">wind</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">bar_polar</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="s">"frequency"</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="s">"direction"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"strength"</span><span class="p">,</span> 
+		<span class="n">template</span><span class="o">=</span><span class="s">"seaborn"</span><span class="p">,</span> <span class="c1"># couleur de fond
+</span>                <span class="n">color_discrete_sequence</span><span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">colors</span><span class="p">.</span><span class="n">sequential</span><span class="p">.</span><span class="n">Plasma_r</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 16 07 18" src="https://user-images.githubusercontent.com/63207451/118666061-2627a380-b7f3-11eb-942d-25e2d9491bac.png" />	
+<br /></p>
+
+<h2 id="machine-learning">Machine Learning</h2>
+
+<h3 id="regression-linéaire">Regression linéaire</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">tips</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">total_bill</span><span class="p">.</span><span class="n">values</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">df</span><span class="p">.</span><span class="n">tip</span><span class="p">)</span>
+
+<span class="n">x_range</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="nb">min</span><span class="p">(),</span> <span class="n">X</span><span class="p">.</span><span class="nb">max</span><span class="p">(),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y_range</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_range</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">'total_bill'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'tip'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.65</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_traces</span><span class="p">(</span><span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_range</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_range</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'Regression Fit'</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<p align="center">
+<img width="1166" alt="Capture d’écran 2020-11-24 à 10 45 21" src="https://user-images.githubusercontent.com/63207451/100077394-9821c000-2e42-11eb-9700-8f103b2000c5.png" />
+</p>
+
+<h3 id="umap">UMAP</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">digits</span> <span class="o">=</span> <span class="n">load_digits</span><span class="p">()</span>
+<span class="n">umap_2d</span> <span class="o">=</span> <span class="n">UMAP</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">umap_2d</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">digits</span><span class="p">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">projections</span> <span class="o">=</span> <span class="n">umap_2d</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">digits</span><span class="p">.</span><span class="n">data</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">projections</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">digits</span><span class="p">.</span><span class="n">target</span><span class="p">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'digit'</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<p align="center">
+<img width="1399" alt="Capture d’écran 2021-04-30 à 13 02 14" src="https://user-images.githubusercontent.com/63207451/116686674-6e9e2f00-a9b4-11eb-97e0-a65286464dc0.png" />
+</p>
+
+<h3 id="t-sne">t-SNE</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">:</span><span class="s">'petal_width'</span><span class="p">]</span>
+<span class="n">tsne</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">projections</span> <span class="o">=</span> <span class="n">tsne</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_3d</span><span class="p">(</span>
+    <span class="n">projections</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">df</span><span class="p">.</span><span class="n">species</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'species'</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker_size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<p align="center">
+<img width="1328" alt="Capture d’écran 2021-04-30 à 13 03 58" src="https://user-images.githubusercontent.com/63207451/116686752-8fff1b00-a9b4-11eb-8733-a3491e45f36e.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="graphique-de-corrélation">Graphique de corrélation</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="p">[</span><span class="s">"sepal_width"</span><span class="p">,</span> <span class="s">"sepal_length"</span><span class="p">,</span> <span class="s">"petal_width"</span><span class="p">,</span> <span class="s">"petal_length"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"species"</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+<p align="center">
+<img width="1187" alt="Capture d’écran 2020-11-23 à 21 43 03" src="https://user-images.githubusercontent.com/63207451/100014133-404d6f80-2dd6-11eb-9f4e-f0bca9ee9b96.png" />
+</p>
+<p><br /></p>
+
+<h1 id="plotlygraph_objects">Plotly.Graph_Objects</h1>
+
+<p>Plotly <strong>graph_objects</strong>, importée en tant que <strong>go</strong> est la partie de Plotly utilisant la <strong>POO</strong>, pour créer des graphiques très complets. On va y retrouver la
+plupart des fonctions de plotly express.
+Vous verrez dans cette section quelles sont les fonctions les plus utiles de plotly <strong>graph_objetcs</strong> et comment les personnaliser
+au maximum.
+<br /></p>
+
+<p>Voici la syntaxe globale d’un code utilisant plotly graph_objects :</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span> <span class="c1"># création de la figure, ou alors make_subplots
+</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_TypeTrace</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span> <span class="c1"># on ajoute des figure avec TypeTrace qui est pie, scatter, surface, etc..
+</span><span class="p">...</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_TypeTrace</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="subplots-go">Subplots Go</h2>
+
+<p>Pour un subplots on utilise un autre moyen pour initialiser la figure :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="c1">#column_widths=[0.6, 0.4],
+</span>                    <span class="c1">#row_heights=[0.3, 0.3, 0.3],
+</span>                    <span class="n">subplot_titles</span><span class="o">=</span><span class="p">[</span><span class="s">""</span><span class="p">,</span> <span class="s">""</span><span class="p">,</span> <span class="s">""</span><span class="p">],</span>
+                    <span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">},</span> <span class="p">{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'domain'</span><span class="p">}],</span> <span class="c1"># 1er ligne
+</span>                           <span class="p">[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">,</span> <span class="s">'colspan'</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="bp">None</span><span class="p">]],</span> <span class="c1"># 2e ligne, dont la 1er colonne s'etend sur celle de droite
+</span>                    <span class="c1"># si on s'etend sur une colonne on utilise rowspan
+</span>                    <span class="c1"># il existe plusieurs type de specs : xy, domain, scene, polar, ternary, mapbox
+</span>                    <span class="c1">#horizontal_spacing=0.2,
+</span>                    <span class="c1">#vertical_spacing=0.5
+</span>                    <span class="p">)</span>
+
+<span class="s">"Ensuite on ajoute les figure normalement, en indiquant juste l'emplacement du graphique avec les paramètres row et col"</span>
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># 1er figure
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+                <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'green'</span><span class="p">),</span>
+                <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"tangente hyperbolique"</span>
+                <span class="p">)</span>
+<span class="c1"># 2e figure
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_pie</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s">'oui'</span><span class="p">,</span> <span class="s">'non'</span><span class="p">],</span>
+            <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="mi">201902</span><span class="p">,</span><span class="mi">192981</span><span class="p">],</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># 3e figure
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_traces</span><span class="p">(</span> <span class="c1"># je vais ajouter 2 courbes en même temps sur la dernière ligne
+</span>    <span class="p">[</span>
+        <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s">'markers+lines'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'x²'</span><span class="p">),</span>
+        <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=-</span><span class="n">np</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s">'-x²'</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 19 28" src="https://user-images.githubusercontent.com/63207451/118658192-72bbb080-b7ec-11eb-995c-5a6ce06180f3.png" />
+<br /></p>
+
+<h2 id="scatter">Scatter</h2>
+
+<h3 id="scatter-basique">Scatter basique</h3>
+
+<p>On pourra utiliser scattergl pour des gros datasets.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="c1"># 1ere solution, on ajoute toutes les figures avec le même appel (pour appliquer une seule fois certains parametres)
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_traces</span><span class="p">([</span><span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'markers'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">),</span>
+               <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'negative sigmoid'</span><span class="p">)]</span> <span class="p">)</span>
+<span class="c1"># 2e solution, on ajoute les figures indépendemment
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'markers'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'sigmoid+1'</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'1-sigmoid'</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"sigmoid"</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 21 12" src="https://user-images.githubusercontent.com/63207451/118658467-b0b8d480-b7ec-11eb-9218-95555c2d7e3b.png" />
+<br /></p>
+
+<h3 id="annotations">Annotations</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">,</span>
+                <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'green'</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_annotation</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                   <span class="n">text</span><span class="o">=</span><span class="s">'point en x=0'</span><span class="p">,</span>
+                   <span class="n">showarrow</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                   <span class="n">arrowhead</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                   <span class="n">arrowsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                   <span class="n">arrowwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                   <span class="n">arrowcolor</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span>
+                   <span class="n">bgcolor</span><span class="o">=</span><span class="s">"orange"</span><span class="p">,</span>
+                   <span class="n">borderwidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                   <span class="n">yshift</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 22 17" src="https://user-images.githubusercontent.com/63207451/118658641-df36af80-b7ec-11eb-896d-696748e90290.png" />
+<br /></p>
+
+<h3 id="droite-et-plage-de-valeurs">Droite et plage de valeurs</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="o">=</span><span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_hline</span><span class="p">(</span><span class="n">y</span><span class="o">=-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">"dot"</span><span class="p">,</span> <span class="c1"># vline pour verticale
+</span>              <span class="n">annotation_text</span><span class="o">=</span><span class="s">"0.5"</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"bottom right"</span>
+              <span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_hrect</span><span class="p">(</span><span class="n">y0</span><span class="o">=-</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">y1</span><span class="o">=-</span><span class="mf">0.15</span><span class="p">,</span> <span class="c1"># vrect pour verticale
+</span>              <span class="n">annotation_text</span><span class="o">=</span><span class="s">"-0.15 à -0.85"</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"top right"</span><span class="p">,</span>
+              <span class="n">fillcolor</span><span class="o">=</span><span class="s">"blue"</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 23 22" src="https://user-images.githubusercontent.com/63207451/118658767-fd9cab00-b7ec-11eb-8826-36abcfc5b512.png" />
+<br /></p>
+
+<h3 id="interpolation">Interpolation</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">temps_exec</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.40251994132995605</span><span class="p">,</span> <span class="mf">0.014573812484741211</span><span class="p">,</span> <span class="mf">0.23034405708312988</span><span class="p">,</span> <span class="mf">0.4499189853668213</span><span class="p">,</span> <span class="mf">0.8043158054351807</span><span class="p">,</span> <span class="mf">0.21565508842468262</span><span class="p">,</span> <span class="mf">0.10195517539978027</span><span class="p">,</span> <span class="mf">0.35376596450805664</span><span class="p">,</span> <span class="mf">0.5991549491882324</span><span class="p">,</span> <span class="mf">0.08605694770812988</span><span class="p">,</span> <span class="mf">1.1117901802062988</span><span class="p">,</span> <span class="mf">0.9011919498443604</span><span class="p">,</span> <span class="mf">0.3789708614349365</span><span class="p">,</span> <span class="mf">0.8676671981811523</span><span class="p">,</span> <span class="mf">1.3645083904266357</span><span class="p">,</span> <span class="mf">0.8764557838439941</span><span class="p">,</span> <span class="mf">0.13943982124328613</span><span class="p">,</span> <span class="mf">0.05235695838928223</span><span class="p">,</span> <span class="mf">0.1372683048248291</span><span class="p">,</span> <span class="mf">0.29303503036499023</span><span class="p">]</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.4549849033355713</span><span class="p">,</span> <span class="mf">5.4536731243133545</span><span class="p">,</span> <span class="mf">1.2118861675262451</span><span class="p">,</span> <span class="mf">0.7063937187194824</span><span class="p">,</span> <span class="mf">4.295026779174805</span><span class="p">,</span> <span class="mf">11.98727297782898</span><span class="p">,</span> <span class="mf">1.0320260524749756</span><span class="p">,</span> <span class="mf">5.288934707641602</span><span class="p">,</span> <span class="mf">9.74186897277832</span><span class="p">,</span> <span class="mf">1.484644889831543</span><span class="p">,</span> <span class="mf">6.555363893508911</span><span class="p">,</span> <span class="mf">0.8726191520690918</span><span class="p">,</span> <span class="mf">2.6839470863342285</span><span class="p">,</span> <span class="mf">9.980525970458984</span><span class="p">,</span> <span class="mf">0.665977954864502</span><span class="p">,</span> <span class="mf">4.907128095626831</span><span class="p">,</span> <span class="mf">2.7749810218811035</span><span class="p">,</span> <span class="mf">5.096926927566528</span><span class="p">,</span> <span class="mf">11.398299217224121</span><span class="p">,</span> <span class="mf">3.3110921382904053</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="o">=</span><span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                  <span class="n">subplot_titles</span><span class="o">=</span><span class="p">[</span><span class="s">"Courbe bleue"</span><span class="p">,</span> <span class="s">"Courbe rouge"</span><span class="p">],</span>
+                  <span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">}],</span> <span class="p">[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">}]],</span>
+                  <span class="n">shared_xaxes</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                  <span class="p">)</span>
+
+<span class="c1">## figures principales en haut ##
+# Interpolation linéaire
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">l</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'royalblue'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">'dot'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'interpolation linéaire'</span><span class="p">,</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Interpolation par spline
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">l</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'royalblue'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_shape</span><span class="o">=</span><span class="s">'spline'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'interpolation par spline'</span><span class="p">,</span>
+                          <span class="n">hovertemplate</span> <span class="o">=</span> <span class="s">"&lt;br&gt;%{y:.0f}&lt;/br&gt;"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"x"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"y"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">## Titre + axes labels ##
+</span><span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Interpolation"</span><span class="p">)</span>
+<span class="c1">## ligne moyenne ##
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_shape</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"line"</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s">"firebrick"</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">"dot"</span><span class="p">,</span>
+              <span class="n">x0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x1</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y0</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="n">y1</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">## fleche moyenne ##
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_annotation</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">"Moyenne : {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">grouping</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+                   <span class="n">x</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="c1"># arrows' head
+</span>                   <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span>  <span class="c1"># arrows' head
+</span>                   <span class="n">arrowhead</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">showarrow</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">## layout custom ##
+</span><span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span>
+        <span class="n">showline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">showgrid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="n">showticklabels</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">linecolor</span><span class="o">=</span><span class="s">'rgb(204, 204, 204)'</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">ticks</span><span class="o">=</span><span class="s">'outside'</span><span class="p">,</span>
+        <span class="n">tickfont</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">family</span><span class="o">=</span><span class="s">'Arial'</span><span class="p">,</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s">'rgb(82, 82, 82)'</span><span class="p">,</span>
+        <span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_yaxes</span><span class="p">(</span>
+        <span class="n">showgrid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="n">zeroline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">showline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">linecolor</span><span class="o">=</span><span class="s">'rgb(204, 204, 204)'</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">ticks</span><span class="o">=</span><span class="s">'outside'</span><span class="p">,</span>
+        <span class="n">tickfont</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">family</span><span class="o">=</span><span class="s">'Arial'</span><span class="p">,</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s">'rgb(82, 82, 82)'</span><span class="p">,</span>
+    <span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1">## figures principales en bas ##
+# Interpolation linéaire
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">temps_exec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'firebrick'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">'dot'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Interpolation linéaire"</span><span class="p">,</span>
+                          <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Interpolation par spline
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">temps_exec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'firebrick'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_shape</span><span class="o">=</span><span class="s">'spline'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Interpolation par spline"</span><span class="p">,</span>
+                          <span class="n">hovertemplate</span> <span class="o">=</span> <span class="s">"&lt;br&gt;%{y:.3f}&lt;/br&gt;"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">## ligne moyenne ##
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_shape</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"line"</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s">"royalblue"</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">"dot"</span><span class="p">,</span>
+              <span class="n">x0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x1</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y0</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">),</span> <span class="n">y1</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">## fleche moyenne ##
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_annotation</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">"Moyenne : {} sec"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">),</span><span class="mi">2</span><span class="p">),</span> <span class="n">grouping</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+                   <span class="n">x</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="c1"># arrows' head
+</span>                   <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span>  <span class="c1"># arrows' head
+</span>                   <span class="n">arrowhead</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">showarrow</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"x"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"y"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">## layout custom ##
+</span><span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span>
+    <span class="n">showline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">showgrid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">showticklabels</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">linecolor</span><span class="o">=</span><span class="s">'rgb(204, 204, 204)'</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">ticks</span><span class="o">=</span><span class="s">'outside'</span><span class="p">,</span>
+    <span class="n">tickfont</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">family</span><span class="o">=</span><span class="s">'Arial'</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s">'rgb(82, 82, 82)'</span><span class="p">,</span>
+    <span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_yaxes</span><span class="p">(</span>
+    <span class="n">showgrid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">zeroline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">showline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">linecolor</span><span class="o">=</span><span class="s">'rgb(204, 204, 204)'</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">ticks</span><span class="o">=</span><span class="s">'outside'</span><span class="p">,</span>
+    <span class="n">tickfont</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">family</span><span class="o">=</span><span class="s">'Arial'</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s">'rgb(82, 82, 82)'</span><span class="p">,</span>
+    <span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">plot_bgcolor</span><span class="o">=</span><span class="s">'white'</span><span class="p">,</span>
+                  <span class="n">hoverlabel_align</span><span class="o">=</span><span class="s">'right'</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1424" alt="Capture d’écran 2021-05-19 à 14 58 16" src="https://user-images.githubusercontent.com/63207451/118816667-b2e56680-b8b2-11eb-8937-7d631592cd1f.png" />
+<br /></p>
+
+<h2 id="financial-chart">Financial Chart</h2>
+
+<p>Le dataset et disponible dans les fichiers du repo : “EURUSD_5y.csv”</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vert</span> <span class="o">=</span> <span class="s">'#599673'</span>
+<span class="n">rouge</span> <span class="o">=</span> <span class="s">'#e95142'</span>
+<span class="n">noir</span> <span class="o">=</span> <span class="s">'#000'</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'path/EURUSD_5y.csv'</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Close'</span><span class="p">],</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Date'</span><span class="p">],</span>
+    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">noir</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">hovertemplate</span><span class="o">=</span>
+    <span class="s">"Date: %{x}&lt;br&gt;"</span> <span class="o">+</span>
+    <span class="s">"Close: %{y}&lt;br&gt;"</span>
+<span class="p">))</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_hline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">'Close'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+              <span class="n">line_dash</span><span class="o">=</span><span class="s">"dot"</span><span class="p">,</span>
+              <span class="n">annotation_text</span><span class="o">=</span><span class="s">"25 mai 2016"</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"bottom right"</span><span class="p">,</span>
+              <span class="n">line_width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">))</span>
+
+<span class="c1"># montée 1
+</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_vrect</span><span class="p">(</span><span class="n">x0</span><span class="o">=</span><span class="s">'2017-01-01'</span><span class="p">,</span><span class="n">x1</span><span class="o">=</span><span class="s">'2018-02-20'</span><span class="p">,</span>
+              <span class="n">fillcolor</span><span class="o">=</span><span class="n">vert</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+              <span class="n">annotation_text</span><span class="o">=</span><span class="s">'01-01-2017 au 02-20-2018'</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"top left"</span><span class="p">,</span>
+              <span class="n">annotation</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">))</span>
+              <span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_traces</span><span class="p">(</span><span class="n">go</span><span class="p">.</span><span class="n">Indicator</span><span class="p">(</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s">"number+delta"</span><span class="p">,</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="mf">1.239864</span><span class="p">,</span>
+    <span class="n">number</span><span class="o">=</span><span class="p">{</span><span class="s">'prefix'</span><span class="p">:</span> <span class="s">"$"</span><span class="p">,</span> <span class="s">'font_size'</span> <span class="p">:</span> <span class="mi">40</span><span class="p">},</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="p">{</span><span class="s">"reference"</span><span class="p">:</span> <span class="mf">1.052698</span><span class="p">,</span> <span class="s">"valueformat"</span><span class="p">:</span> <span class="s">".6f"</span><span class="p">,</span> <span class="s">"position"</span> <span class="p">:</span> <span class="s">"bottom"</span><span class="p">},</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="s">"text"</span><span class="p">:</span> <span class="s">"Eur/USD"</span><span class="p">},</span>
+    <span class="n">domain</span> <span class="o">=</span> <span class="p">{</span><span class="s">'y'</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="s">'x'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]}))</span>
+
+<span class="c1"># descente 1
+</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_traces</span><span class="p">(</span><span class="n">go</span><span class="p">.</span><span class="n">Indicator</span><span class="p">(</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s">"number+delta"</span><span class="p">,</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="mf">1.077702</span><span class="p">,</span>
+    <span class="n">number</span><span class="o">=</span><span class="p">{</span><span class="s">'prefix'</span><span class="p">:</span> <span class="s">"$"</span><span class="p">,</span> <span class="s">'font_size'</span> <span class="p">:</span> <span class="mi">40</span><span class="p">},</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="p">{</span><span class="s">"reference"</span><span class="p">:</span> <span class="mf">1.237317</span><span class="p">,</span> <span class="s">"valueformat"</span><span class="p">:</span> <span class="s">".6f"</span><span class="p">,</span> <span class="s">"position"</span> <span class="p">:</span> <span class="s">"bottom"</span><span class="p">},</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="s">"text"</span><span class="p">:</span> <span class="s">"Eur/USD"</span><span class="p">},</span>
+    <span class="n">domain</span> <span class="o">=</span> <span class="p">{</span><span class="s">'y'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">],</span> <span class="s">'x'</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.55</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">]}))</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_vrect</span><span class="p">(</span><span class="n">x0</span><span class="o">=</span><span class="s">'2018-04-18'</span><span class="p">,</span><span class="n">x1</span><span class="o">=</span><span class="s">'2020-04-24'</span><span class="p">,</span>
+              <span class="n">fillcolor</span><span class="o">=</span><span class="n">rouge</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+              <span class="n">annotation_text</span><span class="o">=</span><span class="s">'18-04-2018 au 24-04-2020'</span><span class="p">,</span>
+              <span class="n">annotation_position</span><span class="o">=</span><span class="s">"top right"</span><span class="p">,</span>
+              <span class="n">annotation</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">))</span>
+              <span class="p">)</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">template</span><span class="o">=</span><span class="s">'simple_white'</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s">"Euro/USD close"</span><span class="p">,</span>
+    <span class="n">title_text</span><span class="o">=</span><span class="s">"Euro/USD Close"</span>
+<span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>	
+</code></pre></div></div>
+
+<p><br />
+<img width="1405" alt="Capture d’écran 2021-05-25 à 11 31 28" src="https://user-images.githubusercontent.com/63207451/119475385-6637da80-bd4d-11eb-824b-58dc00a7e73a.png" />
+<br /></p>
+
+<h2 id="pie-chart-go">Pie chart Go</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Apple'</span><span class="p">,</span><span class="s">'Samsung'</span><span class="p">,</span><span class="s">'Nokia'</span><span class="p">,</span><span class="s">'Wiko'</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4500</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1053</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_pie</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="c1"># les valeurs sur lesquelles on compte
+</span>            <span class="n">values</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="c1"># ce qui sert à faire les pourcentages
+</span>            <span class="n">pull</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="c1"># represente une fraction de pi, ici on décale le 4e label
+</span>            <span class="n">textposition</span><span class="o">=</span><span class="s">'inside'</span><span class="p">,</span>
+            <span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">hoverinfo</span><span class="o">=</span><span class="s">'label+percent'</span><span class="p">,</span> <span class="c1"># ce qu'on voit avec la souris
+</span>                  <span class="n">textinfo</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="c1"># Ce qu'on lit dans le pie
+</span>                  <span class="n">textfont_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="c1"># taille du texte du pie
+</span>                  <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s">'gold'</span><span class="p">,</span> <span class="s">'mediumturquoise'</span><span class="p">,</span> <span class="s">'darkorange'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">])</span> <span class="c1"># couleur des secteurs
+</span>                  <span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 24 13" src="https://user-images.githubusercontent.com/63207451/118658898-1dcc6a00-b7ed-11eb-924e-83338a8cb4a5.png" />
+<br /></p>
+
+<h2 id="violin-chart">Violin chart</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_violin</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">'sepal_length'</span><span class="p">],</span>
+               <span class="n">points</span><span class="o">=</span><span class="s">'all'</span><span class="p">,</span> <span class="c1"># pour tous les afficher
+</span>               <span class="n">box_visible</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+               <span class="n">meanline_visible</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+               <span class="n">fillcolor</span><span class="o">=</span><span class="s">'lightblue'</span><span class="p">,</span>
+               <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+	       <span class="n">name</span><span class="o">=</span><span class="s">"longueur sepale"</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">yaxis_zeroline</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 26 23" src="https://user-images.githubusercontent.com/63207451/118659221-697f1380-b7ed-11eb-883f-362f7ce4331a.png" />
+<br /></p>
+
+<h2 id="histogrammebar">Histogramme/Bar</h2>
+
+<p>A partir du code suivant, on a 2 types de diagrammes bâtons, qu’on choisi avec fig.add_histogram ou fig.add_bar :</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">=</span><span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_XXXXXX</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s">'sepal_width'</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>add_histogram</th>
+      <th>add_bar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img width="1386" alt="Capture d’écran 2021-05-18 à 15 29 05" src="https://user-images.githubusercontent.com/63207451/118659679-d4304f00-b7ed-11eb-889d-3df60e99a635.png" /></td>
+      <td><img width="1386" alt="Capture d’écran 2021-05-18 à 15 30 26" src="https://user-images.githubusercontent.com/63207451/118659902-004bd000-b7ee-11eb-89d1-11ba6f8da369.png" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="graphiques-en-3d">Graphiques en 3D</h2>
+
+<p><br /></p>
+
+<h3 id="surface">Surface</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">z_data</span> <span class="o">=</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://raw.githubusercontent.com/plotly/datasets/master/volcano.csv"</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">go</span><span class="p">.</span><span class="n">Surface</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z_data</span><span class="p">,</span> <span class="n">colorscale</span><span class="o">=</span><span class="s">'IceFire'</span><span class="p">)])</span> <span class="c1"># Z1 liste de liste
+</span><span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">'Mountain'</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<p align="center">
+<img width="1267" alt="Capture d’écran 2020-11-23 à 22 30 54" src="https://user-images.githubusercontent.com/63207451/100017741-ad173880-2ddb-11eb-8643-78795b0e3e57.png" />
+</p>
+<p><br /></p>
+
+<h3 id="nuage-de-points">Nuage de points</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">'sepal_length'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'sepal_width'</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="s">'petal_width'</span><span class="p">,</span>
+              <span class="n">color</span><span class="o">=</span><span class="s">'species'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s">'petal_length'</span><span class="p">,</span> <span class="n">size_max</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span><span class="n">symbol</span><span class="o">=</span><span class="s">'species'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+<p align="center">
+<img width="1267" alt="Capture d’écran 2020-11-23 à 22 31 34" src="https://user-images.githubusercontent.com/63207451/100017787-bbfdeb00-2ddb-11eb-9ca5-603cca91a999.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="réseau-de-neurones">réseau de neurones</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># liens
+</span><span class="n">edge_x</span><span class="p">,</span> <span class="n">edge_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,],</span>\
+                 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,]</span>
+<span class="c1"># None pour couper la ligne
+</span><span class="n">edge_trace</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">edge_x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">edge_y</span><span class="p">,</span>
+    <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#000000'</span><span class="p">),</span>
+    <span class="n">hoverinfo</span><span class="o">=</span><span class="s">'none'</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">)</span>
+
+<span class="c1"># traçage des noeuds
+</span><span class="n">node_x</span><span class="p">,</span> <span class="n">node_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">4.5</span><span class="p">],</span>\
+                 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">node_trace</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">node_x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">node_y</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s">'markers'</span><span class="p">,</span>
+    <span class="n">hoverinfo</span><span class="o">=</span><span class="s">'text'</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="s">'green'</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+        <span class="n">line_width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">))</span>
+
+<span class="c1"># affichage
+</span><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">edge_trace</span><span class="p">,</span> <span class="n">node_trace</span><span class="p">],</span>
+             <span class="n">layout</span><span class="o">=</span><span class="n">go</span><span class="p">.</span><span class="n">Layout</span><span class="p">(</span>
+                <span class="n">titlefont_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+                <span class="n">showlegend</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">hovermode</span><span class="o">=</span><span class="s">'closest'</span><span class="p">,</span>
+                <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">t</span><span class="o">=</span><span class="mi">40</span><span class="p">),</span>
+                <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">showgrid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">zeroline</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">showticklabels</span><span class="o">=</span><span class="bp">False</span><span class="p">),</span>
+                <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">showgrid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">zeroline</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">showticklabels</span><span class="o">=</span><span class="bp">False</span><span class="p">),</span>
+                <span class="n">yaxis_range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+                <span class="n">xaxis_range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+             <span class="p">)</span>
+             <span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<p align="center">
+<img width="1014" alt="Capture d’écran 2021-04-30 à 13 24 07" src="https://user-images.githubusercontent.com/63207451/116688699-5aa7fc80-a9b7-11eb-8862-1a9307be0412.png" />
+</p>
+
+<h2 id="regression-surfacique-en-3d">Regression surfacique en 3D</h2>
+
+<p>Le contenu de df_final est disponible dans les fichiers du github.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+
+<span class="n">mesh_size</span> <span class="o">=</span> <span class="p">.</span><span class="mi">02</span>
+<span class="n">margin</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df_final</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s">'x'</span><span class="p">,</span> <span class="s">'y'</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'hauteurs'</span><span class="p">]</span>
+
+<span class="c1"># Modele
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">SVR</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># mesh grid 
+</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="nb">min</span><span class="p">()</span> <span class="o">-</span> <span class="n">margin</span><span class="p">,</span> <span class="n">X</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="nb">max</span><span class="p">()</span> <span class="o">+</span> <span class="n">margin</span>
+<span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">y</span><span class="p">.</span><span class="nb">min</span><span class="p">()</span> <span class="o">-</span> <span class="n">margin</span><span class="p">,</span> <span class="n">X</span><span class="p">.</span><span class="n">y</span><span class="p">.</span><span class="nb">max</span><span class="p">()</span> <span class="o">+</span> <span class="n">margin</span>
+<span class="nb">xrange</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">mesh_size</span><span class="p">)</span>
+<span class="n">yrange</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">mesh_size</span><span class="p">)</span>
+<span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="nb">xrange</span><span class="p">,</span> <span class="n">yrange</span><span class="p">)</span>
+
+<span class="c1"># On run le modele
+</span><span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="p">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="p">.</span><span class="n">ravel</span><span class="p">()])</span>
+<span class="n">pred</span> <span class="o">=</span> <span class="n">pred</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># plot
+</span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">'x'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'y'</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="s">'hauteurs'</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_traces</span><span class="p">(</span><span class="n">go</span><span class="p">.</span><span class="n">Surface</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nb">xrange</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">yrange</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="n">pred</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'pred_surface'</span><span class="p">))</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<p align="center">
+<img width="1284" alt="Capture d’écran 2021-05-18 à 10 56 25" src="https://user-images.githubusercontent.com/63207451/118622535-b2bc6c80-b7c7-11eb-8107-0b53b7437e11.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="maps">Maps</h2>
+
+<h3 id="ligne-entre-miami-et-chicago">Ligne entre Miami et Chicago</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">add_scattermapbox</span><span class="p">(</span>
+    <span class="c1"># on relie Miami (lat = 25.7616798, long = -80.1917902) et Chicago (lat = 41.8119, long = -87.6873)
+</span>    <span class="n">mode</span> <span class="o">=</span> <span class="s">"markers+lines"</span><span class="p">,</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">80.1917902</span><span class="p">,</span> <span class="o">-</span><span class="mf">87.6873</span><span class="p">],</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="p">[</span><span class="mf">25.7616798</span><span class="p">,</span> <span class="mf">41.8119</span><span class="p">],</span>
+    <span class="n">marker</span> <span class="o">=</span> <span class="p">{</span><span class="s">'size'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+              <span class="s">'color'</span><span class="p">:</span> <span class="s">'firebrick'</span><span class="p">,</span>
+              <span class="p">})</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">margin</span> <span class="o">=</span><span class="p">{</span><span class="s">'l'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'t'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'r'</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span> <span class="c1"># marge left, top, bottom, right
+</span>    <span class="n">mapbox</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'center'</span><span class="p">:</span> <span class="p">{</span><span class="s">'lon'</span><span class="p">:</span> <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="s">'lat'</span><span class="p">:</span> <span class="mi">40</span><span class="p">},</span>
+        <span class="s">'style'</span><span class="p">:</span> <span class="s">"stamen-terrain"</span><span class="p">,</span>
+        <span class="s">'zoom'</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1413" alt="Capture d’écran 2021-05-19 à 10 51 17" src="https://user-images.githubusercontent.com/63207451/118784252-24f88400-b890-11eb-9ade-6912e2479c95.png" />
+<br /></p>
+
+<h3 id="air-colorée-sur-une-carte-triangle-des-bermudes">Air colorée sur une carte, triangle des bermudes</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="c1"># les 3 points :
+# Bermudes : lat = 32.320236, long = -64.7740215
+# Miami : lat = 25.7616798, long = -80.1917902
+# San Juan : lat = 18.2232855, long = -66.5927315
+</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">add_scattermapbox</span><span class="p">(</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">"toself"</span><span class="p">,</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">64.7740215</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.1917902</span><span class="p">,</span> <span class="o">-</span><span class="mf">66.5927315</span><span class="p">],</span> <span class="n">lat</span> <span class="o">=</span> <span class="p">[</span><span class="mf">32.320236</span><span class="p">,</span> <span class="mf">25.7616798</span><span class="p">,</span> <span class="mf">18.2232855</span><span class="p">],</span>
+    <span class="n">marker</span> <span class="o">=</span> <span class="p">{</span> <span class="s">'size'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'color'</span><span class="p">:</span> <span class="s">"red"</span> <span class="p">})</span>
+
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">margin</span> <span class="o">=</span><span class="p">{</span><span class="s">'l'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'t'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'r'</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">mapbox</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'style'</span><span class="p">:</span> <span class="s">"stamen-terrain"</span><span class="p">,</span>
+        <span class="s">'center'</span><span class="p">:</span> <span class="p">{</span><span class="s">'lon'</span><span class="p">:</span> <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="s">'lat'</span><span class="p">:</span> <span class="mi">25</span> <span class="p">},</span>
+        <span class="s">'zoom'</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="n">showlegend</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br />
+<img width="1413" alt="Capture d’écran 2021-05-19 à 10 51 55" src="https://user-images.githubusercontent.com/63207451/118784355-3b064480-b890-11eb-89a5-c2a27cdd1370.png" />
+<br /></p>
+
+<h3 id="scatter-sur-une-map">Scatter sur une map</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">gapminder</span><span class="p">().</span><span class="n">query</span><span class="p">(</span><span class="s">"year == 2007"</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_geo</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">locations</span><span class="o">=</span><span class="s">"iso_alpha"</span><span class="p">,</span> <span class="c1"># on situe le pays avec son raccourci international
+</span>                     <span class="n">color</span><span class="o">=</span><span class="s">"continent"</span><span class="p">,</span> <span class="c1"># on colorie par continent
+</span>                     <span class="n">hover_name</span><span class="o">=</span><span class="s">"country"</span><span class="p">,</span> <span class="c1"># ce qu'on voit avec la souris
+</span>                     <span class="n">size</span><span class="o">=</span><span class="s">"gdpPercap"</span><span class="p">,</span> <span class="c1"># la taille des points dépend du pib du pays
+</span>                     <span class="n">projection</span><span class="o">=</span><span class="s">"natural earth"</span> <span class="c1"># type de carte
+</span>                     <span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br />
+<img width="1413" alt="Capture d’écran 2021-05-19 à 10 53 23" src="https://user-images.githubusercontent.com/63207451/118784620-756fe180-b890-11eb-8f0f-c2f14f6c1d70.png" />
+<br /></p>
+
+<h3 id="scatter-avec-ensemble-de-points">Scatter avec ensemble de points</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">token</span> <span class="o">=</span> <span class="s">'your token from https://studio.mapbox.com'</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
+	
+<span class="n">fig</span><span class="p">.</span><span class="n">add_scattermapbox</span><span class="p">(</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s">"markers"</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'long'</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">))),</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'lat'</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">))),</span>
+    <span class="n">marker</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+              <span class="n">color</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'richter'</span><span class="p">],</span>
+              <span class="n">showscale</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+              <span class="n">colorscale</span><span class="o">=</span><span class="s">"jet"</span>
+    <span class="p">),</span>
+    <span class="n">hovertemplate</span><span class="o">=</span>
+    <span class="s">"longitude: %{lon}&lt;br&gt;"</span> <span class="o">+</span>
+    <span class="s">"latitude: %{lat}&lt;br&gt;"</span><span class="o">+</span>
+    <span class="s">"intensité: %{marker.color}"</span>  <span class="p">,</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">margin</span> <span class="o">=</span><span class="p">{</span><span class="s">'l'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'t'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'b'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s">'r'</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span>
+    <span class="n">mapbox</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'accesstoken'</span><span class="p">:</span> <span class="n">token</span><span class="p">,</span>
+        <span class="s">'style'</span><span class="p">:</span> <span class="s">'light'</span><span class="p">,</span>
+        <span class="s">'center'</span><span class="p">:</span> <span class="p">{</span><span class="s">'lon'</span><span class="p">:</span> <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="s">'lat'</span><span class="p">:</span> <span class="mi">25</span> <span class="p">},},</span>
+<span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br />
+<img width="1426" alt="Capture d’écran 2021-05-22 à 23 16 19" src="https://user-images.githubusercontent.com/63207451/119240977-c105e200-bb53-11eb-885f-7aaf7dc59c4e.png" /></p>
+
+<p><br /></p>
+
+<h1 id="plotlyfigure_factory">Plotly.figure_factory</h1>
+
+<p><strong>Plotly.figure_factory</strong> est la partie de plotly qui intervient quand l’utilisation de Go et Px devient impossible.</p>
+
+<h2 id="heatmap-avec-annotations">Heatmap avec annotations</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">z</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Équipe A'</span><span class="p">,</span> <span class="s">'Équipe B'</span><span class="p">,</span> <span class="s">'Équipe C'</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Match 3'</span><span class="p">,</span> <span class="s">'Match 2'</span><span class="p">,</span> <span class="s">'Match 1'</span><span class="p">]</span>
+
+<span class="n">z_text</span> <span class="o">=</span> <span class="p">[[</span><span class="s">'Perdu'</span><span class="p">,</span> <span class="s">'Perdu'</span><span class="p">,</span> <span class="s">'Gagné'</span><span class="p">],</span>
+          <span class="p">[</span><span class="s">'Gagné'</span><span class="p">,</span> <span class="s">'Perdu'</span><span class="p">,</span> <span class="s">'Gagné'</span><span class="p">],</span>
+          <span class="p">[</span><span class="s">'Gagné'</span><span class="p">,</span> <span class="s">'Perdu'</span><span class="p">,</span> <span class="s">'Perdu'</span><span class="p">]]</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ff</span><span class="p">.</span><span class="n">create_annotated_heatmap</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">annotation_text</span><span class="o">=</span><span class="n">z_text</span><span class="p">,</span> <span class="n">colorscale</span><span class="o">=</span><span class="s">'gnbu'</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1413" alt="Capture d’écran 2021-05-19 à 12 14 27" src="https://user-images.githubusercontent.com/63207451/118796290-c33e1700-b89b-11eb-8705-76939c7c381b.png" />
+<br /></p>
+
+<h2 id="dendrogrames">Dendrogrames</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ff</span><span class="p">.</span><span class="n">create_dendrogram</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1080</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">675</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1133" alt="Capture d’écran 2021-05-19 à 12 15 08" src="https://user-images.githubusercontent.com/63207451/118796388-dbae3180-b89b-11eb-95be-b8b2ca1f4caf.png" />
+<br /></p>
+
+<h2 id="champ-vectoriel">Champ vectoriel</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">.</span><span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">.</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">u</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">x</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ff</span><span class="p">.</span><span class="n">create_quiver</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-19 à 12 15 34" src="https://user-images.githubusercontent.com/63207451/118796485-f2ed1f00-b89b-11eb-9fd7-4904de35c834.png" />
+<br /></p>
+
+<h2 id="lignes-de-flux">Lignes de flux</h2>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="n">Y</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">X</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">Y</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">X</span> <span class="o">+</span> <span class="p">(</span><span class="n">Y</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ff</span><span class="p">.</span><span class="n">create_streamline</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">arrow_scale</span><span class="o">=</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br />
+<img width="1386" alt="Capture d’écran 2021-05-19 à 12 16 29" src="https://user-images.githubusercontent.com/63207451/118796606-0dbf9380-b89c-11eb-8642-a9e7d3d86cf4.png" />
+<br /></p>
+
+<h2 id="création-dun-tableau">Création d’un tableau</h2>
+
+<h3 id="à-la-main-avec-latex">À la main avec LaTex</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data_matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="s">'Forme factorisée'</span><span class="p">,</span> <span class="s">'Forme developpée'</span><span class="p">],</span>
+               <span class="p">[</span><span class="s">'$(a+b)^{2}$'</span><span class="p">,</span> <span class="s">'$a^{2}+2ab+b^{2}$'</span><span class="p">],</span>
+               <span class="p">[</span><span class="s">'$(a-b)^{2}$'</span><span class="p">,</span> <span class="s">'$a^{2}-2ab+b^{2}$'</span><span class="p">],</span>
+               <span class="p">[</span><span class="s">'$(a+b)(a-b)$'</span><span class="p">,</span> <span class="s">'$a^{2}-b^{2}$'</span><span class="p">]]</span>
+
+<span class="n">fig</span> <span class="o">=</span>  <span class="n">ff</span><span class="p">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">data_matrix</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">include_mathjax</span><span class="o">=</span><span class="s">'cdn'</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br />
+<img width="1424" alt="Capture d’écran 2021-05-19 à 12 27 17" src="https://user-images.githubusercontent.com/63207451/118798097-8f63f100-b89d-11eb-8b50-e6ec0f4f66c3.png" />
+<br /></p>
+
+<h3 id="à-partir-dun-dataframe-pandas">À partir d’un dataframe pandas</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="o">=</span><span class="n">ff</span><span class="p">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br />
+<img width="1424" alt="Capture d’écran 2021-05-19 à 12 27 49" src="https://user-images.githubusercontent.com/63207451/118798163-a1459400-b89d-11eb-923c-d30c47b77c69.png" />
+<br /></p>
+
+<p><br /></p>
+<p align="center"><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Plotly-tutorial---Data-analysis-and-Machine-learning"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29" /></a></p>
+
+<p class="box-note"><strong>Note:</strong> Un article sur l’utilisation plus détaillée de plotly sera bientot disponible.</p>
+
+
+  </div>
+
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-4 sm-width-full left mr-lg-4 mt-3">
+    <a class="no-underline border-top-thin py-1 block" href="http://localhost:4000/2020/07/20/epidemiologie-post.html">
+      <span class="h5 bold text-accent">Previous</span>
+      <p class="bold h3 link-primary mb-1">Simulation épidémiologique</p>
+      <p>Ce projet à pour objectifs de modéliser une épidémie, et de simuler sa propagation au sein d’une population d’individus. Le...</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-4 sm-width-full left mt-3">
+    <a class="no-underline border-top-thin py-1 block" href="http://localhost:4000/2021/05/02/Galerie-de-Datasets.html">
+      <span class="h5 bold text-accent">Next</span>
+      <p class="bold h3 link-primary mb-1">Galerie de Datasets</p>
+      <p>La **Data Science** requiert l'utilisation de base de données/ datasets pour pouvoir créer des modèles, analyser des tendances, etc. Mais...</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="border-top-thin clearfix mt-2 mt-lg-4">
+  <div class="container mx-auto px-2">
+    <p class="col-8 sm-width-full left py-2 mb-0">This project is maintained by <a class="text-accent" href="https://github.com/antonin-lfv">antonin-lfv</a></p>
+    <ul class="list-reset right clearfix sm-width-full py-2 mb-2 mb-lg-0">
+      <li class="inline-block mr-1">
+      </li>
+      <li class="inline-block">
+        <a class="github-button" href="https://github.com/antonin-lfv/antonin-lfv.github.io" data-icon="octicon-star" data-count-href="antonin-lfv//stargazers" data-count-api="/repos/antonin-lfv/#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star antonin-lfv/ on GitHub">Star</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

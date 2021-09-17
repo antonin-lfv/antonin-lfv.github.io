@@ -34,3 +34,6 @@ markdown: kramdown
 
 # theme
 remote_theme: broccolini/swiss
+
+# options
+timezone: "Europe/Paris"

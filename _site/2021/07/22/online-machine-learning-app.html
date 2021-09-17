@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Machine Learning Web app</title>
+  <meta name="description" content="Cette application web developpée en python et publiée grâce à Streamlit a pour but d’accélérer l’exploration des données, et la mise en place d’algorithmes d...">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2021/07/22/online-machine-learning-app.html">
+  <link rel="alternate" type="application/rss+xml" title="Antonin LEFEVRE" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="border-bottom-thick px-2 clearfix">
+  <div class="left sm-width-full py-1 mt-1 mt-lg-0">
+    <a class="align-middle link-primary text-accent" href="/">
+      Antonin LEFEVRE
+    </a>
+  </div>
+  <div class="right sm-width-full">
+    <ul class="list-reset mt-lg-1 mb-2 mb-lg-1">
+      
+        
+        <li class="inline-block">
+          <a class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2" href="/about/">
+            About
+          </a>
+        </li>
+        
+      
+        
+        <li class="inline-block">
+          <a class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2" href="/certifications/">
+            Certifications
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</header>
+
+
+    <div>
+      <article class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="h0 col-9 sm-width-full py-4 mt-3 inline-block" itemprop="name headline">Machine Learning Web app</h1>
+  <div class="col-4 sm-width-full mt-1 border-top-thin ">
+    <p class="mb-3 py-2 bold h4"><time datetime="2021-07-22T00:00:00+02:00" itemprop="datePublished">Jul 22, 2021</time></p>
+  </div>
+
+  <div class="prose" itemprop="articleBody">
+      <p>Cette application web developpée en python et publiée grâce à Streamlit a pour but d’accélérer l’exploration des données, et la mise en place d’algorithmes de machine learning. 
+<br />
+Elle est basée sur un système multi-pages, qui conserve les widgets entre celles-ci grâce à un système de Session. Le principe est simple, vous déposez votre dataset sous le format csv ou xls sur le volet gauche, puis à partir de là, il faudra se rendre dans la section <b>Dataset</b> pour l’importer, et effectuer des réglages sur celui-ci comme ajouter un séparateur, transformer des colonnes en Time-Series, ou supprimer des symboles qui empêchent un typage en float. 
+<br />
+Puis, libre à vous de faire votre analyse des données, observer les colonnes, leurs statistiques, les corrélations entre elles. Depuis la <b>section graphiques </b> vous pourrez tracer des graphiques avec des points, des courbes, des histogrammes ou même des coordonnées géographiques et effectuer des regressions linéaires et polynomiales. 
+<br />
+Enfin, vous avez la possibilité de créer des modèles de machine learning ou de deep learning rapidement.<br />
+Dans la section ML, vous sera possible d’effectuer des KNN, K-Means, SVM, PCA et UMAP. Quant à la section DL, vous avez la possibilité de faire du transfert de style neuronal, avec plusieurs images déjà disponibles. 
+<br />
+En cas de bug important, veuillez me le signaler pour qu’il puisse être corrigé le plus rapidement possible.</p>
+
+<p><br /></p>
+
+<p>L’application est disponible <a href="https://share.streamlit.io/antonin-lfv/online_preprocessing_for_ml/main.py">ici</a>.</p>
+
+<h1 id="index">Index</h1>
+
+<ol>
+  <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Interface">Interface</a>
+    <ul>
+      <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Accueil">Accueil</a></li>
+      <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Chargement-du-dataset">Chargement du dataset</a></li>
+      <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Analyse-des-colonnes">Analyse des colonnes</a></li>
+      <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Matrice-de-corrélation">Matrice de corrélation</a></li>
+      <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Section-graphiques">Section graphiques</a></li>
+      <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Machine-Learning">Machine Learning</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#k-nearest-neighbors">k-nearest neighbors</a></li>
+          <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#K-Means">k-Means</a></li>
+          <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Support-Vector-Machine">Support Vector Machine</a></li>
+          <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#PCA">PCA</a></li>
+          <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#UMAP">UMAP</a></li>
+        </ul>
+      </li>
+      <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Deep-Learning">Deep Learning</a>
+        <ul>
+          <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#Transfert-de-style-neuronal">Transfert de style neuronal</a></li>
+          <li><a href="https://antonin-lfv.github.io/2021-07-22-online-machine-learning-app/#GAN">GAN</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h1 id="interface">Interface</h1>
+
+<h2 id="accueil">Accueil</h2>
+
+<p>En arrivant sur le DashBoard, vous verrez ceci :
+<br /></p>
+
+<p align="center">
+  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 56 51" src="https://user-images.githubusercontent.com/63207451/126678415-b7980d3d-1364-45d2-9b88-4b73aae43ca6.png" />
+</p>
+
+<p><br /></p>
+
+<p><br />
+Il vous faut ici choisir un dataset csv ou excel de votre machine, en cliquant sur le bouton <b>Browse files</b>. Une fois cela effectuée, le menu lateral apparaîtra. Pour ensuite pouvoir utiliser votre fichier, il faut vous rendre à la page 2, nommée <b>Chargement du dataset</b>. <br /></p>
+
+<h2 id="chargement-du-dataset">Chargement du dataset</h2>
+
+<p>Sur cette page, plusieurs modifications sont possibles sur le dataset :</p>
+<ul>
+  <li>Ajout d’un séparateur si besoin</li>
+  <li>Conversion de colonnes en Time-Series</li>
+  <li>Conversion de colonnes contenant des symboles monétaires en float</li>
+  <li>Conversion de colonnes de strings de nombres à virgules en float <br /></li>
+</ul>
+
+<p>De plus, les caractéristiques principales de ce dataset sont affichées sur le coté.<br /></p>
+
+<p><br />
+<br /></p>
+
+<p align="center">
+  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 57 47" src="https://user-images.githubusercontent.com/63207451/126678557-f687704b-535d-47bf-801b-3008c926e1ef.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="analyse-des-colonnes">Analyse des colonnes</h2>
+
+<p><br /></p>
+<p align="center">
+  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 58 24" src="https://user-images.githubusercontent.com/63207451/126678641-70c74b1d-0bde-4215-91ce-28ec5d9e5ac7.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="matrice-de-corrélation">Matrice de corrélation</h2>
+
+<p><br /></p>
+<p align="center">
+  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 59 36" src="https://user-images.githubusercontent.com/63207451/126678828-a2d20126-694c-4c9b-9613-ee1d6a3ef466.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="section-graphiques">Section graphiques</h2>
+
+<p><br /></p>
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 02 28" src="https://user-images.githubusercontent.com/63207451/126679232-d2968749-9b57-40ba-9543-5410342abd3c.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="machine-learning">Machine Learning</h2>
+
+<p><br /></p>
+
+<h3 id="k-nearest-neighbors">k-nearest neighbors</h3>
+
+<p><br /></p>
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 13 06" src="https://user-images.githubusercontent.com/63207451/126680576-11993544-5da2-4755-b235-ed513c0aa9a3.png" />
+</p>
+
+<p><br /></p>
+
+<h3 id="k-means">k-Means</h3>
+
+<p><br /></p>
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 13 58" src="https://user-images.githubusercontent.com/63207451/126680672-2e178b35-d8fc-49e5-b179-a4fdd30402c0.png" />
+</p>
+
+<p><br /></p>
+
+<h3 id="support-vector-machine">Support Vector Machine</h3>
+
+<p><br /></p>
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 15 01" src="https://user-images.githubusercontent.com/63207451/126680798-816687fd-eac9-4d4f-a817-25f9ee9876d1.png" />
+</p>
+
+<p><br /></p>
+
+<h3 id="pca">PCA</h3>
+
+<p><br /></p>
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 16 15" src="https://user-images.githubusercontent.com/63207451/126680981-247d81d6-49f4-45e9-8c40-01526a237e58.png" />
+</p>
+
+<p><br /></p>
+
+<h3 id="umap">UMAP</h3>
+
+<p><br /></p>
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 16 40" src="https://user-images.githubusercontent.com/63207451/126681039-aa71207a-96ae-4110-80e2-9ab8a4e59b2e.png" />
+</p>
+
+<p><br /></p>
+
+<h2 id="deep-learning">Deep Learning</h2>
+
+<p><br /></p>
+
+<h3 id="transfert-de-style-neuronal">Transfert de style neuronal</h3>
+
+<p><br /></p>
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 17 12" src="https://user-images.githubusercontent.com/63207451/126681123-f05da0b5-e0d8-496c-8c92-ef8ae10caccb.png" />
+</p>
+
+<p><br /></p>
+
+<h3 id="gan">GAN</h3>
+
+<p><br /></p>
+
+<p>Cette section est en développement.</p>
+
+<p align="center">
+<img width="1439" alt="Capture d’écran 2021-07-22 à 19 17 34" src="https://user-images.githubusercontent.com/63207451/126681154-fa50acbe-766b-44a1-89a6-43288f06d6f6.png" />
+</p>
+
+<p><br /></p>
+
+
+  </div>
+
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-4 sm-width-full left mr-lg-4 mt-3">
+    <a class="no-underline border-top-thin py-1 block" href="http://localhost:4000/2021/07/20/build-streamlit-app.html">
+      <span class="h5 bold text-accent">Previous</span>
+      <p class="bold h3 link-primary mb-1">Build Streamlit apps</p>
+      <p>Cet article va vous montrer pas à pas comment créer votre première application grâce à Streamlit, et comment la mettre...</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-4 sm-width-full left mt-3">
+    <a class="no-underline border-top-thin py-1 block" href="http://localhost:4000/2021/08/20/cybersecu-gitbook.html">
+      <span class="h5 bold text-accent">Next</span>
+      <p class="bold h3 link-primary mb-1">Cybersecurity Gitbook</p>
+      <p>Ce Gitbook rassemble diverses techniques de hacking, dans plusieurs domaines, notamment dans le but de savoir se protéger sur internet...</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="border-top-thin clearfix mt-2 mt-lg-4">
+  <div class="container mx-auto px-2">
+    <p class="col-8 sm-width-full left py-2 mb-0">This project is maintained by <a class="text-accent" href="https://github.com/antonin-lfv">antonin-lfv</a></p>
+    <ul class="list-reset right clearfix sm-width-full py-2 mb-2 mb-lg-0">
+      <li class="inline-block mr-1">
+      </li>
+      <li class="inline-block">
+        <a class="github-button" href="https://github.com/antonin-lfv/antonin-lfv.github.io" data-icon="octicon-star" data-count-href="antonin-lfv//stargazers" data-count-api="/repos/antonin-lfv/#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star antonin-lfv/ on GitHub">Star</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

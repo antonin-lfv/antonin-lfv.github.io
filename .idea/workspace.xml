@@ -20,7 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="2.1">
-      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2020-05-10-dashboard-stockprices.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2020-07-20-epidemiologie-post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2021-05-2-Galerie-de-Datasets.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2021-07-20-build-streamlit-app.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2021-07-22-online-machine-learning-app.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2021-08-20-cybersecu-gitbook.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/2020/05/10/dashboard-stockprices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/2020/07/20/epidemiologie-post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/2020/11/17/plotly-tuto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/2021/05/02/Galerie-de-Datasets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/2021/07/20/build-streamlit-app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/2021/07/22/online-machine-learning-app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/2021/08/20/cybersecu-gitbook.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/exemple_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/exemple_post.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-08-05-welcome-to-jekyll.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-08-07-bacoms-are-delicious.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-08-3-potatoes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-04-markdown-sample.md" beforeDir="false" afterPath="$PROJECT_DIR$/exemple_post.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2016/08/07/bacoms-are-delicious.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2016/09/04/markdown-sample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/certifications/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/certifications/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/writing/2015/11/25/potatoes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/writing/2016/08/06/welcome-to-jekyll.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,22 +90,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/_includes" />
       <recent name="$PROJECT_DIR$/assets/img" />
       <recent name="$PROJECT_DIR$/assets/img/certif" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/_sass" />
       <recent name="$PROJECT_DIR$/assets/img/certif" />
       <recent name="$PROJECT_DIR$/assets/img" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,14 +160,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="6891000" />
-    </task>
-    <task id="LOCAL-00208" summary="color">
-      <created>1628673456533</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1628673456534</updated>
+      <workItem from="1631873347674" duration="7561000" />
     </task>
     <task id="LOCAL-00209" summary="color">
       <created>1628673490324</created>
@@ -477,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631883990235</updated>
     </task>
-    <option name="localTasksCounter" value="257" />
+    <task id="LOCAL-00257" summary="2.1">
+      <created>1631884144342</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1631884144342</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
