@@ -42,7 +42,7 @@ Simulation effectuée avec des valeurs de paramètres standards. <br/>
 
 # Index
 
-1. [Librairies](https://antonin-lfv.github.io/2020/07/20/epidemiologie-post.html/#librairies)
+1. [Librairies](https://antonin-lfv.github.io/2020/07/20/epidemiologie-post.html#librairies)
 2. [Le modèle python](https://antonin-lfv.github.io/2020-07-20-epidemiologie-post/#le-modèle-python)
     1. [Simulation avec différents taux d'infection](https://antonin-lfv.github.io/2020-07-20-epidemiologie-post/#Simulation-avec-différents-taux-dinfection)
     2. [Simulation avec différentes létalités](https://antonin-lfv.github.io/2020-07-20-epidemiologie-post/#simulation-avec-différentes-létalités)
