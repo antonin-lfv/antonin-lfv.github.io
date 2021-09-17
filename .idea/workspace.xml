@@ -138,13 +138,7 @@
       <workItem from="1631908809043" duration="67000" />
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
-    </task>
-    <task id="LOCAL-00250" summary="2.1">
-      <created>1631882726289</created>
-      <option name="number" value="00250" />
-      <option name="presentableId" value="LOCAL-00250" />
-      <option name="project" value="LOCAL" />
-      <updated>1631882726289</updated>
+      <workItem from="1631910727510" duration="319000" />
     </task>
     <task id="LOCAL-00251" summary="2.1">
       <created>1631882908592</created>
@@ -482,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631909422582</updated>
     </task>
-    <option name="localTasksCounter" value="299" />
+    <task id="LOCAL-00299" summary="plotly charts">
+      <created>1631911015028</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1631911015028</updated>
+    </task>
+    <option name="localTasksCounter" value="300" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="br" />
     <MESSAGE value="br test" />
     <MESSAGE value="google analytics" />
     <MESSAGE value="google analytics - test" />
@@ -547,7 +547,8 @@
     <MESSAGE value="color theme" />
     <MESSAGE value="version 2.2" />
     <MESSAGE value="embed plotly charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="embed plotly charts" />
+    <MESSAGE value="plotly charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="plotly charts" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
