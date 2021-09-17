@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="2.1" />
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="version 2.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,14 +131,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="9897000" />
-    </task>
-    <task id="LOCAL-00224" summary="post">
-      <created>1630949769090</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1630949769090</updated>
+      <workItem from="1631873347674" duration="10336000" />
     </task>
     <task id="LOCAL-00225" summary="init">
       <created>1630950450638</created>
@@ -476,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631887553053</updated>
     </task>
-    <option name="localTasksCounter" value="273" />
+    <task id="LOCAL-00273" summary="version 2.2">
+      <created>1631888169686</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1631888169686</updated>
+    </task>
+    <option name="localTasksCounter" value="274" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +516,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="text" />
     <MESSAGE value="web app ml" />
     <MESSAGE value="épidémio" />
     <MESSAGE value="br" />
@@ -541,7 +540,8 @@
     <MESSAGE value="init 2.1" />
     <MESSAGE value="post" />
     <MESSAGE value="2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.1" />
+    <MESSAGE value="version 2.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2.2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
