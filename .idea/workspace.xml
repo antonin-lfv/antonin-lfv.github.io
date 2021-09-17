@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="version 2.2">
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts">
       <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/3d_px.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/aire_map.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/_includes/plotly_tuto/ajout_annotations.html" afterDir="false" />
@@ -186,14 +186,7 @@
       <workItem from="1631898870022" duration="4768000" />
       <workItem from="1631907531507" duration="499000" />
       <workItem from="1631908809043" duration="67000" />
-      <workItem from="1631908978200" duration="148000" />
-    </task>
-    <task id="LOCAL-00249" summary="2.1">
-      <created>1631882716700</created>
-      <option name="number" value="00249" />
-      <option name="presentableId" value="LOCAL-00249" />
-      <option name="project" value="LOCAL" />
-      <updated>1631882716700</updated>
+      <workItem from="1631908978200" duration="267000" />
     </task>
     <task id="LOCAL-00250" summary="2.1">
       <created>1631882726289</created>
@@ -531,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631903264259</updated>
     </task>
-    <option name="localTasksCounter" value="298" />
+    <task id="LOCAL-00298" summary="embed plotly charts">
+      <created>1631909422581</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1631909422582</updated>
+    </task>
+    <option name="localTasksCounter" value="299" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,7 +571,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="épidémio" />
     <MESSAGE value="br" />
     <MESSAGE value="br test" />
     <MESSAGE value="google analytics" />
@@ -596,7 +595,8 @@
     <MESSAGE value="2.1" />
     <MESSAGE value="color theme" />
     <MESSAGE value="version 2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 2.2" />
+    <MESSAGE value="embed plotly charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="embed plotly charts" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
