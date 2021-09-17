@@ -70,7 +70,11 @@ In last year *- University of Reims - France*
 |HTML/CSS/JS|⭐️⭐️⭐|Web|
 |PHP|⭐️⭐️⭐|Web, Database|
 
+<br>
+
 Python is my "native" programming language for over 4 years. I used it first in school, for mathematics. And then I spread my skills in Artificial Intelligence, and Data Science domains.
+
+<br>
 
 ### 🗣 Languages
 
