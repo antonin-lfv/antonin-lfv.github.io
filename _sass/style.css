@@ -105,7 +105,7 @@ code {
   border-left: 8px solid #fec92e;
   font-style: italic; }
   .prose blockquote p {
-    font-size: 18px; }
+    font-size: 13px; }
   @media (min-width: 52em) {
     .prose blockquote {
       padding-left: 32px;
