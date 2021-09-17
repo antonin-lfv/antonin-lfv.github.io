@@ -65,14 +65,14 @@ a:hover {
   text-decoration: underline; }
 
 pre {
-  border-left: 8px solid #fec92e;
+  border-left: 8px solid #fa8224;
   margin: 32px 0;
   padding-left: 16px;
   width: 75%;
   overflow-x: auto; }
 
 code {
-  color: #777;
+  color: #767676;
   font-size: 16px;
   padding: 1px 0; }
 
@@ -102,10 +102,10 @@ code {
   line-height: 1.375;
   padding-left: 20px;
   margin: 40px 0 40px -16px;
-  border-left: 8px solid #fec92e;
+  border-left: 8px solid #fa8224;
   font-style: italic; }
   .prose blockquote p {
-    font-size: 13px; }
+    font-size: 16px; }
   @media (min-width: 52em) {
     .prose blockquote {
       padding-left: 32px;
@@ -202,13 +202,13 @@ code {
 
 /* Theme color utilities */
 .header-background {
-  background-color: #fec92e; }
+  background-color: #fa8224; }
 
 .header-border {
   border-color: #181818; }
 
 .header-title {
-  color: #181818; }
+  color: #fff; }
 
 .header-text {
   color: #181818; }
@@ -217,13 +217,13 @@ code {
   fill: #181818; }
 
 .header-social-accent {
-  fill: #fff; }
+  fill: #181818; }
 
 .header-link:hover {
   color: #fff !important; }
 
 .text-accent {
-  color: #fec92e; }
+  color: #DF6D16; }
 
 /* Layout utilities */
 .container {
@@ -475,7 +475,7 @@ code {
   font-weight: bold;
   text-decoration: none !important; }
   .link-primary:hover {
-    color: #fec92e;
+    color: #fa8224;
     text-decoration: none !important; }
 
 /*# sourceMappingURL=style.css.map */

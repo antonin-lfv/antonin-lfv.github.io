@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="version 2.2">
-      <change beforePath="$PROJECT_DIR$/_sass/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/_components.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="version 2.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,28 +131,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="12706000" />
-    </task>
-    <task id="LOCAL-00235" summary="init new site version 2.1">
-      <created>1631870797191</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1631870797191</updated>
-    </task>
-    <task id="LOCAL-00236" summary="init 2.1">
-      <created>1631873881828</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1631873881828</updated>
-    </task>
-    <task id="LOCAL-00237" summary="init 2.1">
-      <created>1631873938866</created>
-      <option name="number" value="00237" />
-      <option name="presentableId" value="LOCAL-00237" />
-      <option name="project" value="LOCAL" />
-      <updated>1631873938866</updated>
+      <workItem from="1631873347674" duration="12852000" />
     </task>
     <task id="LOCAL-00238" summary="init 2.1">
       <created>1631873969372</created>
@@ -479,7 +455,28 @@
       <option name="project" value="LOCAL" />
       <updated>1631890634302</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="version 2.2">
+      <created>1631890691153</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1631890691153</updated>
+    </task>
+    <task id="LOCAL-00285" summary="version 2.2">
+      <created>1631890701397</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1631890701397</updated>
+    </task>
+    <task id="LOCAL-00286" summary="version 2.2">
+      <created>1631890819854</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
+      <option name="project" value="LOCAL" />
+      <updated>1631890819854</updated>
+    </task>
+    <option name="localTasksCounter" value="287" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
