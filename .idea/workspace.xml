@@ -20,22 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="2.1">
-      <change afterPath="$PROJECT_DIR$/_site/2016/08/07/bacoms-are-delicious.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/2016/09/04/markdown-sample.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/about/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/assets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/jekyll-swiss-0.1.0.gem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/jekyll-swiss.gemspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/thumbnail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/writing/2015/11/25/potatoes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/writing/2016/08/06/welcome-to-jekyll.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/writing/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/antonin-lfv.github.io.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/Icon&#10;" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/writing/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/writing/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +33,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,9 +63,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/_includes" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -140,14 +136,7 @@
       <workItem from="1631868760792" duration="1798000" />
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
-      <workItem from="1631873347674" duration="5001000" />
-    </task>
-    <task id="LOCAL-00199" summary="post">
-      <created>1628535328304</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1628535328304</updated>
+      <workItem from="1631873347674" duration="5627000" />
     </task>
     <task id="LOCAL-00200" summary="post">
       <created>1628589802996</created>
@@ -485,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631879614011</updated>
     </task>
-    <option name="localTasksCounter" value="248" />
+    <task id="LOCAL-00248" summary="2.1">
+      <created>1631881968005</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1631881968005</updated>
+    </task>
+    <option name="localTasksCounter" value="249" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
