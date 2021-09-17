@@ -19,28 +19,25 @@ L'application est disponible [**ici**](https://share.streamlit.io/antonin-lfv/on
 
 # Index
 
-1. [Interface](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#interface)
-    - [Accueil](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#accueil)
-    - [Chargement du dataset](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#chargement-du-dataset)
-    - [Analyse des colonnes](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#analyse-des-colonnes)
-    - [Matrice de corrélation](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#matrice-de-corrélation)
-    - [Section graphiques](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#section-graphiques)
-    - [Machine Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#machine-learning)
-        - [k-nearest neighbors](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#k-nearest-neighbors)
-        - [k-Means](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#k-means)
-        - [Support Vector Machine](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#support-vector-machine)
-        - [PCA](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#pca)
-        - [UMAP](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#umap)
-    - [Deep Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#deep-learning)
-        - [Transfert de style neuronal](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#transfert-de-style-neuronal)
-        - [GAN](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#gan)
+ - [Accueil](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#accueil)
+ - [Chargement du dataset](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#chargement-du-dataset)
+ - [Analyse des colonnes](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#analyse-des-colonnes)
+ - [Matrice de corrélation](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#matrice-de-corrélation)
+ - [Section graphiques](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#section-graphiques)
+ - [Machine Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#machine-learning)
+     - [k-nearest neighbors](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#k-nearest-neighbors)
+     - [k-Means](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#k-means)
+     - [Support Vector Machine](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#support-vector-machine)
+     - [PCA](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#pca)
+     - [UMAP](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#umap)
+ - [Deep Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#deep-learning)
+     - [Transfert de style neuronal](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#transfert-de-style-neuronal)
+     - [GAN](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#gan)
 
 
 <br/>
 
-# Interface
-
-## Accueil
+# Accueil
 
 En arrivant sur le DashBoard, vous verrez ceci :
 <br/>
@@ -54,7 +51,7 @@ En arrivant sur le DashBoard, vous verrez ceci :
 <br/>
 Il vous faut ici choisir un dataset csv ou excel de votre machine, en cliquant sur le bouton <b>Browse files</b>. Une fois cela effectuée, le menu lateral apparaîtra. Pour ensuite pouvoir utiliser votre fichier, il faut vous rendre à la page 2, nommée <b>Chargement du dataset</b>. <br/>
 
-## Chargement du dataset
+# Chargement du dataset
 
 Sur cette page, plusieurs modifications sont possibles sur le dataset :
 - Ajout d'un séparateur si besoin
@@ -73,7 +70,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-## Analyse des colonnes
+# Analyse des colonnes
 
 <br/>
 <p align="center">
@@ -82,7 +79,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-## Matrice de corrélation
+# Matrice de corrélation
 
 <br/>
 <p align="center">
@@ -92,7 +89,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 <br/>
 
 
-## Section graphiques
+# Section graphiques
 
 <br/>
 <p align="center">
@@ -101,11 +98,11 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-## Machine Learning
+# Machine Learning
 
 <br/>
 
-### k-nearest neighbors
+## k-nearest neighbors
 
 <br/>
 <p align="center">
@@ -114,7 +111,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-### k-Means
+## k-Means
 
 <br/>
 <p align="center">
@@ -123,7 +120,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-### Support Vector Machine
+## Support Vector Machine
 
 <br/>
 <p align="center">
@@ -132,7 +129,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-### PCA
+## PCA
 
 <br/>
 <p align="center">
@@ -141,7 +138,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-### UMAP
+## UMAP
 
 <br/>
 <p align="center">
@@ -150,11 +147,11 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-## Deep Learning
+# Deep Learning
 
 <br/>
 
-### Transfert de style neuronal
+## Transfert de style neuronal
 
 <br/>
 <p align="center">
@@ -163,7 +160,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 
-### GAN
+## GAN
 
 <br/>
 

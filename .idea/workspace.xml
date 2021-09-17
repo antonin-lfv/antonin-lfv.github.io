@@ -132,13 +132,7 @@
       <workItem from="1631871442361" duration="33000" />
       <workItem from="1631871643162" duration="968000" />
       <workItem from="1631873347674" duration="12852000" />
-    </task>
-    <task id="LOCAL-00238" summary="init 2.1">
-      <created>1631873969372</created>
-      <option name="number" value="00238" />
-      <option name="presentableId" value="LOCAL-00238" />
-      <option name="project" value="LOCAL" />
-      <updated>1631873969372</updated>
+      <workItem from="1631898870022" duration="679000" />
     </task>
     <task id="LOCAL-00239" summary="init 2.1">
       <created>1631874269381</created>
@@ -476,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631890819854</updated>
     </task>
-    <option name="localTasksCounter" value="287" />
+    <task id="LOCAL-00287" summary="color theme">
+      <created>1631899122708</created>
+      <option name="number" value="00287" />
+      <option name="presentableId" value="LOCAL-00287" />
+      <option name="project" value="LOCAL" />
+      <updated>1631899122708</updated>
+    </task>
+    <option name="localTasksCounter" value="288" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="web app ml" />
     <MESSAGE value="épidémio" />
     <MESSAGE value="br" />
     <MESSAGE value="br test" />
@@ -541,7 +541,8 @@
     <MESSAGE value="post" />
     <MESSAGE value="2.1" />
     <MESSAGE value="version 2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 2.2" />
+    <MESSAGE value="color theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="color theme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
