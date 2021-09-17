@@ -54,7 +54,7 @@ Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le c
     - [Regression surfacique en 3D](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#regression-surfacique-en-3d)
     - [Maps](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#maps)
         - [Ligne entre Miami et Chicago](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#ligne-entre-miami-et-chicago)
-        - [Air colorée sur une carte, triangle des bermudes](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#air-colorée-sur-une-carte-triangle-des-bermudes)
+        - [Aire colorée sur une carte, triangle des bermudes](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#aire-colorée-sur-une-carte-triangle-des-bermudes)
         - [Scatter sur une map](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#scatter-sur-une-map)
         - [Scatter avec ensemble de points](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#scatter-avec-ensemble-de-points)
 
@@ -80,6 +80,7 @@ Installation : <br/>
 ```py
 pip install plotly
 ```
+
 <br/>
 
 Documentation [**Plotly**](https://plotly.com/python/) .
@@ -102,6 +103,7 @@ from umap import UMAP # pip install umap-learn
 from sklearn.manifold import TSNE
 import networkx as nx
 ```
+
 <br/>
 
 # Plotly.Express
@@ -155,7 +157,7 @@ plot(fig)
 ```
 <br/>
 
-<img width="1419" alt="Capture d’écran 2021-05-18 à 09 39 56" src="https://user-images.githubusercontent.com/63207451/118611343-05dcf200-b7bd-11eb-98ba-cde2bcecf80e.png">
+{% include plotly_tuto/exemple_simple.html %}
 
 <br/>
 
@@ -175,7 +177,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1419" alt="Capture d’écran 2021-05-18 à 09 42 40" src="https://user-images.githubusercontent.com/63207451/118611691-6a984c80-b7bd-11eb-92cb-bf433f8fa8b7.png">
+{% include plotly_tuto/superposition_fig.html %}
 <br/>
 
 ### Subplots
@@ -199,7 +201,7 @@ Alors on obtient ces résultats en fonction du paramètre de séparation :
 
 | facet_col="species" | facet_row="species" |
 |---------------------|---------------------|
-|<img width="600" alt="Capture d’écran 2021-05-18 à 09 44 19" src="https://user-images.githubusercontent.com/63207451/118611980-a59a8000-b7bd-11eb-8ae9-2b8a673d7e5d.png">|<img width="600" alt="Capture d’écran 2021-05-18 à 09 45 25" src="https://user-images.githubusercontent.com/63207451/118612164-cb278980-b7bd-11eb-9586-abeb9e3a7fb9.png">|
+|{% include plotly_tuto/subplots_px1.html %}|{% include plotly_tuto/subplots_px2 %}|
 
 <br/>
 
@@ -225,7 +227,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1403" alt="Capture d’écran 2021-05-18 à 09 49 41" src="https://user-images.githubusercontent.com/63207451/118612783-67519080-b7be-11eb-8bc7-9bc9e9c1c55d.png">
+{% include plotly_tuto/animation_px.html %}
 <br/>
 
 ### Range Slider
@@ -243,7 +245,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1403" alt="Capture d’écran 2021-05-18 à 09 51 49" src="https://user-images.githubusercontent.com/63207451/118613064-ac75c280-b7be-11eb-8648-05aa6843c10b.png">
+{% include plotly_tuto/range_slider.html %}
 <br/>
 
 ### Rectangles et lignes
@@ -278,7 +280,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1403" alt="Capture d’écran 2021-05-18 à 09 52 53" src="https://user-images.githubusercontent.com/63207451/118613217-d4652600-b7be-11eb-8b8f-bdebc1c54626.png">
+{% include plotly_tuto/rectangle_ligne.html %}
 <br/>
 
 ### Marges statistiques
@@ -296,7 +298,7 @@ fig = px.scatter(df, x="sepal_length", # données
 plot(fig)
 ```
 <br/>
-<img width="1403" alt="Capture d’écran 2021-05-18 à 09 53 30" src="https://user-images.githubusercontent.com/63207451/118613295-e941b980-b7be-11eb-9930-e1c1a496e8f6.png">
+{% include plotly_tuto/marge_stats.html %}
 <br/>
 
 ### Curseurs
@@ -314,7 +316,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1403" alt="Capture d’écran 2021-05-18 à 09 54 47" src="https://user-images.githubusercontent.com/63207451/118613484-168e6780-b7bf-11eb-9be4-204fb57f00ab.png">
+{% include plotly_tuto/curseur_axe.html %}
 <br/>
 
 ### Plot 3D
@@ -327,7 +329,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1411" alt="Capture d’écran 2021-05-18 à 10 42 21" src="https://user-images.githubusercontent.com/63207451/118620412-c666d380-b7c5-11eb-87e6-346920499cca.png">
+{% include plotly_tuto/3d_px.html %}
 <br/>
 
 ## Bar chart
@@ -349,7 +351,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1413" alt="Capture d’écran 2021-05-18 à 16 12 29" src="https://user-images.githubusercontent.com/63207451/118666930-da292e80-b7f3-11eb-98c8-860f7dada52b.png">
+{% include plotly_tuto/bar_exemple.html %}
 <br/>
 
 ### Indicateurs marginaux
@@ -367,7 +369,7 @@ plot(fig)
 
 |marginal='violin'|marginal='box'|
 |-----------------|--------------|
-|<img width="600" alt="Capture d’écran 2021-05-18 à 10 06 10" src="https://user-images.githubusercontent.com/63207451/118615088-ae408580-b7c0-11eb-8306-bc30dfbd6c46.png">|<img width="600" alt="Capture d’écran 2021-05-18 à 10 07 45" src="https://user-images.githubusercontent.com/63207451/118615324-e5af3200-b7c0-11eb-91e7-becb37f542fe.png">|
+|{% include plotly_tuto/bar_marge1.html %}|{% include plotly_tuto/bar_marge2.html %}|
 
 <br/>
 
@@ -389,7 +391,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 16 04 01" src="https://user-images.githubusercontent.com/63207451/118665541-ab5e8880-b7f2-11eb-903d-5a6ed3e70a11.png">
+{% include plotly_tuto/pie_exemple.html %}
 <br/>
 
 ## Polar bar charts
@@ -405,7 +407,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 16 07 18" src="https://user-images.githubusercontent.com/63207451/118666061-2627a380-b7f3-11eb-942d-25e2d9491bac.png">	
+{% include plotly_tuto/polar_bar_chart.html %}
 <br/>
 
 ## Machine Learning
@@ -431,9 +433,8 @@ fig.show()
 ```
 
 <br/>
-<p align="center">
-<img width="1166" alt="Capture d’écran 2020-11-24 à 10 45 21" src="https://user-images.githubusercontent.com/63207451/100077394-9821c000-2e42-11eb-9700-8f103b2000c5.png">
-</p>
+{% include plotly_tuto/reg_line.html %}
+
 
 
 ### UMAP
@@ -452,9 +453,8 @@ plot(fig)
 ```
 
 <br/>
-<p align="center">
-<img width="1399" alt="Capture d’écran 2021-04-30 à 13 02 14" src="https://user-images.githubusercontent.com/63207451/116686674-6e9e2f00-a9b4-11eb-97e0-a65286464dc0.png">
-</p>
+{% include plotly_tuto/umap.html %}
+
 
 
 ### t-SNE
@@ -474,9 +474,8 @@ plot(fig)
 ```
 
 <br/>
-<p align="center">
-<img width="1328" alt="Capture d’écran 2021-04-30 à 13 03 58" src="https://user-images.githubusercontent.com/63207451/116686752-8fff1b00-a9b4-11eb-8733-a3491e45f36e.png">
-</p>
+{% include plotly_tuto/tsne.html %}
+
 
 <br/>
 
@@ -488,9 +487,8 @@ fig = px.scatter_matrix(df, dimensions=["sepal_width", "sepal_length", "petal_wi
 plot(fig)
 ```
 <br/>
-<p align="center">
-<img width="1187" alt="Capture d’écran 2020-11-23 à 21 43 03" src="https://user-images.githubusercontent.com/63207451/100014133-404d6f80-2dd6-11eb-9f4e-f0bca9ee9b96.png">
-</p>
+{% include plotly_tuto/correlation.html %}
+
 <br/>
 
 # Plotly.Graph_Objects
@@ -554,8 +552,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 19 28" src="https://user-images.githubusercontent.com/63207451/118658192-72bbb080-b7ec-11eb-995c-5a6ce06180f3.png">
-<br/>
+{% include plotly_tuto/subplots_go.html %}<br/>
 
 ## Scatter
 
@@ -580,8 +577,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 21 12" src="https://user-images.githubusercontent.com/63207451/118658467-b0b8d480-b7ec-11eb-9218-95555c2d7e3b.png">
-<br/>
+{% include plotly_tuto/basic_scatter.html %}<br/>
 
 ### Annotations
 
@@ -607,8 +603,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 22 17" src="https://user-images.githubusercontent.com/63207451/118658641-df36af80-b7ec-11eb-896d-696748e90290.png">
-<br/>
+{% include plotly_tuto/ajout_annotations.html %}<br/>
 
 ### Droite et plage de valeurs
 
@@ -631,8 +626,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 23 22" src="https://user-images.githubusercontent.com/63207451/118658767-fd9cab00-b7ec-11eb-8826-36abcfc5b512.png">
-<br/>
+{% include plotly_tuto/plage_valeurs.html %}<br/>
 
 ### Interpolation
 
@@ -741,8 +735,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1424" alt="Capture d’écran 2021-05-19 à 14 58 16" src="https://user-images.githubusercontent.com/63207451/118816667-b2e56680-b8b2-11eb-8937-7d631592cd1f.png">
-<br/>
+{% include plotly_tuto/interpolation.html %}<br/>
 
 ## Financial Chart
 
@@ -815,8 +808,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1405" alt="Capture d’écran 2021-05-25 à 11 31 28" src="https://user-images.githubusercontent.com/63207451/119475385-6637da80-bd4d-11eb-824b-58dc00a7e73a.png">
-<br/>
+{% include plotly_tuto/financial.html %}<br/>
 
 ## Pie chart Go
 
@@ -838,8 +830,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 24 13" src="https://user-images.githubusercontent.com/63207451/118658898-1dcc6a00-b7ed-11eb-924e-83338a8cb4a5.png">
-<br/>
+{% include plotly_tuto/pie_go.html %}<br/>
 
 ## Violin chart
 
@@ -859,8 +850,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 26 23" src="https://user-images.githubusercontent.com/63207451/118659221-697f1380-b7ed-11eb-883f-362f7ce4331a.png">
-<br/>
+{% include plotly_tuto/violin_go.html %}<br/>
 
 ## Histogramme/Bar
 
@@ -876,7 +866,7 @@ plot(fig)
 
 |add_histogram|add_bar|
 |-------------|-------|
-|<img width="1386" alt="Capture d’écran 2021-05-18 à 15 29 05" src="https://user-images.githubusercontent.com/63207451/118659679-d4304f00-b7ed-11eb-889d-3df60e99a635.png">|<img width="1386" alt="Capture d’écran 2021-05-18 à 15 30 26" src="https://user-images.githubusercontent.com/63207451/118659902-004bd000-b7ee-11eb-89d1-11ba6f8da369.png">|
+|{% include plotly_tuto/hist_go.html %}|{% include plotly_tuto/bar_go.html %}|
 
 ## Graphiques en 3D
 
@@ -892,9 +882,7 @@ plot(fig)
 ```
 
 <br/>
-<p align="center">
-<img width="1267" alt="Capture d’écran 2020-11-23 à 22 30 54" src="https://user-images.githubusercontent.com/63207451/100017741-ad173880-2ddb-11eb-8643-78795b0e3e57.png">
-</p>
+{% include plotly_tuto/surface.html %}
 <br/>
 
 ### Nuage de points
@@ -906,9 +894,7 @@ fig = px.scatter_3d(df, x='sepal_length', y='sepal_width', z='petal_width',
 plot(fig)
 ```
 <br/>
-<p align="center">
-<img width="1267" alt="Capture d’écran 2020-11-23 à 22 31 34" src="https://user-images.githubusercontent.com/63207451/100017787-bbfdeb00-2ddb-11eb-9ca5-603cca91a999.png">
-</p>
+{% include plotly_tuto/nuage_de_points.html %}
 
 <br/>
 
@@ -954,9 +940,7 @@ plot(fig)
 ```
 
 <br/>
-<p align="center">
-<img width="1014" alt="Capture d’écran 2021-04-30 à 13 24 07" src="https://user-images.githubusercontent.com/63207451/116688699-5aa7fc80-a9b7-11eb-8862-1a9307be0412.png">
-</p>
+{% include plotly_tuto/neurones.html %}
 
 ## Regression surfacique en 3D
 
@@ -996,9 +980,7 @@ plot(fig)
 ```
 
 <br/>
-<p align="center">
-<img width="1284" alt="Capture d’écran 2021-05-18 à 10 56 25" src="https://user-images.githubusercontent.com/63207451/118622535-b2bc6c80-b7c7-11eb-8107-0b53b7437e11.png">
-</p>
+{% include plotly_tuto/reg_surfacique.html %}
 
 <br>
 
@@ -1029,11 +1011,10 @@ plot(fig)
 ```
 
 <br/>
-<img width="1413" alt="Capture d’écran 2021-05-19 à 10 51 17" src="https://user-images.githubusercontent.com/63207451/118784252-24f88400-b890-11eb-9ade-6912e2479c95.png">
-<br/>
+{% include plotly_tuto/ligne_map.html %}<br/>
 
 
-### Air colorée sur une carte, triangle des bermudes
+### Aire colorée sur une carte, triangle des bermudes
 
 ```py
 fig = go.Figure()
@@ -1059,8 +1040,7 @@ fig.update_layout(
 plot(fig)
 ```
 <br/>
-<img width="1413" alt="Capture d’écran 2021-05-19 à 10 51 55" src="https://user-images.githubusercontent.com/63207451/118784355-3b064480-b890-11eb-89a5-c2a27cdd1370.png">
-<br/>
+{% include plotly_tuto/aire_map.html %}<br/>
 
 ### Scatter sur une map
 
@@ -1075,15 +1055,14 @@ fig = px.scatter_geo(df, locations="iso_alpha", # on situe le pays avec son racc
 plot(fig)
 ```
 <br/>
-<img width="1413" alt="Capture d’écran 2021-05-19 à 10 53 23" src="https://user-images.githubusercontent.com/63207451/118784620-756fe180-b890-11eb-8f0f-c2f14f6c1d70.png">
-<br/>
+{% include plotly_tuto/scatter_map.html %}<br/>
 
 ### Scatter avec ensemble de points
 
 ```py
 token = 'your token from https://studio.mapbox.com'
 fig = go.Figure()
-	
+df = pd.read_table('quake.dat', names=['depth', 'lat','long','richter'], sep=',' ,encoding='utf-8', skiprows=8)	
 fig.add_scattermapbox(
     mode = "markers",
     name="",
@@ -1109,8 +1088,7 @@ fig.update_layout(
 plot(fig)
 ```
 <br/>
-<img width="1426" alt="Capture d’écran 2021-05-22 à 23 16 19" src="https://user-images.githubusercontent.com/63207451/119240977-c105e200-bb53-11eb-885f-7aaf7dc59c4e.png">
-
+{% include plotly_tuto/map_points_quake.html %}
 
 <br/>
 
@@ -1137,8 +1115,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1413" alt="Capture d’écran 2021-05-19 à 12 14 27" src="https://user-images.githubusercontent.com/63207451/118796290-c33e1700-b89b-11eb-8705-76939c7c381b.png">
-<br/>
+{% include plotly_tuto/heatmap_ff.html %}<br/>
 
 ## Dendrogrames
 
@@ -1150,8 +1127,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1133" alt="Capture d’écran 2021-05-19 à 12 15 08" src="https://user-images.githubusercontent.com/63207451/118796388-dbae3180-b89b-11eb-95be-b8b2ca1f4caf.png">
-<br/>
+{% include plotly_tuto/dendrogrames.html %}<br/>
 
 ## Champ vectoriel
 
@@ -1165,8 +1141,7 @@ plot(fig)
 ```
 
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-19 à 12 15 34" src="https://user-images.githubusercontent.com/63207451/118796485-f2ed1f00-b89b-11eb-9fd7-4904de35c834.png">
-<br/>
+{% include plotly_tuto/champ_vect.html %}<br/>
 
 ## Lignes de flux
 
@@ -1181,8 +1156,7 @@ fig = ff.create_streamline(x, y, u, v, arrow_scale=.2)
 plot(fig)
 ```
 <br/>
-<img width="1386" alt="Capture d’écran 2021-05-19 à 12 16 29" src="https://user-images.githubusercontent.com/63207451/118796606-0dbf9380-b89c-11eb-8642-a9e7d3d86cf4.png">
-<br/>
+{% include plotly_tuto/lignes_flux.html %}<br/>
 
 ## Création d'un tableau
 
@@ -1198,8 +1172,7 @@ fig =  ff.create_table(data_matrix)
 plot(fig, include_mathjax='cdn')
 ```
 <br/>
-<img width="1424" alt="Capture d’écran 2021-05-19 à 12 27 17" src="https://user-images.githubusercontent.com/63207451/118798097-8f63f100-b89d-11eb-8b50-e6ec0f4f66c3.png">
-<br/>
+{% include plotly_tuto/latex_tab.html %}<br/>
 
 ### À partir d'un dataframe pandas
 
@@ -1210,8 +1183,7 @@ fig=ff.create_table(df)
 plot(fig)
 ```
 <br/>
-<img width="1424" alt="Capture d’écran 2021-05-19 à 12 27 49" src="https://user-images.githubusercontent.com/63207451/118798163-a1459400-b89d-11eb-923c-d30c47b77c69.png">
-<br/>
+{% include plotly_tuto/pandas_tab.html %}<br/>
 
 
 
