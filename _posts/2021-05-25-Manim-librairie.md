@@ -546,11 +546,11 @@ class SurfacesAnimation(ThreeDScene):  ####### Surface
 ```py
 class SVGStickMan(GraphScene, MovingCameraScene):
     def construct(self):
-        start_man = SVGMobject("/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg").set_color(WHITE)
-        start_man_2 = SVGMobject("/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg").set_color(WHITE)
-        wave_man = SVGMobject("/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_wave.svg").set_color(WHITE)
-        wave_man_2 = SVGMobject("/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_wave.svg").set_color(WHITE)
-        base = SVGMobject("/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg").set_color(WHITE)
+        start_man = SVGMobject("path/stick_man_plain.svg").set_color(WHITE)
+        start_man_2 = SVGMobject("path/stick_man_plain.svg").set_color(WHITE)
+        wave_man = SVGMobject("path/stick_man_wave.svg").set_color(WHITE)
+        wave_man_2 = SVGMobject("path/stick_man_wave.svg").set_color(WHITE)
+        base = SVGMobject("path/stick_man_plain.svg").set_color(WHITE)
         self.camera.frame.save_state()
 
         self.add(start_man.move_to(2*LEFT))
@@ -567,7 +567,8 @@ class SVGStickMan(GraphScene, MovingCameraScene):
         salut_2 = Tex("Hey !").set_color(YELLOW).next_to(start_man_2, UP+RIGHT, buff=0.5)
         self.play(Transform(start_man_2, wave_man_2.move_to(2*RIGHT)), FadeIn(salut_2))
         self.play(FadeOut(salut), FadeOut(salut_2), run_time=0.01)
-        self.play(Transform(start_man, base.move_to(2 * LEFT)), Transform(start_man_2, base.copy().move_to(2 * RIGHT)))
+        self.play(Transform(start_man, base.move_to(2 * LEFT)), 
+                  Transform(start_man_2, base.copy().move_to(2 * RIGHT)))
         self.play(Restore(self.camera.frame))
 ```
 
@@ -598,7 +599,7 @@ class ZoomOnNeuron(ZoomedScene, MovingCameraScene):
         )
     def construct(self):
         # image du neurone
-        neurone_1 = SVGMobject("/Users/antoninlefevre/Downloads/ManimCE/SVG_files/neuron_video.svg").set_color(WHITE).scale(3).rotate(PI/2)
+        neurone_1 = SVGMobject("path/neuron_video.svg").set_color(WHITE).scale(3).rotate(PI/2)
         self.play(Write(neurone_1))
 
         # texte du zoom
@@ -613,7 +614,9 @@ class ZoomOnNeuron(ZoomedScene, MovingCameraScene):
         frame.set_color(PURPLE)
 
         # placer le cadre du zoom
-        zd_rect = BackgroundRectangle(zoomed_display.move_to(neurone_1[0].get_left()+DOWN), fill_opacity=0, buff=MED_SMALL_BUFF)
+        zd_rect = BackgroundRectangle(zoomed_display.move_to(neurone_1[0].get_left()+DOWN), 
+                                                             fill_opacity=0, 
+                                                             buff=MED_SMALL_BUFF)
         self.add_foreground_mobject(zd_rect)
 
         unfold_camera = UpdateFromFunc(zd_rect, lambda rect: rect.replace(zoomed_display))
@@ -625,7 +628,8 @@ class ZoomOnNeuron(ZoomedScene, MovingCameraScene):
         self.wait(2)
 
         # dezoom et fin de l'animation
-        self.play(self.get_zoomed_display_pop_out_animation(), unfold_camera, rate_func=lambda t: smooth(1 - t))
+        self.play(self.get_zoomed_display_pop_out_animation(), unfold_camera, 
+                  rate_func=lambda t: smooth(1 - t))
         self.play(Uncreate(zoomed_display_frame), FadeOut(frame))
         self.wait()
 ```
