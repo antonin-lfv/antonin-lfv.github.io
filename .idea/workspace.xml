@@ -140,13 +140,6 @@
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
     </task>
-    <task id="LOCAL-00252" summary="2.1">
-      <created>1631883133102</created>
-      <option name="number" value="00252" />
-      <option name="presentableId" value="LOCAL-00252" />
-      <option name="project" value="LOCAL" />
-      <updated>1631883133102</updated>
-    </task>
     <task id="LOCAL-00253" summary="2.1">
       <created>1631883203646</created>
       <option name="number" value="00253" />
@@ -483,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631963982050</updated>
     </task>
-    <option name="localTasksCounter" value="301" />
+    <task id="LOCAL-00301" summary="posts">
+      <created>1631964705345</created>
+      <option name="number" value="00301" />
+      <option name="presentableId" value="LOCAL-00301" />
+      <option name="project" value="LOCAL" />
+      <updated>1631964705345</updated>
+    </task>
+    <option name="localTasksCounter" value="302" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="google analytics" />
     <MESSAGE value="google analytics - test" />
     <MESSAGE value="ML app - to do" />
     <MESSAGE value="plotly" />
@@ -548,7 +547,8 @@
     <MESSAGE value="embed plotly charts" />
     <MESSAGE value="plotly charts" />
     <MESSAGE value="plotly graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="plotly graph" />
+    <MESSAGE value="posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="5" y="161" key="Vcs.Push.Dialog.v2" timestamp="1631963992067">
