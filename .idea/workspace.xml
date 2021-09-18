@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,13 +139,6 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00251" summary="2.1">
-      <created>1631882908592</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1631882908592</updated>
     </task>
     <task id="LOCAL-00252" summary="2.1">
       <created>1631883133102</created>
@@ -486,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631911015028</updated>
     </task>
-    <option name="localTasksCounter" value="300" />
+    <task id="LOCAL-00300" summary="plotly graph">
+      <created>1631963982049</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1631963982050</updated>
+    </task>
+    <option name="localTasksCounter" value="301" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="br test" />
     <MESSAGE value="google analytics" />
     <MESSAGE value="google analytics - test" />
     <MESSAGE value="ML app - to do" />
@@ -551,7 +547,14 @@
     <MESSAGE value="version 2.2" />
     <MESSAGE value="embed plotly charts" />
     <MESSAGE value="plotly charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="plotly charts" />
+    <MESSAGE value="plotly graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="plotly graph" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="5" y="161" key="Vcs.Push.Dialog.v2" timestamp="1631963992067">
+      <screen x="0" y="25" width="1440" height="797" />
+    </state>
+    <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631963992067" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
