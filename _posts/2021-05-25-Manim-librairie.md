@@ -495,7 +495,7 @@ class SurfacesAnimation(ThreeDScene):  ####### Surface
                 1 * np.cos(u) * np.cos(v),
                 2 * np.cos(u) * np.sin(v),
                 0.5 * np.sin(u)
-            ]), v_min=0, v_max=TAU, u_min=-PI / 2, u_max=PI / 2, checkerboard_colors=[TEAL_D, TEAL_E],
+            ]), v_min=0,v_max=TAU, u_min=-PI / 2, u_max=PI / 2, checkerboard_colors=[TEAL_D, TEAL_E],
             resolution=(15, 32)).scale(2)
 
         sphere = ParametricSurface(
