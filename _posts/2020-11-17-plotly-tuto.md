@@ -367,7 +367,8 @@ plot(fig)
 
 |marginal='violin'|marginal='box'|
 |-----------------|--------------|
-|<img width="600" alt="Capture d’écran 2021-05-18 à 10 06 10" src="https://user-images.githubusercontent.com/63207451/118615088-ae408580-b7c0-11eb-8306-bc30dfbd6c46.png">|<img width="600" alt="Capture d’écran 2021-05-18 à 10 07 45" src="https://user-images.githubusercontent.com/63207451/118615324-e5af3200-b7c0-11eb-91e7-becb37f542fe.png">|
+|<img width="600" src="https://user-images.githubusercontent.com/63207451/118615088-ae408580-b7c0-11eb-8306-bc30dfbd6c46.png">|<img width="600" src="https://user-images.githubusercontent.com/63207451/118615324-e5af3200-b7c0-11eb-91e7-becb37f542fe.png">|
+
 <br>
 
 ## Pie chart
