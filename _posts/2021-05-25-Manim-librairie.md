@@ -40,6 +40,7 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
 	- [Stickman](#stickman)
 	- [Zoom sur un neurone](#zoom-sur-un-neurone)
 
+<br>
 
 # Exemples basiques
 
