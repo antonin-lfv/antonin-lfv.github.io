@@ -55,7 +55,7 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
 <details>
   <summary >Code</summary>
 	
-```python 
+```py
 class latex_formules(Scene): 
     def construct(self):
         latex = MathTex(r"\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}")
@@ -301,7 +301,7 @@ class LigneGradient(Scene):
 <details>
   <summary >Code</summary>
 	
-```python 
+```py
 class WarpSquare(Scene):
     def construct(self):
         square = Square()
@@ -327,7 +327,7 @@ class WarpSquare(Scene):
 <details>
   <summary >Code</summary>
 	
-```python 
+```py
 class movecircle(Scene):
     def construct(self):
         sphere = Sphere().set_color(RED)
@@ -391,7 +391,7 @@ class polygon(GraphScene):
 <details>
   <summary >Code</summary>
 	
-```python 
+```py
 class Plot_line(GraphScene):
     def construct(self):
         self.setup_axes()
