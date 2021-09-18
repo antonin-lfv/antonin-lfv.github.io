@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,20 +139,6 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00254" summary="2.1">
-      <created>1631883744939</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1631883744940</updated>
-    </task>
-    <task id="LOCAL-00255" summary="2.1">
-      <created>1631883812655</created>
-      <option name="number" value="00255" />
-      <option name="presentableId" value="LOCAL-00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1631883812655</updated>
     </task>
     <task id="LOCAL-00256" summary="2.1">
       <created>1631883990235</created>
@@ -486,7 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631964921614</updated>
     </task>
-    <option name="localTasksCounter" value="303" />
+    <task id="LOCAL-00303" summary="posts">
+      <created>1631965065504</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1631965065504</updated>
+    </task>
+    <task id="LOCAL-00304" summary="posts">
+      <created>1631965433928</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1631965433930</updated>
+    </task>
+    <option name="localTasksCounter" value="305" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,10 +551,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="posts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="161" key="Vcs.Push.Dialog.v2" timestamp="1631964922961">
+    <state x="5" y="161" key="Vcs.Push.Dialog.v2" timestamp="1631965434873">
       <screen x="0" y="25" width="1440" height="797" />
     </state>
-    <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631964922961" />
+    <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631965434873" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

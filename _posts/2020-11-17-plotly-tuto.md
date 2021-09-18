@@ -66,7 +66,7 @@ Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le c
     - [Champ vectoriel](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#champ-vectoriel)
     - [Lignes de flux](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#lignes-de-flux)
     - [Création d'un tableau](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#création-dun-tableau)
-        - [À la main avec LaTex](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#à-la-main-avec-LaTex)
+        - [À la main avec LaTex](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#à-la-main-avec-latex)
         - [À partir d'un dataframe pandas](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#à-partir-dun-dataframe-pandas)
 
 <br>
