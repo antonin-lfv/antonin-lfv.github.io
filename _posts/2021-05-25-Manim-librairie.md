@@ -642,7 +642,7 @@ class ZoomOnNeuron(ZoomedScene, MovingCameraScene):
 
 <br>
 
-<p align="center"><a href="#Index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29"/></a></p>
+<p align="center"><a href="https://antonin-lfv.github.io/2021/05/25/Manim-librairie.html#index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29"/></a></p>
 
 <br>
 
