@@ -8,6 +8,8 @@ permalink: /Resume/
 
 # 📞  Contact information
 
+<br>
+
 📧  [**Email address**](mailto:antoninlefevre45@icloud.com)
 
 🔗  [**LinkedIn**](https://www.linkedin.com/in/antonin-lefevre-0110/)
