@@ -907,6 +907,7 @@ plot(fig)
 
 <br>
 <img width="1386" alt="Capture d’écran 2021-05-18 à 15 26 23" src="https://user-images.githubusercontent.com/63207451/118659221-697f1380-b7ed-11eb-883f-362f7ce4331a.png">
+<br>
 
 ## Histogramme/Bar
 
@@ -920,10 +921,13 @@ fig.add_XXXXXX(x=df['sepal_width'])
 plot(fig)
 ```
 
+<br>
+
 |add_histogram|add_bar|
 |-------------|-------|
 |<img width="1386" alt="Capture d’écran 2021-05-18 à 15 29 05" src="https://user-images.githubusercontent.com/63207451/118659679-d4304f00-b7ed-11eb-889d-3df60e99a635.png">|<img width="1386" alt="Capture d’écran 2021-05-18 à 15 30 26" src="https://user-images.githubusercontent.com/63207451/118659902-004bd000-b7ee-11eb-89d1-11ba6f8da369.png">|
 
+<br>
 
 ## Graphiques en 3D
 
@@ -940,6 +944,7 @@ plot(fig)
 
 <br>
 <img width="1267" alt="Capture d’écran 2020-11-23 à 22 30 54" src="https://user-images.githubusercontent.com/63207451/100017741-ad173880-2ddb-11eb-8643-78795b0e3e57.png">
+<br>
 <br>
 
 ### Nuage de points
@@ -1000,6 +1005,8 @@ plot(fig)
 
 <br>
 <img width="1014" alt="Capture d’écran 2021-04-30 à 13 24 07" src="https://user-images.githubusercontent.com/63207451/116688699-5aa7fc80-a9b7-11eb-8862-1a9307be0412.png">
+<br>
+<br>
 
 ## Regression surfacique en 3D
 
@@ -1042,6 +1049,7 @@ plot(fig)
 <img width="1284" alt="Capture d’écran 2021-05-18 à 10 56 25" src="https://user-images.githubusercontent.com/63207451/118622535-b2bc6c80-b7c7-11eb-8107-0b53b7437e11.png">
 
 <br>
+<br>
 
 ## Maps
 
@@ -1072,7 +1080,9 @@ plot(fig)
 
 <br>
 <img width="1413" alt="Capture d’écran 2021-05-19 à 10 51 17" src="https://user-images.githubusercontent.com/63207451/118784252-24f88400-b890-11eb-9ade-6912e2479c95.png">
-
+<br>
+<br>
+<br>
 
 ### Aire colorée sur une carte, triangle des bermudes
 
@@ -1101,6 +1111,9 @@ plot(fig)
 ```
 <br>
 <img width="1413" alt="Capture d’écran 2021-05-19 à 10 51 55" src="https://user-images.githubusercontent.com/63207451/118784355-3b064480-b890-11eb-89a5-c2a27cdd1370.png"><br>
+<br>
+<br>
+<br>
 
 ### Scatter sur une map
 
@@ -1116,6 +1129,9 @@ plot(fig)
 ```
 <br>
 <img width="1413" alt="Capture d’écran 2021-05-19 à 10 53 23" src="https://user-images.githubusercontent.com/63207451/118784620-756fe180-b890-11eb-8f0f-c2f14f6c1d70.png"><br>
+<br>
+<br>
+<br>
 
 ### Scatter avec ensemble de points
 
@@ -1234,6 +1250,8 @@ plot(fig, include_mathjax='cdn')
 ```
 <br>
 <img width="1424" alt="Capture d’écran 2021-05-19 à 12 27 17" src="https://user-images.githubusercontent.com/63207451/118798097-8f63f100-b89d-11eb-8b50-e6ec0f4f66c3.png"><br>
+<br>
+<br>
 
 ### À partir d'un dataframe pandas
 
@@ -1246,18 +1264,16 @@ plot(fig)
 <br>
 <img width="1424" alt="Capture d’écran 2021-05-19 à 12 27 49" src="https://user-images.githubusercontent.com/63207451/118798163-a1459400-b89d-11eb-923c-d30c47b77c69.png"><br>
 
-
-
-
-
-
 <br>
-<p align="center"><a href="https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29"/></a></p>
-
-
 
 {: .box-note}
 **Note:** Un article sur l'utilisation plus détaillée de plotly sera bientot disponible.
+
+<br>
+
+<br>
+<p align="right"><a href="https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29"/></a></p>
+
 
 
 
