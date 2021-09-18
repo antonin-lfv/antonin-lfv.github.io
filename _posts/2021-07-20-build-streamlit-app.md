@@ -14,10 +14,13 @@ et comment la mettre en ligne. Aucun prérequis n'est nécessaire.
 Avant toute chose, il vous faudra créer un compte sur le site de [**Streamlit sharing**](https://streamlit.io/sharing-sign-up). 
 La validation de votre demande prend en général quelques jours a être traitée. Une fois validée, vous aurez accès à ce panel :
 
+<br>
 ![Panel](https://user-images.githubusercontent.com/63207451/127782495-e65fe7fc-e0d4-4e5c-acc5-d9dab4aee6ea.png){: .mx-auto.d-block :}
-
+<br>
 
 Si vous venez seulement de vous inscrire vous pouvez tout de même suivre la suite du tutoriel.
+<br>
+<br>
 <br>
 
 # Étape 2 : création du repository
@@ -26,16 +29,20 @@ Si vous venez seulement de vous inscrire vous pouvez tout de même suivre la sui
 
 - Pour ceux qui ne seraient pas à l'aise avec GIT, téléchargez [**Github Desktop**](https://desktop.github.com), puis depuis le repository Github faites "Open with GitHub Desktop" comme ceci :
 
+<br>
 ![Click](https://user-images.githubusercontent.com/63207451/127778333-d54f590d-f83e-4413-ab4f-6b85284cae5a.png){: .mx-auto.d-block :}
 
 <br>
 
 Puis, dans Github Desktop, choisissez l'endroit sur votre pc pour créer le dossier de ce repositoy (Par défaut il le mettra dans le dossier nommé Github) comme ceci :
 
+<br>
 ![desktop](https://user-images.githubusercontent.com/63207451/127778447-882fe0e7-3c7d-45f3-9dcc-ec25f790074e.png){: .mx-auto.d-block :}
-
+<br>
 
 Maintenant, vous avez accès au dossier de votre repository !
+<br>
+<br>
 <br>
 
 # Étape 3 : création de l'application avec Streamlit
@@ -86,10 +93,14 @@ streamlit run main.py
 
 Vous devriez voir apparaître dans une page web votre Dashboard : 
 
-![dashboard](https://user-images.githubusercontent.com/63207451/127779145-746c17fb-8114-4df5-9329-c238b39f1736.png){: .mx-auto.d-block :}
+<br>
 
+![dashboard](https://user-images.githubusercontent.com/63207451/127779145-746c17fb-8114-4df5-9329-c238b39f1736.png){: .mx-auto.d-block :}
+<br>
 
 Félicitations vous avez créé votre premier Dashboard !
+<br>
+<br>
 <br>
 
 # Étape 4 : mise en ligne
@@ -130,15 +141,17 @@ font = "sans serif"
 
 On obtient finalement cette architecture : 
 
+<br>
 ![archi](https://user-images.githubusercontent.com/63207451/127779393-50791d8e-55d5-44aa-ba73-3ba994320f45.png){: .mx-auto.d-block :}
 
 <br>
 
 Finalement, il ne reste plus qu'à déployer l'application. Pour cela, rendez-vous sur le site de [**Streamlit Sharing**](https://share.streamlit.io) et appuyez sur "New app" puis "From existing repo" :
 
+<br>
 ![newapp](https://user-images.githubusercontent.com/63207451/127779503-72433cc8-44de-4255-8b66-ef26565b760f.png){: .mx-auto.d-block :}
 
-
+<br>
 Il faut maintenant simplement s'assurer que le fichier "Main file path" soit bien le fichier "main.py" que nous avons créé.
 Ensuite, Deploy !
 
@@ -146,8 +159,9 @@ Ensuite, Deploy !
 
 Une page web devrait s'ouvrir comme ceci :
 
+<br>
 ![oven](https://user-images.githubusercontent.com/63207451/127779611-cad53ed7-bf95-415c-a945-fca10c824db8.png){: .mx-auto.d-block :}
-
+<br>
 Cela signifie que l'application est en cours de déploiement, on peut y suivre la progression sur le volet de droite. Une fois le traitement terminé votre application est en ligne ! Et accessible depuis n'importe où, grâce à votre url qu'il suffit de partager à tout le monde.
 
 
@@ -155,3 +169,4 @@ Cela signifie que l'application est en cours de déploiement, on peut y suivre l
 {: .box-note}
 Si ce **tutoriel** vous a été utile n'hésitez pas à laisser un commentaire sous ce post, et à partager l'url de votre application !
 
+<br>

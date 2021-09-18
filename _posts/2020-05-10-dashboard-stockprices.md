@@ -9,13 +9,16 @@ La mise à jour en temps réel se fait grâce à l'API Yahoo Finance, les graphi
 
 Le code de ce DashBoard est disponible sur le [**repo GitHub**](https://github.com/antonin-lfv/DashBoard_stock_prices), j'explique également sur le ReadMe comment mettre son site en ligne avec StreamLit.
 
+<br>
+
 Le DashBoard est disponible [**ici**](https://share.streamlit.io/antonin-lfv/dashboard_stock_prices/main/StreamLit/streamlit.py).
 
 Aperçu du DashBoard :
 
 ![DashBoard](https://user-images.githubusercontent.com/63207451/124904291-23705000-dfe5-11eb-89bc-3ab352c69d0f.png){: .mx-auto.d-block :}
 
-
+<br>
+<br>
 
 
 

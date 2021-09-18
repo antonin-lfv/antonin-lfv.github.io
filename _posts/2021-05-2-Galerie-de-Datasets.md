@@ -8,27 +8,31 @@ La **Data Science** requiert l'utilisation de base de données/ datasets pour po
 Mais la recherche de données est souvent plus compliquée que prévu. 
 C'est pour cela que j'ai décidé de rassembler des ressources pour faciliter la recherche.
 
+<br>
+
 ### Moteurs de recherches
 
 Par exemple, il existe des **moteurs de recherches** spécifiques à certaines catégories de données :
 
 - Pour de la [**Classification**](https://sci2s.ugr.es/keel/category.php?cat=clas)
-  &nbsp;
+  <br>
   
 - Pour de la [**Regression**](https://sci2s.ugr.es/keel/category.php?cat=reg)
-  &nbsp;
+  <br>
   
 - Dans le domaine de la [**Physique**](http://opendata.cern.ch/)
   Comme l'étude de la collision des atomes
-  &nbsp;
+  <br>
   
 - Pour étudier le [**Climat**](https://www.ncdc.noaa.gov/data-access/quick-links)
   Comme étudier les précipitations, les indicateurs climatiques, etc.
-  &nbsp;
+  <br>
   
 - Pour étudier l'[**Homme**](https://www.humanprogress.org/datasets/)
   Comme étudier l'évolution des transports aériens, la criminalité, les maladies comme les cancers ou encore les technologies et communications
-  &nbsp;
+  <br>
+
+<br>
 
 ### Types de données
 
@@ -36,7 +40,8 @@ Les **types** de ces données peuvent être très variés, et l'importation sous
 &nbsp;
 
 Voici quelques exemples :
-&nbsp;
+
+<br>
 
 - Fichiers nc/nc4
   
