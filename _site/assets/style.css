@@ -29,7 +29,7 @@ a { color: inherit; text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
-pre { border-left: 8px solid #fa8224; margin: 32px 0; padding-left: 16px; width: 75%; overflow-x: auto; }
+pre { border-left: 8px solid #fa8224; margin: 32px 0; padding-left: 16px; width: 100%; overflow-x: auto; }
 
 code { color: #767676; font-size: 16px; padding: 1px 0; }
 

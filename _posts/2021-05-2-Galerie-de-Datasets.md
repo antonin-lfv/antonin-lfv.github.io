@@ -64,6 +64,7 @@ df = pd.read_csv('your/path/dataset.tsv', delimiter="\t")
 import numpy as np
 # Il faut spécifier le nom des colonnes et choisir le bon séparateur
 df = pd.read_table('your/path/dataset.dat', names=['x1','x2','x3'], sep=',' ,encoding='utf-8')
+
 ```
 &nbsp;
 
