@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-05-2-Galerie-de-Datasets.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-05-2-Galerie-de-Datasets.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-07-20-build-streamlit-app.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-07-20-build-streamlit-app.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/_components.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2021/05/02/Galerie-de-Datasets.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2021/05/02/Galerie-de-Datasets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2021/07/20/build-streamlit-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2021/07/20/build-streamlit-app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2020/05/10/dashboard-stockprices.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2020/05/10/dashboard-stockprices.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,13 +141,6 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00266" summary="2.1">
-      <created>1631886021656</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1631886021656</updated>
     </task>
     <task id="LOCAL-00267" summary="2.1">
       <created>1631886054012</created>
@@ -491,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631980922339</updated>
     </task>
-    <option name="localTasksCounter" value="315" />
+    <task id="LOCAL-00315" summary="certifications section">
+      <created>1631982014983</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1631982014983</updated>
+    </task>
+    <option name="localTasksCounter" value="316" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,10 +553,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="certifications section" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1631980923386">
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1631982016113">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1631980923386" />
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1631982016113" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631965434873" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
