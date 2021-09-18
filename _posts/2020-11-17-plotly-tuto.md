@@ -1194,7 +1194,7 @@ plot(fig)
 
 
 <br>
-<p align="center"><a href="https://antonin-lfv.github.io/2020-11-17-plotly-tuto/#Plotly-tutorial---Data-analysis-and-Machine-learning"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29"/></a></p>
+<p align="center"><a href="https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29"/></a></p>
 
 
 
