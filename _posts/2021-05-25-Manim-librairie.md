@@ -52,18 +52,16 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
 	  <img src="https://user-images.githubusercontent.com/63207451/116814422-3126d680-ab59-11eb-8f6a-bacefb3eeaed.gif" height="350">
 </p>
 
-<details>
-  <summary >Code</summary>
+<br>
 	
 ```py
 class latex_formules(Scene): 
     def construct(self):
         latex = MathTex(r"\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}")
         self.play(FadeInFrom(latex))
-	self.wait() 
+    self.wait() 
 ```
 
-</details>
 
 <br>
 
@@ -77,8 +75,7 @@ class latex_formules(Scene):
 	  <img src="https://user-images.githubusercontent.com/63207451/117114850-a0384100-ad8c-11eb-8661-9f693e2f5369.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 
 ```py
 class IR_amoinsb_2(Scene):  # (a-b)^2
@@ -128,7 +125,7 @@ class IR_amoinsb_2(Scene):  # (a-b)^2
         self.wait()
 
 ```
-</details>
+
 
 <br>
 
@@ -139,8 +136,7 @@ class IR_amoinsb_2(Scene):  # (a-b)^2
 	  <img src="https://user-images.githubusercontent.com/63207451/117114404-1b4d2780-ad8c-11eb-949d-91e5afe31f37.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 
 ```py
 class IR_a_b_2(Scene):  # a^2-b^2
@@ -187,7 +183,7 @@ class IR_a_b_2(Scene):  # a^2-b^2
         self.wait()
 
 ```
-</details>
+
 <br>
 
 ## Texte en couleur et entouré
@@ -197,8 +193,7 @@ class IR_a_b_2(Scene):  # a^2-b^2
 	  <img src="https://user-images.githubusercontent.com/63207451/117121735-4ee07f80-ad95-11eb-92b4-addd94c2ad31.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 
 ```py
 class TextColor(Scene):  # f(x)=ax+b
@@ -242,7 +237,7 @@ class TextColor(Scene):  # f(x)=ax+b
         self.remove(boxtexteb)
         self.wait(0.5)
 ```
-</details>
+
 <br>
 
 ## Aligner du texte
@@ -252,8 +247,7 @@ class TextColor(Scene):  # f(x)=ax+b
 	  <img src="https://user-images.githubusercontent.com/63207451/116814430-3d129880-ab59-11eb-9d5f-674b6488c26c.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 	
 ```py
 class Aligner_text(Scene):
@@ -266,7 +260,7 @@ class Aligner_text(Scene):
         self.play(group.animate.arrange(RIGHT, .25, center=False))
 ```
 
-</details>
+
 <br>
 
 ## Ligne couleurs gradient
@@ -276,8 +270,7 @@ class Aligner_text(Scene):
 	  <img src="https://user-images.githubusercontent.com/63207451/116814437-4b60b480-ab59-11eb-89bf-99db2bfba138.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 	
 ```py
 class LigneGradient(Scene):
@@ -287,7 +280,6 @@ class LigneGradient(Scene):
         self.add(line_gradient)
         self.wait()
 ```
-</details>
 
 <br>
 
@@ -298,8 +290,7 @@ class LigneGradient(Scene):
 	  <img src="https://user-images.githubusercontent.com/63207451/116870605-1a44ba80-ac13-11eb-8072-09fe52358a35.gif" height="350">
 </p>
 
-<details>
-  <summary >Code</summary>
+<br>
 	
 ```py
 class WarpSquare(Scene):
@@ -313,7 +304,7 @@ class WarpSquare(Scene):
         self.wait()
 ```
 
-</details>
+
 
 <br>
 
@@ -324,8 +315,7 @@ class WarpSquare(Scene):
 	  <img src="https://user-images.githubusercontent.com/63207451/116870651-2b8dc700-ac13-11eb-8b8e-2536f580eabe.gif" height="350">
 </p>
 
-<details>
-  <summary >Code</summary>
+<br>
 	
 ```py
 class movecircle(Scene):
@@ -337,7 +327,7 @@ class movecircle(Scene):
         self.wait()
 ```
 
-</details>
+
 
 <br>
 
@@ -362,8 +352,7 @@ class movecircle(Scene):
 	  <img src="https://user-images.githubusercontent.com/63207451/116814445-561b4980-ab59-11eb-979f-dd322a001660.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 	
 ```py
 class polygon(GraphScene):
@@ -377,7 +366,7 @@ class polygon(GraphScene):
         plol = Polygon(*polyg).move_to(UP+DOWN)
         self.play(ShowCreation(plol))
 ```
-</details>
+
 
 <br>
 
@@ -388,8 +377,7 @@ class polygon(GraphScene):
 	  <img src="https://user-images.githubusercontent.com/63207451/116870663-30527b00-ac13-11eb-938c-87f8132376a9.gif" height="350">
 </p>
 
-<details>
-  <summary >Code</summary>
+<br>
 	
 ```py
 class Plot_line(GraphScene):
@@ -402,7 +390,7 @@ class Plot_line(GraphScene):
         self.wait()
 ```
 
-</details>
+
 
 <br>
 
@@ -455,8 +443,7 @@ class Plot_line(GraphScene):
 	  <img src="https://user-images.githubusercontent.com/63207451/117125122-6f123d80-ad99-11eb-8368-f7b8c3581c28.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 
 ```py
 class SurfacesAnimation(ThreeDScene):  ####### Surface
@@ -540,7 +527,7 @@ class SurfacesAnimation(ThreeDScene):  ####### Surface
         self.play(FadeOut(cylinder))
 ```
 
-</details>
+
 <br>
 
 # Animations SVG
@@ -554,8 +541,7 @@ class SurfacesAnimation(ThreeDScene):  ####### Surface
 	  <img src="https://user-images.githubusercontent.com/63207451/116814462-67fcec80-ab59-11eb-84bd-81e2a6e5e6b0.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 	
 ```py
 class SVGStickMan(GraphScene, MovingCameraScene):
@@ -584,7 +570,7 @@ class SVGStickMan(GraphScene, MovingCameraScene):
         self.play(Transform(start_man, base.move_to(2 * LEFT)), Transform(start_man_2, base.copy().move_to(2 * RIGHT)))
         self.play(Restore(self.camera.frame))
 ```
-</details>
+
 <br>
 
 ## Zoom sur un neurone
@@ -594,8 +580,7 @@ class SVGStickMan(GraphScene, MovingCameraScene):
 	  <img src="https://user-images.githubusercontent.com/63207451/117122527-489ed300-ad96-11eb-8412-109ec39eaf10.gif" height="350">
 </p>
 
-<details>
-  <summary>Code</summary>
+<br>
 
 ```py
 class ZoomOnNeuron(ZoomedScene, MovingCameraScene):
@@ -644,7 +629,7 @@ class ZoomOnNeuron(ZoomedScene, MovingCameraScene):
         self.play(Uncreate(zoomed_display_frame), FadeOut(frame))
         self.wait()
 ```
-</details>
+
 
 <br>
 

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Manim</title>
+  <meta name="description" content="">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:4000/assets/style.css">
+
+  <link rel="canonical" href="http://localhost:4000/2021/05/25/Manim-librairie.html">
+  <link rel="alternate" type="application/rss+xml" title="Antonin LEFEVRE" href="http://localhost:4000/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="border-bottom-thick px-2 clearfix">
+  <div class="left sm-width-full py-1 mt-1 mt-lg-0">
+    <a class="align-middle link-primary text-accent" href="/">
+      Antonin LEFEVRE
+    </a>
+  </div>
+  <div class="right sm-width-full">
+    <ul class="list-reset mt-lg-1 mb-2 mb-lg-1">
+      
+        
+        <li class="inline-block">
+          <a class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2" href="/Resume/">
+            Resume
+          </a>
+        </li>
+        
+      
+        
+        <li class="inline-block">
+          <a class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2" href="/about/">
+            About
+          </a>
+        </li>
+        
+      
+        
+        <li class="inline-block">
+          <a class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2" href="/certifications/">
+            Certifications
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</header>
+
+
+    <div>
+      <article class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="h0 col-9 sm-width-full py-4 mt-3 inline-block" itemprop="name headline">Manim</h1>
+  <div class="col-4 sm-width-full mt-1 border-top-thin ">
+    <p class="mb-3 py-2 bold h4"><time datetime="2021-05-25T00:00:00+02:00" itemprop="datePublished">May 25, 2021</time></p>
+  </div>
+
+  <div class="prose" itemprop="articleBody">
+      <p><br /></p>
+
+<p align="center">
+Dans cet article je vais partager des animations réalisées avec Manim, une librairie python développée par le YouTubeur 3Blue1Brown, qui permet de créer des animations de façon puissante et épurée. J'utilise ici la version 4.0 de Manim CE (Community Edition) qui est la version de Manim régulièrement mise à jour par la communauté et qui est la plus stable. Si vous voulez utilisez Manim l'installation est détaillée sur le site Manim community. 
+	
+<br />
+</p>
+
+<p><br /></p>
+
+<h1 id="index">Index</h1>
+
+<ol>
+  <li><a href="#exemples-basiques">Exemples basiques</a>
+    <ul>
+      <li><a href="#formules-latex">Formules latex</a></li>
+      <li><a href="#identités-remarquables">identités remarquables</a>
+        <ul>
+          <li><a href="#a-b">(a-b)²</a></li>
+          <li><a href="#a-b-1">a²-b²</a></li>
+        </ul>
+      </li>
+      <li><a href="#texte-en-couleur-et-entouré">Texte en couleur et entouré</a></li>
+      <li><a href="#aligner-du-texte">Aligner du texte</a></li>
+      <li><a href="#ligne-couleurs-gradient">Ligne couleurs gradient</a></li>
+      <li><a href="#animation-carré-déformé">Animation carré déformé</a></li>
+      <li><a href="#déplacement-disque">Déplacement disque</a></li>
+      <li><a href="#distance-euclidienne">Distance Euclidienne</a></li>
+    </ul>
+  </li>
+  <li><a href="#graphiques-2d">Graphiques 2D</a>
+    <ul>
+      <li><a href="#polygone">Polygone</a></li>
+      <li><a href="#ligne-verticale-sous-une-courbe">Ligne verticale sous une courbe</a></li>
+      <li><a href="#sigmoid">Sigmoid</a></li>
+      <li><a href="#évolution-dune-épidémie">Évolution d’une épidémie</a></li>
+      <li><a href="#skewness-et-kurtosis">Skewness et kurtosis</a></li>
+    </ul>
+  </li>
+  <li><a href="#graphiques-3d">Graphiques 3D</a>
+    <ul>
+      <li><a href="#descente-de-gradient">Descente de Gradient</a></li>
+      <li><a href="#animation-surfaces">Animation surfaces</a></li>
+    </ul>
+  </li>
+  <li><a href="#animations-svg">Animations SVG</a>
+    <ul>
+      <li><a href="#stickman">Stickman</a></li>
+      <li><a href="#zoom-sur-un-neurone">Zoom sur un neurone</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="exemples-basiques">Exemples basiques</h1>
+
+<p><br /></p>
+
+<h2 id="formules-latex">Formules latex</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116814422-3126d680-ab59-11eb-8f6a-bacefb3eeaed.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">latex_formules</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">latex</span> <span class="o">=</span> <span class="n">MathTex</span><span class="p">(</span><span class="sa">r</span><span class="s">"\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">FadeInFrom</span><span class="p">(</span><span class="n">latex</span><span class="p">))</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span> 
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="identités-remarquables">Identités remarquables</h2>
+
+<p><br /></p>
+<h2 id="a-b">(a-b)²</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/117114850-a0384100-ad8c-11eb-8661-9f693e2f5369.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">IR_amoinsb_2</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>  <span class="c1"># (a-b)^2
+</span>    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">formula</span> <span class="o">=</span> <span class="n">TexMobject</span><span class="p">(</span>
+            <span class="s">"("</span><span class="p">,</span>  <span class="c1"># 0
+</span>            <span class="s">"a"</span><span class="p">,</span>  <span class="c1"># 1
+</span>            <span class="s">"-"</span><span class="p">,</span>  <span class="c1"># 2
+</span>            <span class="s">"b"</span><span class="p">,</span>  <span class="c1"># 3
+</span>            <span class="s">")"</span><span class="p">,</span>  <span class="c1"># 4
+</span>            <span class="s">"^{2}"</span><span class="p">,</span>  <span class="c1"># 5
+</span>            <span class="s">"="</span><span class="p">,</span>  <span class="c1"># 6
+</span>            <span class="s">"a"</span><span class="p">,</span>  <span class="c1"># 7
+</span>            <span class="s">"^{2}"</span><span class="p">,</span>  <span class="c1"># 8
+</span>            <span class="s">"-"</span><span class="p">,</span>  <span class="c1"># 9
+</span>            <span class="s">"2"</span><span class="p">,</span>  <span class="c1"># 10
+</span>            <span class="s">"a"</span><span class="p">,</span>  <span class="c1"># 11
+</span>            <span class="s">"b"</span><span class="p">,</span>  <span class="c1"># 12
+</span>            <span class="s">"+"</span><span class="p">,</span>  <span class="c1"># 13
+</span>            <span class="s">"b"</span><span class="p">,</span>  <span class="c1"># 14
+</span>            <span class="s">"^{2}"</span>  <span class="c1"># 15
+</span>        <span class="p">)</span>
+        <span class="n">formula</span><span class="p">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">]))</span>  <span class="c1"># 0 à 6
+</span>        <span class="n">formula</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="n">formula</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">BLUE</span><span class="p">)</span>
+        <span class="n">formula</span><span class="p">[</span><span class="mi">11</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="n">formula</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">BLUE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">7</span><span class="p">]),</span>
+            <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">8</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">9</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">9</span><span class="p">]),</span>
+            <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">13</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">14</span><span class="p">]),</span>
+            <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">15</span><span class="p">]),</span>
+            <span class="n">run_time</span><span class="o">=</span><span class="mi">2</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span>
+            <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">10</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">11</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">12</span><span class="p">]),</span>
+            <span class="n">run_time</span><span class="o">=</span><span class="mi">2</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="a-b-1">a²-b²</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/117114404-1b4d2780-ad8c-11eb-949d-91e5afe31f37.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">IR_a_b_2</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>  <span class="c1"># a^2-b^2
+</span>    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">formula</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span>
+            <span class="s">"a"</span><span class="p">,</span>  <span class="c1"># 0
+</span>            <span class="s">"^{2}"</span><span class="p">,</span>  <span class="c1"># 1
+</span>            <span class="s">"-"</span><span class="p">,</span>  <span class="c1"># 2
+</span>            <span class="s">"b"</span><span class="p">,</span>  <span class="c1"># 3
+</span>            <span class="s">"^{2}"</span><span class="p">,</span>  <span class="c1"># 4
+</span>            <span class="s">"="</span><span class="p">,</span>  <span class="c1"># 5
+</span>            <span class="s">"("</span><span class="p">,</span>  <span class="c1"># 6
+</span>            <span class="s">"a"</span><span class="p">,</span>  <span class="c1"># 7
+</span>            <span class="s">"-"</span><span class="p">,</span>  <span class="c1"># 8
+</span>            <span class="s">"b"</span><span class="p">,</span>  <span class="c1"># 9
+</span>            <span class="s">")"</span><span class="p">,</span>  <span class="c1"># 10
+</span>            <span class="s">"("</span><span class="p">,</span>  <span class="c1"># 11
+</span>            <span class="s">"a"</span><span class="p">,</span>  <span class="c1"># 12
+</span>            <span class="s">"+"</span><span class="p">,</span>  <span class="c1"># 13
+</span>            <span class="s">"b"</span><span class="p">,</span>  <span class="c1"># 14
+</span>            <span class="s">")"</span>  <span class="c1"># 15
+</span>        <span class="p">)</span>
+        <span class="n">formula</span><span class="p">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]))</span>  <span class="c1"># 0 à 5
+</span>        <span class="n">formula</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="n">formula</span><span class="p">[</span><span class="mi">9</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">BLUE</span><span class="p">)</span>
+        <span class="n">formula</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="n">formula</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">BLUE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">7</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">12</span><span class="p">]),</span>
+            <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">11</span><span class="p">]),</span>
+            <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">10</span><span class="p">]),</span> <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">15</span><span class="p">]),</span>
+            <span class="n">run_time</span><span class="o">=</span><span class="mf">1.5</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span>
+            <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">8</span><span class="p">]),</span> <span class="n">Write</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">13</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">9</span><span class="p">]),</span>
+            <span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">formula</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">copy</span><span class="p">(),</span> <span class="n">formula</span><span class="p">[</span><span class="mi">14</span><span class="p">]),</span>
+            <span class="n">run_time</span><span class="o">=</span><span class="mf">1.5</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="texte-en-couleur-et-entouré">Texte en couleur et entouré</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/117121735-4ee07f80-ad95-11eb-92b4-addd94c2ad31.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TextColor</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>  <span class="c1"># f(x)=ax+b
+</span>    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"f(x)"</span><span class="p">,</span> <span class="s">"="</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"x"</span><span class="p">,</span> <span class="s">"+"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">)</span>
+        <span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">text</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">BLUE</span><span class="p">)</span>
+        <span class="n">text</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">text</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="s">"#FFFFFF"</span><span class="p">)</span>  <span class="c1"># Hexadecimal color
+</span>        <span class="n">text</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">set_color</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="c1"># text.to_corner(DL)
+</span>
+        <span class="n">frameBoxa</span> <span class="o">=</span> <span class="n">SurroundingRectangle</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">buff</span><span class="o">=</span><span class="mf">0.8</span> <span class="o">*</span> <span class="n">SMALL_BUFF</span><span class="p">)</span>
+        <span class="n">frameBoxa</span><span class="p">.</span><span class="n">set_stroke</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">boxtextea</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"{</span><span class="se">\\</span><span class="s">normalsize On fait varier a}"</span><span class="p">)</span>
+        <span class="n">boxtextea</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">BLUE</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">boxtextea</span><span class="p">.</span><span class="n">next_to</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">get_center</span><span class="p">(),</span> <span class="n">UP</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+        <span class="n">frameBoxb</span> <span class="o">=</span> <span class="n">SurroundingRectangle</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">buff</span><span class="o">=</span><span class="mf">0.8</span> <span class="o">*</span> <span class="n">SMALL_BUFF</span><span class="p">)</span>
+        <span class="n">frameBoxb</span><span class="p">.</span><span class="n">set_stroke</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="n">boxtexteb</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"{</span><span class="se">\\</span><span class="s">normalsize et b}"</span><span class="p">)</span>
+        <span class="n">boxtexteb</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="n">boxtexteb</span><span class="p">.</span><span class="n">next_to</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">get_center</span><span class="p">(),</span> <span class="n">UP</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(.</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ShowCreation</span><span class="p">(</span><span class="n">frameBoxa</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">boxtextea</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">frameBoxa</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">boxtextea</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ShowCreation</span><span class="p">(</span><span class="n">frameBoxb</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">boxtexteb</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">frameBoxb</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">boxtexteb</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="aligner-du-texte">Aligner du texte</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116814430-3d129880-ab59-11eb-9d5f-674b6488c26c.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Aligner_text</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">text1</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"text1"</span><span class="p">).</span><span class="n">shift</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">UL</span><span class="p">)</span>  <span class="c1"># UpLeft
+</span>        <span class="n">text2</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"text2"</span><span class="p">)</span>
+        <span class="n">text3</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"text3"</span><span class="p">).</span><span class="n">shift</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">DR</span><span class="p">)</span>  <span class="c1"># DownRight
+</span>        <span class="n">group</span> <span class="o">=</span> <span class="n">VGroup</span><span class="p">(</span><span class="n">text1</span><span class="p">,</span> <span class="n">text2</span><span class="p">,</span> <span class="n">text3</span><span class="p">).</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">group</span><span class="p">.</span><span class="n">animate</span><span class="p">.</span><span class="n">arrange</span><span class="p">(</span><span class="n">RIGHT</span><span class="p">,</span> <span class="p">.</span><span class="mi">25</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="ligne-couleurs-gradient">Ligne couleurs gradient</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116814437-4b60b480-ab59-11eb-89bf-99db2bfba138.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">LigneGradient</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">line_gradient</span> <span class="o">=</span> <span class="n">Line</span><span class="p">(</span><span class="n">LEFT</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="n">RIGHT</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="n">line_gradient</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="n">PURPLE</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span> <span class="n">YELLOW</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">RED</span><span class="p">])</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">line_gradient</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="animation-carré-déformé">Animation carré déformé</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116870605-1a44ba80-ac13-11eb-8072-09fe52358a35.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">WarpSquare</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">square</span> <span class="o">=</span> <span class="n">Square</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ApplyPointwiseFunction</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">point</span><span class="p">:</span> <span class="n">complex_to_R3</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">R3_to_complex</span><span class="p">(</span><span class="n">point</span><span class="p">))),</span>
+            <span class="n">square</span>
+        <span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="déplacement-disque">Déplacement disque</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116870651-2b8dc700-ac13-11eb-8b8e-2536f580eabe.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">movecircle</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">sphere</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">().</span><span class="n">set_color</span><span class="p">(</span><span class="n">RED</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ApplyMethod</span><span class="p">(</span><span class="n">sphere</span><span class="p">.</span><span class="n">shift</span><span class="p">,</span> <span class="n">UP</span><span class="p">),</span> <span class="n">run_time</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ApplyMethod</span><span class="p">(</span><span class="n">sphere</span><span class="p">.</span><span class="n">scale</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">),</span> <span class="n">run_time</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="distance-euclidienne">Distance Euclidienne</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116870660-2f214e00-ac13-11eb-9588-56b55423cde0.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<h1 id="graphiques-2d">Graphiques 2D</h1>
+
+<p><br /></p>
+
+<h2 id="polygone">Polygone</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116814445-561b4980-ab59-11eb-979f-dd322a001660.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">polygon</span><span class="p">(</span><span class="n">GraphScene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setup_axes</span><span class="p">(</span><span class="n">animate</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">polyg</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">coords_to_point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="c1">#P1
+</span>                 <span class="bp">self</span><span class="p">.</span><span class="n">coords_to_point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">3.5</span><span class="p">),</span> <span class="c1">#P2
+</span>                 <span class="bp">self</span><span class="p">.</span><span class="n">coords_to_point</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span><span class="mf">1.75</span><span class="p">),</span> <span class="c1">#P3
+</span>                 <span class="bp">self</span><span class="p">.</span><span class="n">coords_to_point</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="c1">#P4
+</span>                 <span class="bp">self</span><span class="p">.</span><span class="n">coords_to_point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span> <span class="c1">#P1 pour fermer la figure
+</span>        <span class="n">plol</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="o">*</span><span class="n">polyg</span><span class="p">).</span><span class="n">move_to</span><span class="p">(</span><span class="n">UP</span><span class="o">+</span><span class="n">DOWN</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ShowCreation</span><span class="p">(</span><span class="n">plol</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="ligne-verticale-sous-une-courbe">Ligne verticale sous une courbe</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116870663-30527b00-ac13-11eb-938c-87f8132376a9.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Plot_line</span><span class="p">(</span><span class="n">GraphScene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setup_axes</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">v_graph</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_graph</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_max</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">variable_point_label</span> <span class="o">=</span> <span class="s">"x_0"</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add_T_label</span><span class="p">(</span><span class="n">x_val</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">v_graph</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="sigmoid">Sigmoid</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116870640-2892d680-ac13-11eb-8af1-8ee91c0ef5c9.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<h2 id="évolution-dune-épidémie">Évolution d’une épidémie</h2>
+
+<p><br /></p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/114284499-b1718480-9a50-11eb-8b13-a7803d66c94f.gif" width="600" />
+	</p>
+
+<p><br /></p>
+
+<h2 id="skewness-et-kurtosis">Skewness et kurtosis</h2>
+
+<p><br /> 
+<br /></p>
+
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116815034-fa05f480-ab5b-11eb-8f4b-29fd98e034ba.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<h1 id="graphiques-3d">Graphiques 3D</h1>
+
+<p><br /></p>
+
+<h2 id="descente-de-gradient">Descente de gradient</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/117108691-d8875180-ad83-11eb-83b0-42ef904829bc.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<h2 id="animation-surfaces">Animation surfaces</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/117125122-6f123d80-ad99-11eb-8368-f7b8c3581c28.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SurfacesAnimation</span><span class="p">(</span><span class="n">ThreeDScene</span><span class="p">):</span>  <span class="c1">####### Surface
+</span>    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="n">ThreeDAxes</span><span class="p">()</span>
+        <span class="n">cylinder</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">TAU</span> <span class="o">*</span> <span class="n">v</span><span class="p">),</span>
+                <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">TAU</span> <span class="o">*</span> <span class="n">v</span><span class="p">),</span>
+                <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">u</span><span class="p">)</span>
+            <span class="p">]),</span>
+            <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">32</span><span class="p">)).</span><span class="n">fade</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Resolution of the surfaces
+</span>
+        <span class="n">paraboloid</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="p">,</span>
+                <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="p">,</span>
+                <span class="n">u</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="p">]),</span> <span class="n">v_max</span><span class="o">=</span><span class="n">TAU</span><span class="p">,</span>
+            <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">PURPLE_D</span><span class="p">,</span> <span class="n">PURPLE_E</span><span class="p">],</span>
+            <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">)).</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">para_hyp</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="n">u</span><span class="p">,</span>
+                <span class="n">v</span><span class="p">,</span>
+                <span class="n">u</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">v</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="p">]),</span> <span class="n">v_min</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">v_max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">u_min</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">u_max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">BLUE_D</span><span class="p">,</span> <span class="n">BLUE_E</span><span class="p">],</span>
+            <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">32</span><span class="p">)).</span><span class="n">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">cone</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="n">u</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="n">u</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="n">u</span>
+            <span class="p">]),</span> <span class="n">v_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_max</span><span class="o">=</span><span class="n">TAU</span><span class="p">,</span> <span class="n">u_min</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">u_max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">GREEN_D</span><span class="p">,</span> <span class="n">GREEN_E</span><span class="p">],</span>
+            <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">32</span><span class="p">)).</span><span class="n">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">hip_one_side</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="n">np</span><span class="p">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="n">np</span><span class="p">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="n">np</span><span class="p">.</span><span class="n">sinh</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+            <span class="p">]),</span> <span class="n">v_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_max</span><span class="o">=</span><span class="n">TAU</span><span class="p">,</span> <span class="n">u_min</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">u_max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">YELLOW_D</span><span class="p">,</span> <span class="n">YELLOW_E</span><span class="p">],</span>
+            <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+
+        <span class="n">ellipsoid</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+            <span class="p">]),</span> <span class="n">v_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_max</span><span class="o">=</span><span class="n">TAU</span><span class="p">,</span> <span class="n">u_min</span><span class="o">=-</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">u_max</span><span class="o">=</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">TEAL_D</span><span class="p">,</span> <span class="n">TEAL_E</span><span class="p">],</span>
+            <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">32</span><span class="p">)).</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">sphere</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
+                <span class="mf">1.5</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="mf">1.5</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                <span class="mf">1.5</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+            <span class="p">]),</span> <span class="n">v_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_max</span><span class="o">=</span><span class="n">TAU</span><span class="p">,</span> <span class="n">u_min</span><span class="o">=-</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">u_max</span><span class="o">=</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">RED_D</span><span class="p">,</span> <span class="n">RED_E</span><span class="p">],</span>
+            <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">32</span><span class="p">)).</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">set_camera_orientation</span><span class="p">(</span><span class="n">phi</span><span class="o">=</span><span class="mi">75</span> <span class="o">*</span> <span class="n">DEGREES</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">begin_ambient_camera_rotation</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">sphere</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">ellipsoid</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">ellipsoid</span><span class="p">,</span> <span class="n">cone</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">cone</span><span class="p">,</span> <span class="n">hip_one_side</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">hip_one_side</span><span class="p">,</span> <span class="n">para_hyp</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">para_hyp</span><span class="p">,</span> <span class="n">paraboloid</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ReplacementTransform</span><span class="p">(</span><span class="n">paraboloid</span><span class="p">,</span> <span class="n">cylinder</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">FadeOut</span><span class="p">(</span><span class="n">cylinder</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h1 id="animations-svg">Animations SVG</h1>
+
+<p><br /></p>
+
+<h2 id="stickman">Stickman</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/116814462-67fcec80-ab59-11eb-84bd-81e2a6e5e6b0.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SVGStickMan</span><span class="p">(</span><span class="n">GraphScene</span><span class="p">,</span> <span class="n">MovingCameraScene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">start_man</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">start_man_2</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">wave_man</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_wave.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">wave_man_2</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_wave.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">camera</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">save_state</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">start_man</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">LEFT</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">RIGHT</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">camera</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">animate</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">start_man</span><span class="p">.</span><span class="n">get_top</span><span class="p">()).</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.4</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">salut</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"Salut !"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">YELLOW</span><span class="p">).</span><span class="n">next_to</span><span class="p">(</span><span class="n">start_man</span><span class="p">,</span> <span class="n">UP</span><span class="o">+</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Transform</span><span class="p">(</span><span class="n">start_man</span><span class="p">,</span> <span class="n">wave_man</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">LEFT</span><span class="p">)),</span> <span class="n">FadeIn</span><span class="p">(</span><span class="n">salut</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">camera</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">animate</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">.</span><span class="n">get_top</span><span class="p">()))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">salut_2</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"Hey !"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">YELLOW</span><span class="p">).</span><span class="n">next_to</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">,</span> <span class="n">UP</span><span class="o">+</span><span class="n">RIGHT</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Transform</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">,</span> <span class="n">wave_man_2</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">RIGHT</span><span class="p">)),</span> <span class="n">FadeIn</span><span class="p">(</span><span class="n">salut_2</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">FadeOut</span><span class="p">(</span><span class="n">salut</span><span class="p">),</span> <span class="n">FadeOut</span><span class="p">(</span><span class="n">salut_2</span><span class="p">),</span> <span class="n">run_time</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Transform</span><span class="p">(</span><span class="n">start_man</span><span class="p">,</span> <span class="n">base</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">LEFT</span><span class="p">)),</span> <span class="n">Transform</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">,</span> <span class="n">base</span><span class="p">.</span><span class="n">copy</span><span class="p">().</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">RIGHT</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Restore</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">camera</span><span class="p">.</span><span class="n">frame</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="zoom-sur-un-neurone">Zoom sur un neurone</h2>
+
+<p><br /></p>
+<p align="center">
+	  <img src="https://user-images.githubusercontent.com/63207451/117122527-489ed300-ad96-11eb-8412-109ec39eaf10.gif" height="350" />
+</p>
+
+<p><br /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ZoomOnNeuron</span><span class="p">(</span><span class="n">ZoomedScene</span><span class="p">,</span> <span class="n">MovingCameraScene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">ZoomedScene</span><span class="p">.</span><span class="n">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">zoom_factor</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+            <span class="n">zoomed_display_height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">zoomed_display_width</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">image_frame_stroke_width</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+            <span class="n">zoomed_camera_config</span><span class="o">=</span><span class="p">{</span>
+                <span class="s">"default_frame_stroke_width"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># image du neurone
+</span>        <span class="n">neurone_1</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/neuron_video.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">).</span><span class="n">scale</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">rotate</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">neurone_1</span><span class="p">))</span>
+
+        <span class="c1"># texte du zoom
+</span>        <span class="c1">#zoomed_camera_text = Text("Dendrites", color=WHITE).scale(1.1) # box qui suit le zoom
+</span>
+        <span class="n">zoomed_camera</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">zoomed_camera</span>
+        <span class="n">zoomed_display</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">zoomed_display</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">zoomed_camera</span><span class="p">.</span><span class="n">frame</span>
+        <span class="n">zoomed_display_frame</span> <span class="o">=</span> <span class="n">zoomed_display</span><span class="p">.</span><span class="n">display_frame</span>
+
+        <span class="n">frame</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">neurone_1</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">get_left</span><span class="p">())</span>
+        <span class="n">frame</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">PURPLE</span><span class="p">)</span>
+
+        <span class="c1"># placer le cadre du zoom
+</span>        <span class="n">zd_rect</span> <span class="o">=</span> <span class="n">BackgroundRectangle</span><span class="p">(</span><span class="n">zoomed_display</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">neurone_1</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">get_left</span><span class="p">()</span><span class="o">+</span><span class="n">DOWN</span><span class="p">),</span> <span class="n">fill_opacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="n">MED_SMALL_BUFF</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">add_foreground_mobject</span><span class="p">(</span><span class="n">zd_rect</span><span class="p">)</span>
+
+        <span class="n">unfold_camera</span> <span class="o">=</span> <span class="n">UpdateFromFunc</span><span class="p">(</span><span class="n">zd_rect</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">rect</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">zoomed_display</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">ShowCreation</span><span class="p">(</span><span class="n">frame</span><span class="p">),</span> <span class="n">direction</span><span class="o">=</span><span class="n">DOWN</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">activate_zooming</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">get_zoomed_display_pop_out_animation</span><span class="p">(),</span> <span class="n">unfold_camera</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="c1"># dezoom et fin de l'animation
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">get_zoomed_display_pop_out_animation</span><span class="p">(),</span> <span class="n">unfold_camera</span><span class="p">,</span> <span class="n">rate_func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">smooth</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Uncreate</span><span class="p">(</span><span class="n">zoomed_display_frame</span><span class="p">),</span> <span class="n">FadeOut</span><span class="p">(</span><span class="n">frame</span><span class="p">))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p align="center"><a href="#Index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29" /></a></p>
+
+<p><br /></p>
+
+<p align="center">
+  <a href="https://github.com/antonin-lfv" class="fancybox"><img src="https://user-images.githubusercontent.com/63207451/97302854-e484da80-1859-11eb-9374-5b319ca51197.png" title="GitHub" width="40" height="40" /></a>
+  <a href="https://www.linkedin.com/in/antonin-lefevre-565b8b141" class="fancybox"><img src="https://user-images.githubusercontent.com/63207451/97303444-b2c04380-185a-11eb-8cfc-864c33a64e4b.png" title="LinkedIn" width="40" height="40" /></a>
+  <a href="mailto:antoninlefevre45@icloud.com" class="fancybox"><img src="https://user-images.githubusercontent.com/63207451/97303543-cec3e500-185a-11eb-8adc-c1364e2054a9.png" title="Mail" width="40" height="40" /></a>
+</p>
+
+<hr />
+
+  </div>
+
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  <div class="col-4 sm-width-full left mr-lg-4 mt-3">
+    <a class="no-underline border-top-thin py-1 block" href="http://localhost:4000/2021/05/02/Galerie-de-Datasets.html">
+      <span class="h5 bold text-accent">Previous</span>
+      <p class="bold h3 link-primary mb-1">Galerie de Datasets</p>
+      <p>La Data Science requiert l’utilisation de base de données/ datasets pour pouvoir créer des modèles, analyser des tendances, etc. Mais...</p>
+    </a>
+  </div>
+  
+  
+  <div class="col-4 sm-width-full left mt-3">
+    <a class="no-underline border-top-thin py-1 block" href="http://localhost:4000/2021/07/20/build-streamlit-app.html">
+      <span class="h5 bold text-accent">Next</span>
+      <p class="bold h3 link-primary mb-1">Build Streamlit apps</p>
+      <p>Cet article va vous montrer pas à pas comment créer votre première application grâce à Streamlit, et comment la mettre...</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="border-top-thin clearfix mt-2 mt-lg-4">
+  <div class="container mx-auto px-2">
+    <p class="col-8 sm-width-full left py-2 mb-0">Site maintenu par <a class="text-accent" href="https://github.com/antonin-lfv">antonin-lfv</a></p>
+    <ul class="list-reset right clearfix sm-width-full py-2 mb-2 mb-lg-0">
+      <li class="inline-block mr-1">
+      </li>
+      <li class="inline-block">
+        <a class="github-button" href="https://github.com/antonin-lfv/antonin-lfv.github.io" data-icon="octicon-star" data-count-href="antonin-lfv//stargazers" data-count-api="/repos/antonin-lfv/#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star antonin-lfv/ on GitHub">Star</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  </body>
+
+</html>

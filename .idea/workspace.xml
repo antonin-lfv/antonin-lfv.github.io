@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section">
-      <change afterPath="$PROJECT_DIR$/_posts/2021-05-25-Manim-librairie.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,34 +139,6 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00269" summary="2.1">
-      <created>1631886839960</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1631886839960</updated>
-    </task>
-    <task id="LOCAL-00270" summary="2.1">
-      <created>1631886952237</created>
-      <option name="number" value="00270" />
-      <option name="presentableId" value="LOCAL-00270" />
-      <option name="project" value="LOCAL" />
-      <updated>1631886952237</updated>
-    </task>
-    <task id="LOCAL-00271" summary="2.1">
-      <created>1631886973772</created>
-      <option name="number" value="00271" />
-      <option name="presentableId" value="LOCAL-00271" />
-      <option name="project" value="LOCAL" />
-      <updated>1631886973772</updated>
-    </task>
-    <task id="LOCAL-00272" summary="2.1">
-      <created>1631887553052</created>
-      <option name="number" value="00272" />
-      <option name="presentableId" value="LOCAL-00272" />
-      <option name="project" value="LOCAL" />
-      <updated>1631887553053</updated>
     </task>
     <task id="LOCAL-00273" summary="version 2.2">
       <created>1631888169686</created>
@@ -486,7 +455,35 @@
       <option name="project" value="LOCAL" />
       <updated>1631989360873</updated>
     </task>
-    <option name="localTasksCounter" value="318" />
+    <task id="LOCAL-00318" summary="new post manim">
+      <created>1632007174316</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1632007174317</updated>
+    </task>
+    <task id="LOCAL-00319" summary="new post manim">
+      <created>1632007294719</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1632007294719</updated>
+    </task>
+    <task id="LOCAL-00320" summary="new post manim">
+      <created>1632007392656</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1632007392656</updated>
+    </task>
+    <task id="LOCAL-00321" summary="new post manim">
+      <created>1632007504756</created>
+      <option name="number" value="00321" />
+      <option name="presentableId" value="LOCAL-00321" />
+      <option name="project" value="LOCAL" />
+      <updated>1632007504756</updated>
+    </task>
+    <option name="localTasksCounter" value="322" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="image" />
     <MESSAGE value="ml image" />
     <MESSAGE value="certif" />
     <MESSAGE value="color" />
@@ -551,13 +547,15 @@
     <MESSAGE value="about section" />
     <MESSAGE value="certifications section" />
     <MESSAGE value="resume" />
-    <option name="LAST_COMMIT_MESSAGE" value="resume" />
+    <MESSAGE value="new post manim" />
+    <option name="LAST_COMMIT_MESSAGE" value="new post manim" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1631989363113">
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1632007506110">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1631989363113" />
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1632007506110" />
+    <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1632007176106" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631965434873" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
