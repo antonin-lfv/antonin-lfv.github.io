@@ -123,7 +123,8 @@ backgroundColor= '#FFF'
 # Color used for almost all text.
 textColor = '#222f3e'
 
-# Font family for all text in the app, except code blocks. One of "sans serif", "serif", or "monospace".
+# Font family for all text in the app, except code blocks. 
+# One of "sans serif", "serif", or "monospace".
 font = "sans serif"
 ```
 

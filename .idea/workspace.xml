@@ -19,7 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="embed plotly charts" />
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-11-17-plotly-tuto.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2021-07-22-online-machine-learning-app.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-07-22-online-machine-learning-app.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2020/11/17/plotly-tuto.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2020/11/17/plotly-tuto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2021/05/02/Galerie-de-Datasets.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2021/05/02/Galerie-de-Datasets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2021/07/22/online-machine-learning-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2021/07/22/online-machine-learning-app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2021/08/20/cybersecu-gitbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2021/08/20/cybersecu-gitbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/certifications/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/certifications/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,13 +150,6 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00262" summary="2.1">
-      <created>1631885603498</created>
-      <option name="number" value="00262" />
-      <option name="presentableId" value="LOCAL-00262" />
-      <option name="project" value="LOCAL" />
-      <updated>1631885603498</updated>
     </task>
     <task id="LOCAL-00263" summary="2.1">
       <created>1631885736944</created>
@@ -483,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631979112583</updated>
     </task>
-    <option name="localTasksCounter" value="311" />
+    <task id="LOCAL-00311" summary="certifications section">
+      <created>1631979192381</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1631979192381</updated>
+    </task>
+    <option name="localTasksCounter" value="312" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="streamlit post" />
     <MESSAGE value="stock price post" />
     <MESSAGE value="image" />
     <MESSAGE value="ml image" />
@@ -548,13 +558,14 @@
     <MESSAGE value="footer" />
     <MESSAGE value="BlockCode width 100%" />
     <MESSAGE value="about section" />
-    <option name="LAST_COMMIT_MESSAGE" value="about section" />
+    <MESSAGE value="certifications section" />
+    <option name="LAST_COMMIT_MESSAGE" value="certifications section" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1631979115979">
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1631979194469">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1631979115979" />
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1631979194469" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631965434873" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

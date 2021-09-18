@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Plotly - Tutoriel</title>
-  <meta name="description" content="Ce tutoriel à pour objectif de présenter le module Plotly qui est l’un des modules les plus utilisés pour faire de la visualisation de données avec Python. P...">
+  <meta name="description" content="Ce tutoriel à pour objectif de présenter le module Plotly qui est l'un des modules les plus utilisés pour faire de la visualisation de données avec Python. P...">
 
   
   
@@ -74,9 +74,11 @@
   </div>
 
   <div class="prose" itemprop="articleBody">
-      <p>Ce tutoriel à pour objectif de présenter le module <b>Plotly</b> qui est l’un des modules les plus utilisés pour faire de la visualisation de données avec Python. <br />
-Plotly étant le plus compliqué mais également le plus interactif. Il est construit sur 3 composantes principales, à savoir <b>plotly.express</b> qui est basé sur l’utilisation des dataframes pandas, et qui est simple et rapide, et <b>plotly.graph_objects</b> qui est beaucoup plus puissant, et beaucoup plus personnalisable, il est basé sur la POO et <b>plotly.figure_factory</b> qui est dédiée à la création de figure spécifiques qui seraient trop compliqué à developper avec les 2 autres composantes. <br />
-Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du <a href="https://github.com/antonin-lfv/Plotly_tutorial"><strong>Repository</strong></a> sous le nom <b>plotly_ex.py</b> .</p>
+      <p align="center">
+Ce tutoriel à pour objectif de présenter le module <b>Plotly</b> qui est l'un des modules les plus utilisés pour faire de la visualisation de données avec Python. <br />
+Plotly étant le plus compliqué mais également le plus interactif. Il est construit sur 3 composantes principales, à savoir <b>plotly.express</b> qui est basé sur l'utilisation des dataframes pandas, et qui est simple et rapide, et <b>plotly.graph_objects</b> qui est beaucoup plus puissant, et beaucoup plus personnalisable, il est basé sur la POO et <b>plotly.figure_factory</b> qui est dédiée à la création de figure spécifiques qui seraient trop compliqué à developper avec les 2 autres composantes. <br />
+Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du <a href="https://github.com/antonin-lfv/Plotly_tutorial"><b>Repository</b></a> sous le nom <b>plotly_ex.py</b> .
+</p>
 
 <p><br /></p>
 
@@ -215,8 +217,11 @@ Installation : <br />
 
 <h1 id="plotlyexpress">Plotly.Express</h1>
 
-<p>Plotly express, importée en tant que <strong>px</strong>, est la partie de plotly permettant de créer rapidement et simplement n’importe quel graphique en 1 ligne de code. Son interet est notamment basé sur le fait qu’elle marche parfaitement bien avec les <strong>DataFrames</strong> de Pandas, mais on peut également travailler avec des listes ou tout autre type de données. Son utilisation est limitée notamment dans la conception de subplots. Vous verrez dans cette section quelles sont les fonctions les plus utiles de <strong>plotly express</strong>, et comment les personnaliser au maximum.
-<br /></p>
+<p align="center">
+Plotly express, importée en tant que <b>px</b>, est la partie de plotly permettant de créer rapidement et simplement n'importe quel graphique en 1 ligne de code. Son interet est notamment basé sur le fait qu'elle marche parfaitement bien avec les <b>DataFrames</b> de Pandas, mais on peut également travailler avec des listes ou tout autre type de données. Son utilisation est limitée notamment dans la conception de subplots. Vous verrez dans cette section quelles sont les fonctions les plus utiles de <b>plotly express</b>, et comment les personnaliser au maximum.
+</p>
+
+<p><br /></p>
 
 <p>Voici la syntaxe globale d’un code utilisant plotly express :</p>
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">chart_type</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
@@ -282,6 +287,7 @@ Installation : <br />
 
 <p><br />
 <img width="1419" alt="Capture d’écran 2021-05-18 à 09 42 40" src="https://user-images.githubusercontent.com/63207451/118611691-6a984c80-b7bd-11eb-92cb-bf433f8fa8b7.png" />
+<br />
 <br /></p>
 
 <h3 id="subplots">Subplots</h3>
@@ -302,10 +308,22 @@ Installation : <br />
 
 <p><br /></p>
 
-<p>| facet_col=”species” | facet_row=”species” |
-|———————|———————|
-|<img width="600" alt="Capture d’écran 2021-05-18 à 09 44 19" src="https://user-images.githubusercontent.com/63207451/118611980-a59a8000-b7bd-11eb-8ae9-2b8a673d7e5d.png" />|<img width="600" alt="Capture d’écran 2021-05-18 à 09 45 25" src="https://user-images.githubusercontent.com/63207451/118612164-cb278980-b7bd-11eb-9586-abeb9e3a7fb9.png" />|
-<br /></p>
+<table>
+  <thead>
+    <tr>
+      <th>facet_col=”species”</th>
+      <th>facet_row=”species”</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img width="600" alt="Capture d’écran 2021-05-18 à 09 44 19" src="https://user-images.githubusercontent.com/63207451/118611980-a59a8000-b7bd-11eb-8ae9-2b8a673d7e5d.png" /></td>
+      <td><img width="600" alt="Capture d’écran 2021-05-18 à 09 45 25" src="https://user-images.githubusercontent.com/63207451/118612164-cb278980-b7bd-11eb-9586-abeb9e3a7fb9.png" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
 
 <h3 id="animations">Animations</h3>
 
@@ -329,6 +347,7 @@ Installation : <br />
 
 <p><br />
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 49 41" src="https://user-images.githubusercontent.com/63207451/118612783-67519080-b7be-11eb-8bc7-9bc9e9c1c55d.png" />
+<br />
 <br /></p>
 
 <h3 id="range-slider">Range Slider</h3>
@@ -346,6 +365,7 @@ Installation : <br />
 
 <p><br />
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 51 49" src="https://user-images.githubusercontent.com/63207451/118613064-ac75c280-b7be-11eb-8648-05aa6843c10b.png" />
+<br />
 <br /></p>
 
 <h3 id="rectangles-et-lignes">Rectangles et lignes</h3>
@@ -380,6 +400,7 @@ Installation : <br />
 
 <p><br />
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 52 53" src="https://user-images.githubusercontent.com/63207451/118613217-d4652600-b7be-11eb-8b8f-bdebc1c54626.png" />
+<br />
 <br /></p>
 
 <h3 id="marges-statistiques">Marges statistiques</h3>
@@ -396,7 +417,8 @@ Installation : <br />
 <span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </code></pre></div></div>
 <p><br />
-<img width="1403" alt="Capture d’écran 2021-05-18 à 09 53 30" src="https://user-images.githubusercontent.com/63207451/118613295-e941b980-b7be-11eb-9930-e1c1a496e8f6.png" /><br /></p>
+<img width="1403" alt="Capture d’écran 2021-05-18 à 09 53 30" src="https://user-images.githubusercontent.com/63207451/118613295-e941b980-b7be-11eb-9930-e1c1a496e8f6.png" /><br />
+<br /></p>
 
 <h3 id="curseurs">Curseurs</h3>
 
@@ -413,6 +435,7 @@ Installation : <br />
 
 <p><br />
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 54 47" src="https://user-images.githubusercontent.com/63207451/118613484-168e6780-b7bf-11eb-9be4-204fb57f00ab.png" />
+<br />
 <br /></p>
 
 <h3 id="plot-3d">Plot 3D</h3>
@@ -425,6 +448,7 @@ Installation : <br />
 
 <p><br />
 <img width="1411" alt="Capture d’écran 2021-05-18 à 10 42 21" src="https://user-images.githubusercontent.com/63207451/118620412-c666d380-b7c5-11eb-87e6-346920499cca.png" />
+<br />
 <br /></p>
 
 <h2 id="bar-chart">Bar chart</h2>
@@ -446,6 +470,7 @@ Installation : <br />
 
 <p><br />
 <img width="1413" alt="Capture d’écran 2021-05-18 à 16 12 29" src="https://user-images.githubusercontent.com/63207451/118666930-da292e80-b7f3-11eb-98c8-860f7dada52b.png" />
+<br />
 <br /></p>
 
 <h3 id="indicateurs-marginaux">Indicateurs marginaux</h3>
@@ -510,6 +535,7 @@ Installation : <br />
 
 <p><br />
 <img width="1386" alt="Capture d’écran 2021-05-18 à 16 07 18" src="https://user-images.githubusercontent.com/63207451/118666061-2627a380-b7f3-11eb-942d-25e2d9491bac.png" />
+<br />
 <br /></p>
 
 <h2 id="machine-learning">Machine Learning</h2>
@@ -533,7 +559,8 @@ Installation : <br />
 </code></pre></div></div>
 
 <p><br />
-<img width="1166" alt="Capture d’écran 2020-11-24 à 10 45 21" src="https://user-images.githubusercontent.com/63207451/100077394-9821c000-2e42-11eb-9700-8f103b2000c5.png" /></p>
+<img width="1166" alt="Capture d’écran 2020-11-24 à 10 45 21" src="https://user-images.githubusercontent.com/63207451/100077394-9821c000-2e42-11eb-9700-8f103b2000c5.png" />
+<br /></p>
 
 <h3 id="umap">UMAP</h3>
 
@@ -550,7 +577,8 @@ Installation : <br />
 </code></pre></div></div>
 
 <p><br />
-<img width="1399" alt="Capture d’écran 2021-04-30 à 13 02 14" src="https://user-images.githubusercontent.com/63207451/116686674-6e9e2f00-a9b4-11eb-97e0-a65286464dc0.png" /></p>
+<img width="1399" alt="Capture d’écran 2021-04-30 à 13 02 14" src="https://user-images.githubusercontent.com/63207451/116686674-6e9e2f00-a9b4-11eb-97e0-a65286464dc0.png" />
+<br /></p>
 
 <h3 id="t-sne">t-SNE</h3>
 
@@ -570,12 +598,17 @@ Installation : <br />
 <p><br />
 <img width="1328" alt="Capture d’écran 2021-04-30 à 13 03 58" src="https://user-images.githubusercontent.com/63207451/116686752-8fff1b00-a9b4-11eb-8733-a3491e45f36e.png" /></p>
 
-<p><br /></p>
+<p><br />
+<br /></p>
 
 <h2 id="graphique-de-corrélation">Graphique de corrélation</h2>
 
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">iris</span><span class="p">()</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="p">[</span><span class="s">"sepal_width"</span><span class="p">,</span> <span class="s">"sepal_length"</span><span class="p">,</span> <span class="s">"petal_width"</span><span class="p">,</span> <span class="s">"petal_length"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">"species"</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="p">[</span><span class="s">"sepal_width"</span><span class="p">,</span> 
+                                        <span class="s">"sepal_length"</span><span class="p">,</span> 
+                                        <span class="s">"petal_width"</span><span class="p">,</span> 
+                                        <span class="s">"petal_length"</span><span class="p">],</span> 
+                            <span class="n">color</span><span class="o">=</span><span class="s">"species"</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </code></pre></div></div>
 <p><br />
@@ -585,23 +618,31 @@ Installation : <br />
 
 <h1 id="plotlygraph_objects">Plotly.Graph_Objects</h1>
 
-<p>Plotly <strong>graph_objects</strong>, importée en tant que <strong>go</strong> est la partie de Plotly utilisant la <strong>POO</strong>, pour créer des graphiques très complets. On va y retrouver la
+<p><br /></p>
+
+<p align="center">
+Plotly <b>graph_objects</b>, importée en tant que <b>go</b> est la partie de Plotly utilisant la <b>POO</b>, pour créer des graphiques très complets. On va y retrouver la
 plupart des fonctions de plotly express.
-Vous verrez dans cette section quelles sont les fonctions les plus utiles de plotly <strong>graph_objetcs</strong> et comment les personnaliser
+Vous verrez dans cette section quelles sont les fonctions les plus utiles de plotly <b>graph_objetcs</b> et comment les personnaliser
 au maximum.
-<br /></p>
+</p>
+
+<p><br /></p>
 
 <p>Voici la syntaxe globale d’un code utilisant plotly graph_objects :</p>
-<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span> <span class="c1"># création de la figure, ou alors make_subplots
-</span>
-<span class="n">fig</span><span class="p">.</span><span class="n">add_TypeTrace</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span> <span class="c1"># on ajoute des figure avec TypeTrace qui est pie, scatter, surface, etc..
-</span><span class="p">...</span>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># création de la figure, ou alors make_subplots
+</span><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span> 
+<span class="c1"># on ajoute des figure avec TypeTrace qui est pie, scatter, surface, etc..
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_TypeTrace</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span> 
+<span class="p">...</span>
 <span class="n">fig</span><span class="p">.</span><span class="n">add_TypeTrace</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">.</span><span class="n">update_layout</span><span class="p">(</span><span class="s">"parameters"</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </code></pre></div></div>
+
+<p><br /></p>
 
 <h2 id="subplots-go">Subplots Go</h2>
 
@@ -611,15 +652,18 @@ au maximum.
                     <span class="c1">#column_widths=[0.6, 0.4],
 </span>                    <span class="c1">#row_heights=[0.3, 0.3, 0.3],
 </span>                    <span class="n">subplot_titles</span><span class="o">=</span><span class="p">[</span><span class="s">""</span><span class="p">,</span> <span class="s">""</span><span class="p">,</span> <span class="s">""</span><span class="p">],</span>
-                    <span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">},</span> <span class="p">{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'domain'</span><span class="p">}],</span> <span class="c1"># 1er ligne
-</span>                           <span class="p">[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">,</span> <span class="s">'colspan'</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="bp">None</span><span class="p">]],</span> <span class="c1"># 2e ligne, dont la 1er colonne s'etend sur celle de droite
-</span>                    <span class="c1"># si on s'etend sur une colonne on utilise rowspan
+                            <span class="c1"># 1er ligne :
+</span>                    <span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">},</span> <span class="p">{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'domain'</span><span class="p">}],</span> 
+                            <span class="c1"># 2e ligne, dont la 1er colonne s'etend sur celle de droite :
+</span>                           <span class="p">[{</span><span class="s">'type'</span><span class="p">:</span> <span class="s">'xy'</span><span class="p">,</span> <span class="s">'colspan'</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="bp">None</span><span class="p">]],</span>
+                    <span class="c1"># si on s'etend sur une colonne on utilise rowspan
 </span>                    <span class="c1"># il existe plusieurs type de specs : xy, domain, scene, polar, ternary, mapbox
 </span>                    <span class="c1">#horizontal_spacing=0.2,
 </span>                    <span class="c1">#vertical_spacing=0.5
 </span>                    <span class="p">)</span>
 
-<span class="s">"Ensuite on ajoute les figure normalement, en indiquant juste l'emplacement du graphique avec les paramètres row et col"</span>
+<span class="s">"Ensuite on ajoute les figure normalement, en indiquant juste l'emplacement du graphique avec les 
+paramètres row et col"</span>
 <span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="c1"># 1er figure
 </span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
@@ -642,7 +686,8 @@ au maximum.
 </code></pre></div></div>
 
 <p><br />
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 19 28" src="https://user-images.githubusercontent.com/63207451/118658192-72bbb080-b7ec-11eb-995c-5a6ce06180f3.png" /><br /></p>
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 19 28" src="https://user-images.githubusercontent.com/63207451/118658192-72bbb080-b7ec-11eb-995c-5a6ce06180f3.png" /><br />
+<br /></p>
 
 <h2 id="scatter">Scatter</h2>
 
@@ -654,7 +699,8 @@ au maximum.
 <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
-<span class="c1"># 1ere solution, on ajoute toutes les figures avec le même appel (pour appliquer une seule fois certains parametres)
+<span class="c1"># 1ere solution, on ajoute toutes les figures avec le même appel (pour appliquer une seule fois 
+# certains parametres)
 </span><span class="n">fig</span><span class="p">.</span><span class="n">add_traces</span><span class="p">([</span><span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'markers'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">),</span>
                <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="n">y</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'negative sigmoid'</span><span class="p">)]</span> <span class="p">)</span>
 <span class="c1"># 2e solution, on ajoute les figures indépendemment
@@ -667,6 +713,7 @@ au maximum.
 
 <p><br />
 <img width="1386" alt="Capture d’écran 2021-05-18 à 15 21 12" src="https://user-images.githubusercontent.com/63207451/118658467-b0b8d480-b7ec-11eb-9218-95555c2d7e3b.png" />
+<br />
 <br /></p>
 
 <h3 id="annotations">Annotations</h3>
@@ -692,7 +739,8 @@ au maximum.
 </code></pre></div></div>
 
 <p><br />
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 22 17" src="https://user-images.githubusercontent.com/63207451/118658641-df36af80-b7ec-11eb-896d-696748e90290.png" /><br /></p>
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 22 17" src="https://user-images.githubusercontent.com/63207451/118658641-df36af80-b7ec-11eb-896d-696748e90290.png" /><br />
+<br /></p>
 
 <h3 id="droite-et-plage-de-valeurs">Droite et plage de valeurs</h3>
 
@@ -714,12 +762,21 @@ au maximum.
 </code></pre></div></div>
 
 <p><br />
-<img width="1386" alt="Capture d’écran 2021-05-18 à 15 23 22" src="https://user-images.githubusercontent.com/63207451/118658767-fd9cab00-b7ec-11eb-8826-36abcfc5b512.png" /></p>
+<img width="1386" alt="Capture d’écran 2021-05-18 à 15 23 22" src="https://user-images.githubusercontent.com/63207451/118658767-fd9cab00-b7ec-11eb-8826-36abcfc5b512.png" />
+<br /></p>
 
 <h3 id="interpolation">Interpolation</h3>
 
-<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">temps_exec</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.40251994132995605</span><span class="p">,</span> <span class="mf">0.014573812484741211</span><span class="p">,</span> <span class="mf">0.23034405708312988</span><span class="p">,</span> <span class="mf">0.4499189853668213</span><span class="p">,</span> <span class="mf">0.8043158054351807</span><span class="p">,</span> <span class="mf">0.21565508842468262</span><span class="p">,</span> <span class="mf">0.10195517539978027</span><span class="p">,</span> <span class="mf">0.35376596450805664</span><span class="p">,</span> <span class="mf">0.5991549491882324</span><span class="p">,</span> <span class="mf">0.08605694770812988</span><span class="p">,</span> <span class="mf">1.1117901802062988</span><span class="p">,</span> <span class="mf">0.9011919498443604</span><span class="p">,</span> <span class="mf">0.3789708614349365</span><span class="p">,</span> <span class="mf">0.8676671981811523</span><span class="p">,</span> <span class="mf">1.3645083904266357</span><span class="p">,</span> <span class="mf">0.8764557838439941</span><span class="p">,</span> <span class="mf">0.13943982124328613</span><span class="p">,</span> <span class="mf">0.05235695838928223</span><span class="p">,</span> <span class="mf">0.1372683048248291</span><span class="p">,</span> <span class="mf">0.29303503036499023</span><span class="p">]</span>
-<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.4549849033355713</span><span class="p">,</span> <span class="mf">5.4536731243133545</span><span class="p">,</span> <span class="mf">1.2118861675262451</span><span class="p">,</span> <span class="mf">0.7063937187194824</span><span class="p">,</span> <span class="mf">4.295026779174805</span><span class="p">,</span> <span class="mf">11.98727297782898</span><span class="p">,</span> <span class="mf">1.0320260524749756</span><span class="p">,</span> <span class="mf">5.288934707641602</span><span class="p">,</span> <span class="mf">9.74186897277832</span><span class="p">,</span> <span class="mf">1.484644889831543</span><span class="p">,</span> <span class="mf">6.555363893508911</span><span class="p">,</span> <span class="mf">0.8726191520690918</span><span class="p">,</span> <span class="mf">2.6839470863342285</span><span class="p">,</span> <span class="mf">9.980525970458984</span><span class="p">,</span> <span class="mf">0.665977954864502</span><span class="p">,</span> <span class="mf">4.907128095626831</span><span class="p">,</span> <span class="mf">2.7749810218811035</span><span class="p">,</span> <span class="mf">5.096926927566528</span><span class="p">,</span> <span class="mf">11.398299217224121</span><span class="p">,</span> <span class="mf">3.3110921382904053</span><span class="p">]</span>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">temps_exec</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.40251994132995605</span><span class="p">,</span> <span class="mf">0.014573812484741211</span><span class="p">,</span> <span class="mf">0.23034405708312988</span><span class="p">,</span> <span class="mf">0.4499189853668213</span><span class="p">,</span> 
+<span class="mf">0.8043158054351807</span><span class="p">,</span> <span class="mf">0.21565508842468262</span><span class="p">,</span> <span class="mf">0.10195517539978027</span><span class="p">,</span> <span class="mf">0.35376596450805664</span><span class="p">,</span> <span class="mf">0.5991549491882324</span><span class="p">,</span> 
+<span class="mf">0.08605694770812988</span><span class="p">,</span> <span class="mf">1.1117901802062988</span><span class="p">,</span> <span class="mf">0.9011919498443604</span><span class="p">,</span> <span class="mf">0.3789708614349365</span><span class="p">,</span> <span class="mf">0.8676671981811523</span><span class="p">,</span> 
+<span class="mf">1.3645083904266357</span><span class="p">,</span> <span class="mf">0.8764557838439941</span><span class="p">,</span> <span class="mf">0.13943982124328613</span><span class="p">,</span> <span class="mf">0.05235695838928223</span><span class="p">,</span> <span class="mf">0.1372683048248291</span><span class="p">,</span> 
+<span class="mf">0.29303503036499023</span><span class="p">]</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.4549849033355713</span><span class="p">,</span> <span class="mf">5.4536731243133545</span><span class="p">,</span> <span class="mf">1.2118861675262451</span><span class="p">,</span> <span class="mf">0.7063937187194824</span><span class="p">,</span> 
+<span class="mf">4.295026779174805</span><span class="p">,</span> <span class="mf">11.98727297782898</span><span class="p">,</span> <span class="mf">1.0320260524749756</span><span class="p">,</span> <span class="mf">5.288934707641602</span><span class="p">,</span> <span class="mf">9.74186897277832</span><span class="p">,</span> 
+<span class="mf">1.484644889831543</span><span class="p">,</span> <span class="mf">6.555363893508911</span><span class="p">,</span> <span class="mf">0.8726191520690918</span><span class="p">,</span> <span class="mf">2.6839470863342285</span><span class="p">,</span> <span class="mf">9.980525970458984</span><span class="p">,</span> 
+<span class="mf">0.665977954864502</span><span class="p">,</span> <span class="mf">4.907128095626831</span><span class="p">,</span> <span class="mf">2.7749810218811035</span><span class="p">,</span> <span class="mf">5.096926927566528</span><span class="p">,</span> <span class="mf">11.398299217224121</span><span class="p">,</span> 
+<span class="mf">3.3110921382904053</span><span class="p">]</span>
 
 <span class="n">fig</span><span class="o">=</span><span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
                   <span class="n">subplot_titles</span><span class="o">=</span><span class="p">[</span><span class="s">"Courbe bleue"</span><span class="p">,</span> <span class="s">"Courbe rouge"</span><span class="p">],</span>
@@ -729,10 +786,12 @@ au maximum.
 
 <span class="c1">## figures principales en haut ##
 # Interpolation linéaire
-</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">l</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'royalblue'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">'dot'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'interpolation linéaire'</span><span class="p">,</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">l</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'royalblue'</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">'dot'</span><span class="p">,</span> 
+                <span class="n">name</span><span class="o">=</span><span class="s">'interpolation linéaire'</span><span class="p">,</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1"># Interpolation par spline
-</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">l</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'royalblue'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_shape</span><span class="o">=</span><span class="s">'spline'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'interpolation par spline'</span><span class="p">,</span>
-                          <span class="n">hovertemplate</span> <span class="o">=</span> <span class="s">"&lt;br&gt;%{y:.0f}&lt;/br&gt;"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">l</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'royalblue'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_shape</span><span class="o">=</span><span class="s">'spline'</span><span class="p">,</span> 
+                <span class="n">name</span><span class="o">=</span><span class="s">'interpolation par spline'</span><span class="p">,</span>
+                <span class="n">hovertemplate</span> <span class="o">=</span> <span class="s">"&lt;br&gt;%{y:.0f}&lt;/br&gt;"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"x"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"y"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
@@ -775,16 +834,21 @@ au maximum.
 
 <span class="c1">## figures principales en bas ##
 # Interpolation linéaire
-</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">temps_exec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'firebrick'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">'dot'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Interpolation linéaire"</span><span class="p">,</span>
-                          <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">temps_exec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> 
+                <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'firebrick'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> 
+                <span class="n">line_dash</span><span class="o">=</span><span class="s">'dot'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Interpolation linéaire"</span><span class="p">,</span>
+                <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1"># Interpolation par spline
-</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">temps_exec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'firebrick'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="n">line_shape</span><span class="o">=</span><span class="s">'spline'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Interpolation par spline"</span><span class="p">,</span>
-                          <span class="n">hovertemplate</span> <span class="o">=</span> <span class="s">"&lt;br&gt;%{y:.3f}&lt;/br&gt;"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">temps_exec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s">'lines'</span><span class="p">,</span> 
+                <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'firebrick'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> 
+                <span class="n">line_shape</span><span class="o">=</span><span class="s">'spline'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Interpolation par spline"</span><span class="p">,</span>
+                <span class="n">hovertemplate</span> <span class="o">=</span> <span class="s">"&lt;br&gt;%{y:.3f}&lt;/br&gt;"</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1">## ligne moyenne ##
 </span><span class="n">fig</span><span class="p">.</span><span class="n">add_shape</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"line"</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s">"royalblue"</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s">"dot"</span><span class="p">,</span>
               <span class="n">x0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x1</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y0</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">),</span> <span class="n">y1</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1">## fleche moyenne ##
-</span><span class="n">fig</span><span class="p">.</span><span class="n">add_annotation</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">"Moyenne : {} sec"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">),</span><span class="mi">2</span><span class="p">),</span> <span class="n">grouping</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+</span><span class="n">fig</span><span class="p">.</span><span class="n">add_annotation</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">"Moyenne : {} sec"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">),</span><span class="mi">2</span><span class="p">),</span> 
+                                                    <span class="n">grouping</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">monetary</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
                    <span class="n">x</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="c1"># arrows' head
 </span>                   <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">temps_exec</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span>  <span class="c1"># arrows' head
 </span>                   <span class="n">arrowhead</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">showarrow</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -822,7 +886,9 @@ au maximum.
 </code></pre></div></div>
 
 <p><br />
-<img width="1424" alt="Capture d’écran 2021-05-19 à 14 58 16" src="https://user-images.githubusercontent.com/63207451/118816667-b2e56680-b8b2-11eb-8937-7d631592cd1f.png" /></p>
+<img width="1424" alt="Capture d’écran 2021-05-19 à 14 58 16" src="https://user-images.githubusercontent.com/63207451/118816667-b2e56680-b8b2-11eb-8937-7d631592cd1f.png" />
+<br />
+<br /></p>
 
 <h2 id="financial-chart">Financial Chart</h2>
 
@@ -909,8 +975,9 @@ au maximum.
 <span class="n">fig</span><span class="p">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">hoverinfo</span><span class="o">=</span><span class="s">'label+percent'</span><span class="p">,</span> <span class="c1"># ce qu'on voit avec la souris
 </span>                  <span class="n">textinfo</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="c1"># Ce qu'on lit dans le pie
 </span>                  <span class="n">textfont_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="c1"># taille du texte du pie
-</span>                  <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s">'gold'</span><span class="p">,</span> <span class="s">'mediumturquoise'</span><span class="p">,</span> <span class="s">'darkorange'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">])</span> <span class="c1"># couleur des secteurs
-</span>                  <span class="p">)</span>
+</span>                  <span class="c1"># couleur des secteurs
+</span>                  <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s">'gold'</span><span class="p">,</span> <span class="s">'mediumturquoise'</span><span class="p">,</span> <span class="s">'darkorange'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">])</span> 
+                  <span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -993,8 +1060,10 @@ au maximum.
 <h2 id="réseau-de-neurones">réseau de neurones</h2>
 
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># liens
-</span><span class="n">edge_x</span><span class="p">,</span> <span class="n">edge_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,],</span>\
-                 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,]</span>
+</span><span class="n">edge_x</span><span class="p">,</span> <span class="n">edge_y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span>
+                    <span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="bp">None</span><span class="p">,],</span>\
+                 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span>
+                    <span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="bp">None</span><span class="p">,]</span>
 <span class="c1"># None pour couper la ligne
 </span><span class="n">edge_trace</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Scatter</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="n">edge_x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">edge_y</span><span class="p">,</span>
@@ -1081,7 +1150,8 @@ au maximum.
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
 
 <span class="n">fig</span><span class="p">.</span><span class="n">add_scattermapbox</span><span class="p">(</span>
-    <span class="c1"># on relie Miami (lat = 25.7616798, long = -80.1917902) et Chicago (lat = 41.8119, long = -87.6873)
+    <span class="c1"># on relie Miami (lat = 25.7616798, long = -80.1917902) 
+</span>    <span class="c1"># et Chicago (lat = 41.8119, long = -87.6873)
 </span>    <span class="n">mode</span> <span class="o">=</span> <span class="s">"markers+lines"</span><span class="p">,</span>
     <span class="n">lon</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">80.1917902</span><span class="p">,</span> <span class="o">-</span><span class="mf">87.6873</span><span class="p">],</span>
     <span class="n">lat</span> <span class="o">=</span> <span class="p">[</span><span class="mf">25.7616798</span><span class="p">,</span> <span class="mf">41.8119</span><span class="p">],</span>
@@ -1147,7 +1217,8 @@ au maximum.
 
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">token</span> <span class="o">=</span> <span class="s">'your token from https://studio.mapbox.com'</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="p">.</span><span class="n">Figure</span><span class="p">()</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_table</span><span class="p">(</span><span class="s">'quake.dat'</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s">'depth'</span><span class="p">,</span> <span class="s">'lat'</span><span class="p">,</span><span class="s">'long'</span><span class="p">,</span><span class="s">'richter'</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s">','</span> <span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>	
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_table</span><span class="p">(</span><span class="s">'quake.dat'</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s">'depth'</span><span class="p">,</span> <span class="s">'lat'</span><span class="p">,</span><span class="s">'long'</span><span class="p">,</span><span class="s">'richter'</span><span class="p">],</span> 
+                   <span class="n">sep</span><span class="o">=</span><span class="s">','</span> <span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>	
 <span class="n">fig</span><span class="p">.</span><span class="n">add_scattermapbox</span><span class="p">(</span>
     <span class="n">mode</span> <span class="o">=</span> <span class="s">"markers"</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s">""</span><span class="p">,</span>

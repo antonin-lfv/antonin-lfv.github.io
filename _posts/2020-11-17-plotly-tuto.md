@@ -2,10 +2,12 @@
 layout: post
 title: Plotly - Tutoriel
 ---
+
+<p align="center">
 Ce tutoriel à pour objectif de présenter le module <b>Plotly</b> qui est l'un des modules les plus utilisés pour faire de la visualisation de données avec Python. <br>
 Plotly étant le plus compliqué mais également le plus interactif. Il est construit sur 3 composantes principales, à savoir <b>plotly.express</b> qui est basé sur l'utilisation des dataframes pandas, et qui est simple et rapide, et <b>plotly.graph_objects</b> qui est beaucoup plus puissant, et beaucoup plus personnalisable, il est basé sur la POO et <b>plotly.figure_factory</b> qui est dédiée à la création de figure spécifiques qui seraient trop compliqué à developper avec les 2 autres composantes. <br>
-Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du [**Repository**](https://github.com/antonin-lfv/Plotly_tutorial) sous le nom <b>plotly_ex.py</b> .
-
+Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le code complet se trouve dans les fichiers du <a href="https://github.com/antonin-lfv/Plotly_tutorial"><b>Repository</b></a> sous le nom <b>plotly_ex.py</b> .
+</p>
 
 <br>
 
@@ -108,7 +110,10 @@ import networkx as nx
 
 # Plotly.Express
 
-Plotly express, importée en tant que __px__, est la partie de plotly permettant de créer rapidement et simplement n'importe quel graphique en 1 ligne de code. Son interet est notamment basé sur le fait qu'elle marche parfaitement bien avec les __DataFrames__ de Pandas, mais on peut également travailler avec des listes ou tout autre type de données. Son utilisation est limitée notamment dans la conception de subplots. Vous verrez dans cette section quelles sont les fonctions les plus utiles de __plotly express__, et comment les personnaliser au maximum.
+<p align="center">
+Plotly express, importée en tant que <b>px</b>, est la partie de plotly permettant de créer rapidement et simplement n'importe quel graphique en 1 ligne de code. Son interet est notamment basé sur le fait qu'elle marche parfaitement bien avec les <b>DataFrames</b> de Pandas, mais on peut également travailler avec des listes ou tout autre type de données. Son utilisation est limitée notamment dans la conception de subplots. Vous verrez dans cette section quelles sont les fonctions les plus utiles de <b>plotly express</b>, et comment les personnaliser au maximum.
+</p>
+
 <br>
 
 Voici la syntaxe globale d'un code utilisant plotly express :
@@ -179,6 +184,7 @@ plot(fig)
 <br>
 <img width="1419" alt="Capture d’écran 2021-05-18 à 09 42 40" src="https://user-images.githubusercontent.com/63207451/118611691-6a984c80-b7bd-11eb-92cb-bf433f8fa8b7.png">
 <br>
+<br>
 
 ### Subplots
 
@@ -199,9 +205,11 @@ Alors on obtient ces résultats en fonction du paramètre de séparation :
 
 <br>
 
+
 | facet_col="species" | facet_row="species" |
 |---------------------|---------------------|
 |<img width="600" alt="Capture d’écran 2021-05-18 à 09 44 19" src="https://user-images.githubusercontent.com/63207451/118611980-a59a8000-b7bd-11eb-8ae9-2b8a673d7e5d.png">|<img width="600" alt="Capture d’écran 2021-05-18 à 09 45 25" src="https://user-images.githubusercontent.com/63207451/118612164-cb278980-b7bd-11eb-9586-abeb9e3a7fb9.png">|
+
 <br>
 
 ### Animations
@@ -228,6 +236,7 @@ plot(fig)
 <br>
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 49 41" src="https://user-images.githubusercontent.com/63207451/118612783-67519080-b7be-11eb-8bc7-9bc9e9c1c55d.png">
 <br>
+<br>
 
 ### Range Slider
 
@@ -245,6 +254,7 @@ plot(fig)
 
 <br>
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 51 49" src="https://user-images.githubusercontent.com/63207451/118613064-ac75c280-b7be-11eb-8648-05aa6843c10b.png">
+<br>
 <br>
 
 ### Rectangles et lignes
@@ -281,6 +291,7 @@ plot(fig)
 <br>
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 52 53" src="https://user-images.githubusercontent.com/63207451/118613217-d4652600-b7be-11eb-8b8f-bdebc1c54626.png">
 <br>
+<br>
 
 ### Marges statistiques
 
@@ -298,6 +309,8 @@ plot(fig)
 ```
 <br>
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 53 30" src="https://user-images.githubusercontent.com/63207451/118613295-e941b980-b7be-11eb-9930-e1c1a496e8f6.png"><br>
+<br>
+
 
 ### Curseurs
 
@@ -316,6 +329,7 @@ plot(fig)
 <br>
 <img width="1403" alt="Capture d’écran 2021-05-18 à 09 54 47" src="https://user-images.githubusercontent.com/63207451/118613484-168e6780-b7bf-11eb-9be4-204fb57f00ab.png">
 <br>
+<br>
 
 ### Plot 3D
 
@@ -328,6 +342,7 @@ plot(fig)
 
 <br>
 <img width="1411" alt="Capture d’écran 2021-05-18 à 10 42 21" src="https://user-images.githubusercontent.com/63207451/118620412-c666d380-b7c5-11eb-87e6-346920499cca.png">
+<br>
 <br>
 
 ## Bar chart
@@ -350,6 +365,7 @@ plot(fig)
 
 <br>
 <img width="1413" alt="Capture d’écran 2021-05-18 à 16 12 29" src="https://user-images.githubusercontent.com/63207451/118666930-da292e80-b7f3-11eb-98c8-860f7dada52b.png">
+<br>
 <br>
 
 ### Indicateurs marginaux
@@ -407,6 +423,7 @@ plot(fig)
 <br>
 <img width="1386" alt="Capture d’écran 2021-05-18 à 16 07 18" src="https://user-images.githubusercontent.com/63207451/118666061-2627a380-b7f3-11eb-942d-25e2d9491bac.png">
 <br>
+<br>
 
 ## Machine Learning
 
@@ -432,7 +449,7 @@ fig.show()
 
 <br>
 <img width="1166" alt="Capture d’écran 2020-11-24 à 10 45 21" src="https://user-images.githubusercontent.com/63207451/100077394-9821c000-2e42-11eb-9700-8f103b2000c5.png">
-
+<br>
 
 
 ### UMAP
@@ -452,7 +469,7 @@ plot(fig)
 
 <br>
 <img width="1399" alt="Capture d’écran 2021-04-30 à 13 02 14" src="https://user-images.githubusercontent.com/63207451/116686674-6e9e2f00-a9b4-11eb-97e0-a65286464dc0.png">
-
+<br>
 
 
 ### t-SNE
@@ -474,14 +491,18 @@ plot(fig)
 <br>
 <img width="1328" alt="Capture d’écran 2021-04-30 à 13 03 58" src="https://user-images.githubusercontent.com/63207451/116686752-8fff1b00-a9b4-11eb-8733-a3491e45f36e.png">
 
-
+<br>
 <br>
 
 ## Graphique de corrélation
 
 ```py
 df = px.data.iris()
-fig = px.scatter_matrix(df, dimensions=["sepal_width", "sepal_length", "petal_width", "petal_length"], color="species")
+fig = px.scatter_matrix(df, dimensions=["sepal_width", 
+                                        "sepal_length", 
+                                        "petal_width", 
+                                        "petal_length"], 
+                            color="species")
 plot(fig)
 ```
 <br>
@@ -491,17 +512,23 @@ plot(fig)
 
 # Plotly.Graph_Objects
 
-Plotly __graph_objects__, importée en tant que __go__ est la partie de Plotly utilisant la __POO__, pour créer des graphiques très complets. On va y retrouver la
+<br>
+
+<p align="center">
+Plotly <b>graph_objects</b>, importée en tant que <b>go</b> est la partie de Plotly utilisant la <b>POO</b>, pour créer des graphiques très complets. On va y retrouver la
 plupart des fonctions de plotly express.
-Vous verrez dans cette section quelles sont les fonctions les plus utiles de plotly __graph_objetcs__ et comment les personnaliser
+Vous verrez dans cette section quelles sont les fonctions les plus utiles de plotly <b>graph_objetcs</b> et comment les personnaliser
 au maximum.
+</p>
+
 <br/>
 
 Voici la syntaxe globale d'un code utilisant plotly graph_objects :
 ```py
-fig = go.Figure() # création de la figure, ou alors make_subplots
-
-fig.add_TypeTrace("parameters") # on ajoute des figure avec TypeTrace qui est pie, scatter, surface, etc..
+# création de la figure, ou alors make_subplots
+fig = go.Figure() 
+# on ajoute des figure avec TypeTrace qui est pie, scatter, surface, etc..
+fig.add_TypeTrace("parameters") 
 ...
 fig.add_TypeTrace("parameters")
 
@@ -509,6 +536,8 @@ fig.update_traces("parameters")
 fig.update_layout("parameters")
 plot(fig)
 ```
+
+<br>
 
 ## Subplots Go
 
@@ -519,15 +548,18 @@ fig = make_subplots(rows=2, cols=2,
                     #column_widths=[0.6, 0.4],
                     #row_heights=[0.3, 0.3, 0.3],
                     subplot_titles=["", "", ""],
-                    specs=[[{'type': 'xy'}, {'type': 'domain'}], # 1er ligne
-                           [{'type': 'xy', 'colspan': 2}, None]], # 2e ligne, dont la 1er colonne s'etend sur celle de droite
+                            # 1er ligne :
+                    specs=[[{'type': 'xy'}, {'type': 'domain'}], 
+                            # 2e ligne, dont la 1er colonne s'etend sur celle de droite :
+                           [{'type': 'xy', 'colspan': 2}, None]],
                     # si on s'etend sur une colonne on utilise rowspan
                     # il existe plusieurs type de specs : xy, domain, scene, polar, ternary, mapbox
                     #horizontal_spacing=0.2,
                     #vertical_spacing=0.5
                     )
 
-"Ensuite on ajoute les figure normalement, en indiquant juste l'emplacement du graphique avec les paramètres row et col"
+"Ensuite on ajoute les figure normalement, en indiquant juste l'emplacement du graphique avec les 
+paramètres row et col"
 x=np.linspace(-4,4)
 # 1er figure
 fig.add_scatter(x=np.linspace(-4,4), y=np.tanh(x),
@@ -551,6 +583,7 @@ plot(fig)
 
 <br>
 <img width="1386" alt="Capture d’écran 2021-05-18 à 15 19 28" src="https://user-images.githubusercontent.com/63207451/118658192-72bbb080-b7ec-11eb-995c-5a6ce06180f3.png"><br>
+<br>
 
 ## Scatter
 
@@ -563,7 +596,8 @@ x = np.linspace(-2, 2, 100)
 y = 1/(1+np.exp(-x))
 
 fig = go.Figure()
-# 1ere solution, on ajoute toutes les figures avec le même appel (pour appliquer une seule fois certains parametres)
+# 1ere solution, on ajoute toutes les figures avec le même appel (pour appliquer une seule fois 
+# certains parametres)
 fig.add_traces([go.Scatter(x=x, y=y, mode='markers', name='sigmoid'),
                go.Scatter(x=x, y=-y, mode='lines', name='negative sigmoid')] )
 # 2e solution, on ajoute les figures indépendemment
@@ -576,6 +610,7 @@ plot(fig)
 
 <br>
 <img width="1386" alt="Capture d’écran 2021-05-18 à 15 21 12" src="https://user-images.githubusercontent.com/63207451/118658467-b0b8d480-b7ec-11eb-9218-95555c2d7e3b.png">
+<br>
 <br>
 
 ### Annotations
@@ -603,6 +638,7 @@ plot(fig)
 
 <br>
 <img width="1386" alt="Capture d’écran 2021-05-18 à 15 22 17" src="https://user-images.githubusercontent.com/63207451/118658641-df36af80-b7ec-11eb-896d-696748e90290.png"><br>
+<br>
 
 ### Droite et plage de valeurs
 
@@ -626,14 +662,22 @@ plot(fig)
 
 <br>
 <img width="1386" alt="Capture d’écran 2021-05-18 à 15 23 22" src="https://user-images.githubusercontent.com/63207451/118658767-fd9cab00-b7ec-11eb-8826-36abcfc5b512.png">
-
+<br>
 
 ### Interpolation
 
 
 ```py
-temps_exec = [0.40251994132995605, 0.014573812484741211, 0.23034405708312988, 0.4499189853668213, 0.8043158054351807, 0.21565508842468262, 0.10195517539978027, 0.35376596450805664, 0.5991549491882324, 0.08605694770812988, 1.1117901802062988, 0.9011919498443604, 0.3789708614349365, 0.8676671981811523, 1.3645083904266357, 0.8764557838439941, 0.13943982124328613, 0.05235695838928223, 0.1372683048248291, 0.29303503036499023]
-l = [3.4549849033355713, 5.4536731243133545, 1.2118861675262451, 0.7063937187194824, 4.295026779174805, 11.98727297782898, 1.0320260524749756, 5.288934707641602, 9.74186897277832, 1.484644889831543, 6.555363893508911, 0.8726191520690918, 2.6839470863342285, 9.980525970458984, 0.665977954864502, 4.907128095626831, 2.7749810218811035, 5.096926927566528, 11.398299217224121, 3.3110921382904053]
+temps_exec = [0.40251994132995605, 0.014573812484741211, 0.23034405708312988, 0.4499189853668213, 
+0.8043158054351807, 0.21565508842468262, 0.10195517539978027, 0.35376596450805664, 0.5991549491882324, 
+0.08605694770812988, 1.1117901802062988, 0.9011919498443604, 0.3789708614349365, 0.8676671981811523, 
+1.3645083904266357, 0.8764557838439941, 0.13943982124328613, 0.05235695838928223, 0.1372683048248291, 
+0.29303503036499023]
+l = [3.4549849033355713, 5.4536731243133545, 1.2118861675262451, 0.7063937187194824, 
+4.295026779174805, 11.98727297782898, 1.0320260524749756, 5.288934707641602, 9.74186897277832, 
+1.484644889831543, 6.555363893508911, 0.8726191520690918, 2.6839470863342285, 9.980525970458984, 
+0.665977954864502, 4.907128095626831, 2.7749810218811035, 5.096926927566528, 11.398299217224121, 
+3.3110921382904053]
 
 fig=make_subplots(rows=2, cols=1,
                   subplot_titles=["Courbe bleue", "Courbe rouge"],
@@ -643,10 +687,12 @@ fig=make_subplots(rows=2, cols=1,
 
 ## figures principales en haut ##
 # Interpolation linéaire
-fig.add_scatter(y=l, mode='lines', opacity=0.4, line=dict(color='royalblue', width=4), line_dash='dot', name='interpolation linéaire',row=1,col=1)
+fig.add_scatter(y=l, mode='lines', opacity=0.4, line=dict(color='royalblue',width=4), line_dash='dot', 
+                name='interpolation linéaire',row=1,col=1)
 # Interpolation par spline
-fig.add_scatter(y=l, mode='lines', line=dict(color='royalblue', width=4), line_shape='spline', name='interpolation par spline',
-                          hovertemplate = "<br>%{y:.0f}</br>", row=1,col=1)
+fig.add_scatter(y=l, mode='lines', line=dict(color='royalblue', width=4), line_shape='spline', 
+                name='interpolation par spline',
+                hovertemplate = "<br>%{y:.0f}</br>", row=1,col=1)
 fig.update_xaxes(title="x", row=1, col=1)
 fig.update_yaxes(title="y", row=1, col=1)
 
@@ -689,16 +735,21 @@ fig.update_yaxes(
 
 ## figures principales en bas ##
 # Interpolation linéaire
-fig.add_scatter(y=temps_exec, mode='lines', opacity=0.4, line=dict(color='firebrick', width=4), line_dash='dot', name="Interpolation linéaire",
-                          row=2,col=1)
+fig.add_scatter(y=temps_exec, mode='lines', opacity=0.4, 
+                line=dict(color='firebrick', width=4), 
+                line_dash='dot', name="Interpolation linéaire",
+                row=2,col=1)
 # Interpolation par spline
-fig.add_scatter(y=temps_exec, mode='lines', line=dict(color='firebrick', width=4), line_shape='spline', name="Interpolation par spline",
-                          hovertemplate = "<br>%{y:.3f}</br>", row=2,col=1)
+fig.add_scatter(y=temps_exec, mode='lines', 
+                line=dict(color='firebrick', width=4), 
+                line_shape='spline', name="Interpolation par spline",
+                hovertemplate = "<br>%{y:.3f}</br>", row=2,col=1)
 ## ligne moyenne ##
 fig.add_shape(type="line", line_color="royalblue", line_width=2, opacity=1, line_dash="dot",
               x0=0, x1=len(l)-1, y0=np.mean(temps_exec), y1=np.mean(temps_exec), row=2, col=1)
 ## fleche moyenne ##
-fig.add_annotation(text="Moyenne : {} sec".format(round(np.mean(temps_exec),2), grouping=True, monetary=True),
+fig.add_annotation(text="Moyenne : {} sec".format(round(np.mean(temps_exec),2), 
+                                                    grouping=True, monetary=True),
                    x=int(len(temps_exec)/5)*4, # arrows' head
                    y=np.mean(temps_exec)*1.2,  # arrows' head
                    arrowhead=2, showarrow=True, row=2, col=1)
@@ -738,6 +789,8 @@ plot(fig)
 
 <br>
 <img width="1424" alt="Capture d’écran 2021-05-19 à 14 58 16" src="https://user-images.githubusercontent.com/63207451/118816667-b2e56680-b8b2-11eb-8937-7d631592cd1f.png">
+<br>
+<br>
 
 ## Financial Chart
 
@@ -826,7 +879,8 @@ fig.add_pie(labels=labels, # les valeurs sur lesquelles on compte
 fig.update_traces(hoverinfo='label+percent', # ce qu'on voit avec la souris
                   textinfo='value', # Ce qu'on lit dans le pie
                   textfont_size=20, # taille du texte du pie
-                  marker=dict(colors=['gold', 'mediumturquoise', 'darkorange', 'lightgreen']) # couleur des secteurs
+                  # couleur des secteurs
+                  marker=dict(colors=['gold', 'mediumturquoise', 'darkorange', 'lightgreen']) 
                   )
 plot(fig)
 ```
@@ -905,8 +959,10 @@ plot(fig)
 
 ```py
 # liens
-edge_x, edge_y = [1.5,3,None,1.5,3,None,1.5,3,None,1.5,3,None,1.5,3,None,1.5,3,None,3,4.5,None,3,4.5,None,3,4.5,None,3,4.5,None,3,4.5,None,3,4.5,None,3,4.5,None,],\
-                 [1,0,None,1,2,None,1,4,None,3,0,None,3,2,None,3,4,None,0,1,None,0,1,None,0,3,None,2,1,None,2,3,None,4,1,None,4,3,None,]
+edge_x, edge_y = [1.5,3,None,1.5,3,None,1.5,3,None,1.5,3,None,1.5,3,None,1.5,3,None,3,4.5,None,3,4.5,
+                    None,3,4.5,None,3,4.5,None,3,4.5,None,3,4.5,None,3,4.5,None,],\
+                 [1,0,None,1,2,None,1,4,None,3,0,None,3,2,None,3,4,None,0,1,None,0,1,None,0,3,None,2,
+                    1,None,2,3,None,4,1,None,4,3,None,]
 # None pour couper la ligne
 edge_trace = go.Scatter(
     x=edge_x, y=edge_y,
@@ -995,7 +1051,8 @@ plot(fig)
 fig = go.Figure()
 
 fig.add_scattermapbox(
-    # on relie Miami (lat = 25.7616798, long = -80.1917902) et Chicago (lat = 41.8119, long = -87.6873)
+    # on relie Miami (lat = 25.7616798, long = -80.1917902) 
+    # et Chicago (lat = 41.8119, long = -87.6873)
     mode = "markers+lines",
     lon = [-80.1917902, -87.6873],
     lat = [25.7616798, 41.8119],
@@ -1065,7 +1122,8 @@ plot(fig)
 ```py
 token = 'your token from https://studio.mapbox.com'
 fig = go.Figure()
-df = pd.read_table('quake.dat', names=['depth', 'lat','long','richter'], sep=',' ,encoding='utf-8', skiprows=8)	
+df = pd.read_table('quake.dat', names=['depth', 'lat','long','richter'], 
+                   sep=',' ,encoding='utf-8', skiprows=8)	
 fig.add_scattermapbox(
     mode = "markers",
     name="",
