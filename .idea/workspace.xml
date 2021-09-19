@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-05-25-Manim-librairie.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-05-25-Manim-librairie.md" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,13 +139,6 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00278" summary="version 2.2">
-      <created>1631888732291</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1631888732291</updated>
     </task>
     <task id="LOCAL-00279" summary="version 2.2">
       <created>1631889286132</created>
@@ -486,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632008314592</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="index manim post">
+      <created>1632008444234</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1632008444235</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="certif" />
     <MESSAGE value="color" />
     <MESSAGE value="new post" />
     <MESSAGE value="cybersecu" />
@@ -551,13 +547,14 @@
     <MESSAGE value="resume" />
     <MESSAGE value="new post manim" />
     <MESSAGE value="manim post bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="manim post bugs fixed" />
+    <MESSAGE value="index manim post" />
+    <option name="LAST_COMMIT_MESSAGE" value="index manim post" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1632008316902">
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1632008446242">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1632008316902" />
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1632008446242" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1632007176106" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631965434873" />
   </component>

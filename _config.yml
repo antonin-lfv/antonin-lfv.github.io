@@ -37,3 +37,7 @@ remote_theme: broccolini/swiss
 
 # options
 timezone: "Europe/Paris"
+
+
+# Google Analytics
+google_analytics: G-VNYYYW87VH
