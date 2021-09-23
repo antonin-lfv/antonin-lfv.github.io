@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Plotly  Tutoriel
+title: Plotly  Tutoriel ⭐️ 
 ---
 
 <p align="center">

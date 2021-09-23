@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine Learning Web app
+title: Machine Learning Web app ⭐️
 ---
 
 <p align="center">
@@ -13,7 +13,7 @@ En cas de bug important, veuillez me le signaler pour qu'il puisse être corrig�
 
 <br>
 
-L'application est disponible [**ici**](https://share.streamlit.io/antonin-lfv/online_preprocessing_for_ml/main.py).
+L'application est disponible [**ici**](https://share.streamlit.io/antonin-lfv/online_preprocessing_for_ml/main.py). (En maintenance)
 
 # Index
 

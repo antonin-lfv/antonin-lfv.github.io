@@ -17,6 +17,8 @@
   <link rel="alternate" type="application/rss+xml" title="Antonin LEFEVRE" href="http://localhost:4000/feed.xml">
 
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
 </head>
 
 
@@ -126,6 +128,8 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
     </ul>
   </li>
 </ol>
+
+<p><br /></p>
 
 <h1 id="exemples-basiques">Exemples basiques</h1>
 
@@ -559,7 +563,7 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
                 <span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
                 <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
                 <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-            <span class="p">]),</span> <span class="n">v_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">v_max</span><span class="o">=</span><span class="n">TAU</span><span class="p">,</span> <span class="n">u_min</span><span class="o">=-</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">u_max</span><span class="o">=</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">TEAL_D</span><span class="p">,</span> <span class="n">TEAL_E</span><span class="p">],</span>
+            <span class="p">]),</span> <span class="n">v_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">v_max</span><span class="o">=</span><span class="n">TAU</span><span class="p">,</span> <span class="n">u_min</span><span class="o">=-</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">u_max</span><span class="o">=</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">checkerboard_colors</span><span class="o">=</span><span class="p">[</span><span class="n">TEAL_D</span><span class="p">,</span> <span class="n">TEAL_E</span><span class="p">],</span>
             <span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">32</span><span class="p">)).</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
         <span class="n">sphere</span> <span class="o">=</span> <span class="n">ParametricSurface</span><span class="p">(</span>
@@ -608,11 +612,11 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
 
 <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SVGStickMan</span><span class="p">(</span><span class="n">GraphScene</span><span class="p">,</span> <span class="n">MovingCameraScene</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">start_man</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
-        <span class="n">start_man_2</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
-        <span class="n">wave_man</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_wave.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
-        <span class="n">wave_man_2</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_wave.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
-        <span class="n">base</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">start_man</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"path/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">start_man_2</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"path/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">wave_man</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"path/stick_man_wave.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">wave_man_2</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"path/stick_man_wave.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"path/stick_man_plain.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">)</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">camera</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">save_state</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">start_man</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">LEFT</span><span class="p">))</span>
@@ -629,7 +633,8 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
         <span class="n">salut_2</span> <span class="o">=</span> <span class="n">Tex</span><span class="p">(</span><span class="s">"Hey !"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">YELLOW</span><span class="p">).</span><span class="n">next_to</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">,</span> <span class="n">UP</span><span class="o">+</span><span class="n">RIGHT</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Transform</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">,</span> <span class="n">wave_man_2</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">RIGHT</span><span class="p">)),</span> <span class="n">FadeIn</span><span class="p">(</span><span class="n">salut_2</span><span class="p">))</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">FadeOut</span><span class="p">(</span><span class="n">salut</span><span class="p">),</span> <span class="n">FadeOut</span><span class="p">(</span><span class="n">salut_2</span><span class="p">),</span> <span class="n">run_time</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Transform</span><span class="p">(</span><span class="n">start_man</span><span class="p">,</span> <span class="n">base</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">LEFT</span><span class="p">)),</span> <span class="n">Transform</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">,</span> <span class="n">base</span><span class="p">.</span><span class="n">copy</span><span class="p">().</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">RIGHT</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Transform</span><span class="p">(</span><span class="n">start_man</span><span class="p">,</span> <span class="n">base</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">LEFT</span><span class="p">)),</span> 
+                  <span class="n">Transform</span><span class="p">(</span><span class="n">start_man_2</span><span class="p">,</span> <span class="n">base</span><span class="p">.</span><span class="n">copy</span><span class="p">().</span><span class="n">move_to</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">RIGHT</span><span class="p">)))</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Restore</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">camera</span><span class="p">.</span><span class="n">frame</span><span class="p">))</span>
 </code></pre></div></div>
 
@@ -659,7 +664,7 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
         <span class="p">)</span>
     <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># image du neurone
-</span>        <span class="n">neurone_1</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"/Users/antoninlefevre/Downloads/ManimCE/SVG_files/neuron_video.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">).</span><span class="n">scale</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">rotate</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</span>        <span class="n">neurone_1</span> <span class="o">=</span> <span class="n">SVGMobject</span><span class="p">(</span><span class="s">"path/neuron_video.svg"</span><span class="p">).</span><span class="n">set_color</span><span class="p">(</span><span class="n">WHITE</span><span class="p">).</span><span class="n">scale</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="n">rotate</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Write</span><span class="p">(</span><span class="n">neurone_1</span><span class="p">))</span>
 
         <span class="c1"># texte du zoom
@@ -674,7 +679,9 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
         <span class="n">frame</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">PURPLE</span><span class="p">)</span>
 
         <span class="c1"># placer le cadre du zoom
-</span>        <span class="n">zd_rect</span> <span class="o">=</span> <span class="n">BackgroundRectangle</span><span class="p">(</span><span class="n">zoomed_display</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">neurone_1</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">get_left</span><span class="p">()</span><span class="o">+</span><span class="n">DOWN</span><span class="p">),</span> <span class="n">fill_opacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">buff</span><span class="o">=</span><span class="n">MED_SMALL_BUFF</span><span class="p">)</span>
+</span>        <span class="n">zd_rect</span> <span class="o">=</span> <span class="n">BackgroundRectangle</span><span class="p">(</span><span class="n">zoomed_display</span><span class="p">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">neurone_1</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">get_left</span><span class="p">()</span><span class="o">+</span><span class="n">DOWN</span><span class="p">),</span> 
+                                                             <span class="n">fill_opacity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+                                                             <span class="n">buff</span><span class="o">=</span><span class="n">MED_SMALL_BUFF</span><span class="p">)</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">add_foreground_mobject</span><span class="p">(</span><span class="n">zd_rect</span><span class="p">)</span>
 
         <span class="n">unfold_camera</span> <span class="o">=</span> <span class="n">UpdateFromFunc</span><span class="p">(</span><span class="n">zd_rect</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">rect</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">zoomed_display</span><span class="p">))</span>
@@ -686,7 +693,8 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
         <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
         <span class="c1"># dezoom et fin de l'animation
-</span>        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">get_zoomed_display_pop_out_animation</span><span class="p">(),</span> <span class="n">unfold_camera</span><span class="p">,</span> <span class="n">rate_func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">smooth</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">))</span>
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">get_zoomed_display_pop_out_animation</span><span class="p">(),</span> <span class="n">unfold_camera</span><span class="p">,</span> 
+                  <span class="n">rate_func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">smooth</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">))</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">Uncreate</span><span class="p">(</span><span class="n">zoomed_display_frame</span><span class="p">),</span> <span class="n">FadeOut</span><span class="p">(</span><span class="n">frame</span><span class="p">))</span>
         <span class="bp">self</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
 </code></pre></div></div>
@@ -697,17 +705,11 @@ Dans cet article je vais partager des animations réalisées avec Manim, une lib
 
 <p><br /></p>
 
-<p align="center"><a href="#Index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29" /></a></p>
+<p align="center"><a href="https://antonin-lfv.github.io/2021/05/25/Manim-librairie.html#index"><img src="http://randojs.com/images/backToTopButton.png" alt="Haut de la page" height="29" /></a></p>
 
 <p><br /></p>
 
-<p align="center">
-  <a href="https://github.com/antonin-lfv" class="fancybox"><img src="https://user-images.githubusercontent.com/63207451/97302854-e484da80-1859-11eb-9374-5b319ca51197.png" title="GitHub" width="40" height="40" /></a>
-  <a href="https://www.linkedin.com/in/antonin-lefevre-565b8b141" class="fancybox"><img src="https://user-images.githubusercontent.com/63207451/97303444-b2c04380-185a-11eb-8cfc-864c33a64e4b.png" title="LinkedIn" width="40" height="40" /></a>
-  <a href="mailto:antoninlefevre45@icloud.com" class="fancybox"><img src="https://user-images.githubusercontent.com/63207451/97303543-cec3e500-185a-11eb-8adc-c1364e2054a9.png" title="Mail" width="40" height="40" /></a>
-</p>
-
-<hr />
+<p><br /></p>
 
   </div>
 
