@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-05-10-dashboard-stockprices.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-05-10-dashboard-stockprices.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-07-20-epidemiologie-post.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-07-20-epidemiologie-post.md" afterDir="false" />
-    </list>
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,13 +139,6 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00282" summary="version 2.2">
-      <created>1631890627109</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1631890627109</updated>
     </task>
     <task id="LOCAL-00283" summary="version 2.2">
       <created>1631890634302</created>
@@ -487,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632386054168</updated>
     </task>
-    <option name="localTasksCounter" value="331" />
+    <task id="LOCAL-00331" summary="update links">
+      <created>1632577843273</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1632577843273</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="cybersecu" />
     <MESSAGE value="to do list" />
     <MESSAGE value="directory plotly" />
     <MESSAGE value="bg" />
@@ -552,14 +547,15 @@
     <MESSAGE value="index manim post" />
     <MESSAGE value="google analytics" />
     <MESSAGE value="interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="interface" />
+    <MESSAGE value="update links" />
+    <option name="LAST_COMMIT_MESSAGE" value="update links" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="161" key="Vcs.Push.Dialog.v2" timestamp="1632386056490">
-      <screen x="0" y="25" width="1440" height="794" />
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1632577845150">
+      <screen x="0" y="25" width="1440" height="790" />
     </state>
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/-1920.-123.1920.1055/0.25.1440.794@0.25.1440.794" timestamp="1632386056490" />
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1632046811022" />
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1632577845150" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1632007176106" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1631965434873" />
   </component>
