@@ -7,11 +7,11 @@ date: 2020-05-10
 Ce projet est basé sur la conception d'un DashBoard mis à jour en temps réel. Il affiche le cours de la bourse de certaines entreprises et devises, et affiche l'évolution du cours sur une fenetre donnée.
 La mise à jour en temps réel se fait grâce à l'API Yahoo Finance, les graphiques sont réalisés grâce à la librairie Plotly et le Dashboard est mis en ligne grâce à StreamLit.
 
-Le code de ce DashBoard est disponible sur le [**repo GitHub**](https://github.com/antonin-lfv/DashBoard_stock_prices), j'explique également sur le ReadMe comment mettre son site en ligne avec StreamLit.
+Le code de ce DashBoard est disponible sur le [**repo GitHub**](https://github.com/antonin-lfv/My_streamlit_site).
 
 <br>
 
-Le DashBoard est disponible [**ici**](https://share.streamlit.io/antonin-lfv/dashboard_stock_prices/main/StreamLit/streamlit.py).
+Le DashBoard est disponible [**ici**](https://share.streamlit.io/antonin-lfv/my_streamlit_site/main/StreamLit/streamlit.py).
 
 Aperçu du DashBoard :
 
