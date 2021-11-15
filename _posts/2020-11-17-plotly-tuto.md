@@ -63,6 +63,7 @@ Dans ce <b>Tuto</b> toutes les fonctions seront accompagnées du résultat. Le c
 <br>
 
 - [Plotly.figure_factory](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#plotlyfigure_factory)
+    - [Displot](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#displot)
     - [Heatmap avec annotations](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#heatmap-avec-annotations)
     - [Dendrogrames](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#dendrogrames)
     - [Champ vectoriel](https://antonin-lfv.github.io/2020/11/17/plotly-tuto.html#champ-vectoriel)
@@ -1172,6 +1173,25 @@ plot(fig)
 # Plotly.figure_factory
 
 __Plotly.figure_factory__ est la partie de plotly qui intervient quand l'utilisation de Go et Px devient impossible.
+
+## Displot
+
+```py
+x = [np.random.randn(150)]
+
+label = ['Groupe 1']
+color = ['#B36CD2']
+fig = ff.create_distplot(x, label, colors=color,
+                         bin_size=.2, show_rug=False)
+
+fig.update_layout(title_text='Distplot')
+plot(fig)
+```
+
+<br>
+<img alt="Distplot" src="https://user-images.githubusercontent.com/63207451/141830733-cf252fc1-d152-4ffa-b137-97586a9257fc.png">
+<br>
+
 
 ## Heatmap avec annotations
 

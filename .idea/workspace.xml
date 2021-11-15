@@ -140,13 +140,6 @@
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
     </task>
-    <task id="LOCAL-00284" summary="version 2.2">
-      <created>1631890691153</created>
-      <option name="number" value="00284" />
-      <option name="presentableId" value="LOCAL-00284" />
-      <option name="project" value="LOCAL" />
-      <updated>1631890691153</updated>
-    </task>
     <task id="LOCAL-00285" summary="version 2.2">
       <created>1631890701397</created>
       <option name="number" value="00285" />
@@ -483,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632586142409</updated>
     </task>
-    <option name="localTasksCounter" value="333" />
+    <task id="LOCAL-00333" summary="ML app">
+      <created>1634151966100</created>
+      <option name="number" value="00333" />
+      <option name="presentableId" value="LOCAL-00333" />
+      <option name="project" value="LOCAL" />
+      <updated>1634151966101</updated>
+    </task>
+    <option name="localTasksCounter" value="334" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="directory plotly" />
     <MESSAGE value="bg" />
     <MESSAGE value="init" />
     <MESSAGE value="init new site version 2.1" />
@@ -548,12 +547,14 @@
     <MESSAGE value="interface" />
     <MESSAGE value="update links" />
     <MESSAGE value="link post" />
-    <option name="LAST_COMMIT_MESSAGE" value="link post" />
+    <MESSAGE value="ML app" />
+    <option name="LAST_COMMIT_MESSAGE" value="ML app" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="161" key="Vcs.Push.Dialog.v2" timestamp="1632586144457">
-      <screen x="0" y="25" width="1440" height="797" />
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1634151970263">
+      <screen x="0" y="25" width="1440" height="790" />
     </state>
+    <state x="5" y="160" key="Vcs.Push.Dialog.v2/-1920.-123.1920.1055/0.25.1440.790@0.25.1440.790" timestamp="1634151970263" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/-1920.-123.1920.1055/0.25.1440.794@0.25.1440.794" timestamp="1632386056490" />
     <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1632577845150" />
     <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1632007176106" />
