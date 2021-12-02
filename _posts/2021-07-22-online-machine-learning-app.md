@@ -27,7 +27,7 @@ L'application est disponible [**ici**](https://share.streamlit.io/antonin-lfv/on
      - [UMAP](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#umap)
  - [Deep Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#deep-learning)
      - [Transfert de style neuronal](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#transfert-de-style-neuronal)
-     - [Détection d'objets](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#detection-d-objets)
+     - [Détection d'objets](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#detection-dobjets)
 
 
 <br/>
