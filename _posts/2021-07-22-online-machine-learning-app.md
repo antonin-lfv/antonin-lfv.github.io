@@ -4,14 +4,11 @@ title: Machine Learning Web app ⭐️
 ---
 
 <p align="center">
-Cette application web developpée en python et publiée grâce à Streamlit a pour but d'accélérer l'exploration des données, et la mise en place d'algorithmes de machine learning. Elle est basée sur un système multi-pages, qui conserve les widgets entre celles-ci grâce à un système de Session. Le principe est simple, vous déposez votre dataset sous le format csv ou xls sur le volet gauche, puis à partir de là, il faudra se rendre dans la section <b>Dataset</b> pour l'importer, et effectuer des réglages sur celui-ci comme ajouter un séparateur, transformer des colonnes en Time-Series, ou supprimer des symboles qui empêchent un typage en float. 
-Puis, libre à vous de faire votre analyse des données, observer les colonnes, leurs statistiques, les corrélations entre elles. Depuis la <b>section graphiques </b> vous pourrez tracer des graphiques avec des points, des courbes, des histogrammes ou même des coordonnées géographiques et effectuer des regressions linéaires et polynomiales. 
-Enfin, vous avez la possibilité de créer des modèles de machine learning ou de deep learning rapidement.  
-Dans la section ML, vous sera possible d'effectuer des KNN, K-Means, SVM, PCA et UMAP. Quant à la section DL, vous avez la possibilité de faire du transfert de style neuronal, avec plusieurs images déjà disponibles. 
-En cas de bug important, veuillez me le signaler pour qu'il puisse être corrigé le plus rapidement possible.
+  La <b>No-code AI platform</b> est un site développé avec <b>Python</b> et déployé avec <b>Streamlit</b>, qui permet de faire du Machine/Deep Learning sans écrire de code. La partie analyse et Machine Learning repose sur l'utilisation d'un dataset, qui peut être soit un dataset déjà disponible sur le site (les iris, ou les penguins), soit un dataset de votre choix que vous aurez uploadé, et avec qui vous pourrez effectuer du preprocessing directement depuis la page d'upload (Attention à bien re télécharger le dataset modifié et de le re uploader). Une fois le dataset choisi, vous pouvez l'utiliser pour alimenter des algorithmes tels que des SVM, des K-Means, des KNN ou encore des réductions de dimension.
+Enfin, la partie Deep Learning peut être traitée indépendamment, elle contient deux modèles, un transfert de style neuronal et un modèle de détection d'objets sur une image, où des images sont déjà disponibles.
 </p>
 
-<br>
+<br/>
 
 L'application est disponible [**ici**](https://share.streamlit.io/antonin-lfv/online_preprocessing_for_ml/main.py).
 
@@ -30,40 +27,47 @@ L'application est disponible [**ici**](https://share.streamlit.io/antonin-lfv/on
      - [UMAP](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#umap)
  - [Deep Learning](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#deep-learning)
      - [Transfert de style neuronal](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#transfert-de-style-neuronal)
-     - [GAN](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#gan)
+     - [Détection d'objets](https://antonin-lfv.github.io/2021/07/22/online-machine-learning-app.html#detection-d-objets)
 
 
 <br/>
+
 
 # Accueil
 
-En arrivant sur le DashBoard, vous verrez ceci :
 <br/>
 
 <p align="center">
-  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 56 51" src="https://user-images.githubusercontent.com/63207451/126678415-b7980d3d-1364-45d2-9b88-4b73aae43ca6.png">
+<img src="https://user-images.githubusercontent.com/63207451/144222004-d9721f6e-1618-4713-8096-1e4b5e4ae060.png" height="400">
 </p>
+  <br/>
+
+# Dataset
 
 <br/>
 
-<br/>
-Il vous faut ici choisir un dataset csv ou excel de votre machine, en cliquant sur le bouton <b>Browse files</b>. Une fois cela effectuée, le menu lateral apparaîtra. Pour ensuite pouvoir utiliser votre fichier, il faut vous rendre à la page 2, nommée <b>Chargement du dataset</b>. <br/>
-
-# Chargement du dataset
-
-Sur cette page, plusieurs modifications sont possibles sur le dataset :
-- Ajout d'un séparateur si besoin
-- Conversion de colonnes en Time-Series
-- Conversion de colonnes contenant des symboles monétaires en float
-- Conversion de colonnes de strings de nombres à virgules en float <br/>
-
-De plus, les caractéristiques principales de ce dataset sont affichées sur le coté.<br/>
+Vous voici sur la page dataset, là où vous allez choisir vos données.
+Initialement la page est comme ceci :
 
 <br/>
-<br/>
-
 <p align="center">
-  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 57 47" src="https://user-images.githubusercontent.com/63207451/126678557-f687704b-535d-47bf-801b-3008c926e1ef.png">
+<img src="https://user-images.githubusercontent.com/63207451/144222112-65e16ab0-3443-4cbe-a9f2-8ba3c97ab89f.png" height="400">
+</p>
+<br/>
+
+Soit vous choisisez un dataset déjà prêt :
+
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/144223120-b5d65c93-82ec-4798-850e-2ab10e8a099d.png" height="400">
+</p>
+<br/>
+
+Soit vous choisissez le votre :
+
+<br/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/144223225-2f868156-9007-4c96-9863-6ceaa6d07ea5.png" height="400">
 </p>
 
 <br/>
@@ -71,8 +75,11 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 # Analyse des colonnes
 
 <br/>
+Vous pouvez choisir les colonnes à analyser :
+
+<br/>
 <p align="center">
-  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 58 24" src="https://user-images.githubusercontent.com/63207451/126678641-70c74b1d-0bde-4215-91ce-28ec5d9e5ac7.png">
+<img src="https://user-images.githubusercontent.com/63207451/144224164-8d696e66-77f1-4273-bd55-39df5daa813e.png" height="400">
 </p>
 
 <br/>
@@ -81,30 +88,37 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 <p align="center">
-  <img width="1439" alt="Capture d’écran 2021-07-22 à 18 59 36" src="https://user-images.githubusercontent.com/63207451/126678828-a2d20126-694c-4c9b-9613-ee1d6a3ef466.png">
+<img src="https://user-images.githubusercontent.com/63207451/144224328-55713f47-c89e-4563-9337-a90e5f4faa7e.png" height="400">
 </p>
 
 <br/>
 
-
 # Section graphiques
 
 <br/>
+Ici vous pouvez analyser des paires de features et effectuer des regressions :
+
+<br/>
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 02 28" src="https://user-images.githubusercontent.com/63207451/126679232-d2968749-9b57-40ba-9543-5410342abd3c.png">
+<img src="https://user-images.githubusercontent.com/63207451/144224423-caee36c6-627b-4fcc-8d8b-85006decbd61.png" height="400">
 </p>
 
 <br/>
 
 # Machine Learning
 
-<br/>
-
 ## k-nearest neighbors
 
 <br/>
+Création d'un modèle de KNN :
+
+<br/>
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 13 06" src="https://user-images.githubusercontent.com/63207451/126680576-11993544-5da2-4755-b235-ed513c0aa9a3.png">
+<img src="https://user-images.githubusercontent.com/63207451/144224690-3fdf5872-7966-4c88-8acb-2844f6f2750d.png" height="400">
+</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/63207451/144224707-d749f5fb-fe78-4623-939b-13eeb400042b.png" height="400">
 </p>
 
 <br/>
@@ -112,8 +126,11 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 ## k-Means
 
 <br/>
+Création d'un modèle de K-Means :
+
+<br/>
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 13 58" src="https://user-images.githubusercontent.com/63207451/126680672-2e178b35-d8fc-49e5-b179-a4fdd30402c0.png">
+<img src="https://user-images.githubusercontent.com/63207451/144233663-c81215a4-4aee-4a08-95ee-40f5f605c62a.png" height="400">
 </p>
 
 <br/>
@@ -122,7 +139,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 15 01" src="https://user-images.githubusercontent.com/63207451/126680798-816687fd-eac9-4d4f-a817-25f9ee9876d1.png">
+<img src="https://user-images.githubusercontent.com/63207451/144233818-415e234a-edfc-4cdf-a699-c20169a56407.png" height="400">
 </p>
 
 <br/>
@@ -131,7 +148,7 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 16 15" src="https://user-images.githubusercontent.com/63207451/126680981-247d81d6-49f4-45e9-8c40-01526a237e58.png">
+<img src="https://user-images.githubusercontent.com/63207451/144234084-74882cad-752f-4f1c-812c-3c5f093221b3.png" height="400">
 </p>
 
 <br/>
@@ -140,35 +157,29 @@ De plus, les caractéristiques principales de ce dataset sont affichées sur le 
 
 <br/>
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 16 40" src="https://user-images.githubusercontent.com/63207451/126681039-aa71207a-96ae-4110-80e2-9ab8a4e59b2e.png">
+<img src="https://user-images.githubusercontent.com/63207451/144234174-c3618a43-86e8-44d0-95dd-8715d0342932.png" height="400">
 </p>
 
 <br/>
 
 # Deep Learning
 
-<br/>
-
 ## Transfert de style neuronal
 
 <br/>
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 17 12" src="https://user-images.githubusercontent.com/63207451/126681123-f05da0b5-e0d8-496c-8c92-ef8ae10caccb.png">
+<img src="https://user-images.githubusercontent.com/63207451/144234295-ad263879-86e5-4c07-b434-da5d1a0d8586.png" height="400">
 </p>
 
 <br/>
 
-## GAN
+## Détection d'objets
 
 <br/>
-
-Cette section est en développement.
-
 <p align="center">
-<img width="1439" alt="Capture d’écran 2021-07-22 à 19 17 34" src="https://user-images.githubusercontent.com/63207451/126681154-fa50acbe-766b-44a1-89a6-43288f06d6f6.png">
+<img src="https://user-images.githubusercontent.com/63207451/144234420-278d664e-ae63-415a-88d2-89113304d660.png" height="400">
 </p>
 
-<br/>
 
 
 

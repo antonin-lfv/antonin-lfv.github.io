@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section" />
+    <list default="true" id="7f924800-4702-4b11-ba7e-aa655aaa7fac" name="Default Changelist" comment="certifications section">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2021-07-22-online-machine-learning-app.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-07-22-online-machine-learning-app.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/.sass-cache/fc817f9b6e3eb34c32adfbf63d98ef9e5a685652/_components.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/.sass-cache/fc817f9b6e3eb34c32adfbf63d98ef9e5a685652/_components.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/style.css.map" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +98,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -139,13 +145,7 @@
       <workItem from="1631908978200" duration="267000" />
       <workItem from="1631909890066" duration="26000" />
       <workItem from="1631910727510" duration="319000" />
-    </task>
-    <task id="LOCAL-00285" summary="version 2.2">
-      <created>1631890701397</created>
-      <option name="number" value="00285" />
-      <option name="presentableId" value="LOCAL-00285" />
-      <option name="project" value="LOCAL" />
-      <updated>1631890701397</updated>
+      <workItem from="1638478062708" duration="342000" />
     </task>
     <task id="LOCAL-00286" summary="version 2.2">
       <created>1631890819854</created>
@@ -483,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634151966101</updated>
     </task>
-    <option name="localTasksCounter" value="334" />
+    <task id="LOCAL-00334" summary="certifications section">
+      <created>1636999244979</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1636999244979</updated>
+    </task>
+    <option name="localTasksCounter" value="335" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +545,6 @@
     <MESSAGE value="footer" />
     <MESSAGE value="BlockCode width 100%" />
     <MESSAGE value="about section" />
-    <MESSAGE value="certifications section" />
     <MESSAGE value="resume" />
     <MESSAGE value="new post manim" />
     <MESSAGE value="manim post bugs fixed" />
@@ -548,17 +554,8 @@
     <MESSAGE value="update links" />
     <MESSAGE value="link post" />
     <MESSAGE value="ML app" />
-    <option name="LAST_COMMIT_MESSAGE" value="ML app" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2" timestamp="1634151970263">
-      <screen x="0" y="25" width="1440" height="790" />
-    </state>
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2/-1920.-123.1920.1055/0.25.1440.790@0.25.1440.790" timestamp="1634151970263" />
-    <state x="5" y="161" key="Vcs.Push.Dialog.v2/-1920.-123.1920.1055/0.25.1440.794@0.25.1440.794" timestamp="1632386056490" />
-    <state x="5" y="160" key="Vcs.Push.Dialog.v2/0.25.1440.790@0.25.1440.790" timestamp="1632577845150" />
-    <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.794@0.25.1440.794" timestamp="1632007176106" />
-    <state x="5" y="161" key="Vcs.Push.Dialog.v2/0.25.1440.797@0.25.1440.797" timestamp="1632586144457" />
+    <MESSAGE value="certifications section" />
+    <option name="LAST_COMMIT_MESSAGE" value="certifications section" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
