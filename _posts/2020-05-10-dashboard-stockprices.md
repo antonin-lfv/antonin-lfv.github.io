@@ -11,7 +11,7 @@ Le code de ce DashBoard est disponible sur le [**repo GitHub**](https://github.c
 
 <br>
 
-Le DashBoard est disponible [**ici**](https://share.streamlit.io/antonin-lfv/my_streamlit_site/main/StreamLit/streamlit.py).
+Le DashBoard est disponible [**ici**](https://share.streamlit.io/antonin-lfv/dashboard_stock_prices/main/main.py).
 
 Aperçu du DashBoard :
 
