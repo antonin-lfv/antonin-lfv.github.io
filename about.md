@@ -8,7 +8,7 @@ permalink: /about/
 
 Je m'appelle Antonin, je suis étudiant en Mathématiques/Informatique. Je suis autodidacte en Machine et Deep Learning avec les langages Python et R.
 Je suis un passionné de nouvelles technologies, de cybersécurité, de robotique, d'astrophysique, de mathématiques et j'aime alier toutes ces passions dans des projets.
-Je fais partie du staff [MachineLearnia](https://www.youtube.com/channel/UCmpptkXu8iIFe6kfDK5o7VQ) qui est une communauté de Data Science rassemblant plus de 60.000 personnes sur Youtube.
+Je fais partie du staff [MachineLearnia](https://www.youtube.com/channel/UCmpptkXu8iIFe6kfDK5o7VQ) qui est une communauté de Data Science rassemblant plus de 80.000 personnes sur Youtube.
 
 
 
