@@ -21,6 +21,4 @@ Welcome to my personal website! I am currently pursuing a Master's degree in Art
 
 In addition to my studies, I serve as an administrator and moderator on [machinelearnia.com](https://machinelearnia.com), a thriving community dedicated to Data Sciences.
 
-In addition to my academic background, I am a self-taught learner in Data Science, Machine Learning, and Deep Learning. I began learning these fields at the end of 2019.
-
 Beyond computing, I am passionate about astronomy and astrophotography. To showcase my astrophotography, I have built a [photo gallery website](https://antonin-lfv.github.io/PhotographyWebsite/). Electronics is another area of interest for me. Feel free to explore my website to discover my projects, accomplishments, and learn more about me.
