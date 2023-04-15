@@ -14,7 +14,7 @@
                 <tr>
                   <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
                   <td>
-                    <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    <a class="news-title"><b>{{ item.title }}</b></a>
                   </td>
                 </tr>
               {%- endfor %}
