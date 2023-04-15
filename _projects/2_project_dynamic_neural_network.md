@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
-importance: 3
-category: work
+title: Dynamic graph neural network
+description: Clustering with dynamic neural networks
+img: assets/img/dynamic_neural_network.png
+importance: 1
+category: IA
+redirect: https://github.com/antonin-lfv/Dynamic_graph_neural_network/blob/main/README.md
 ---
 
 Every project has a beautiful feature showcase page.
