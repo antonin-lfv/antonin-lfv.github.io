@@ -6,7 +6,7 @@ description: A collection of my projects.
 nav: true
 nav_order: 2
 display_categories: [IA, Web development, Simulation, Tutorial]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
