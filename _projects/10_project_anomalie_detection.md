@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Anomalie detection
-description: Anomalie detection with ardunio and denoising autoencoder
+title: Vibration anomaly detection
+description: Vibration anomaly detection with ardunio and denoising autoencoder
 img: assets/img/anomalie_detection.png
 importance: 2
 category: IA
