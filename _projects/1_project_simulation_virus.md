@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Simulation épidémiologique
-description: Simulation de la propagation d'une épidémie
+title: Epidemic simulation
+description: Simulation of the spread of a virus in a population
 img: assets/img/virus_simulation.png
 importance: 1
 category: Other
