@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
-description: My publications organized by year. (for now I havn't published anything)
-# years: [2022, 2023]
+title: articles
+description: My articles related to my projects.
+years: [2023]
 nav: true
 nav_order: 1
 ---
