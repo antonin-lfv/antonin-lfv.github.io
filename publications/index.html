@@ -122,7 +122,23 @@
   <ol class="bibliography"><li>
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-2 preview"><img class="preview z-depth-1 rounded" src="https://tenor.com/fr/view/waves-gif-22026287"></div>
+        <div class="col-sm-2 preview">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/vibration_anomaly_detection.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/vibration_anomaly_detection.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/vibration_anomaly_detection.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/vibration_anomaly_detection.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="vibration_anomaly_detection.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</div>
 
         <!-- Entry bib key -->
         <div id="autoencoderETanomalydetection" class="col-sm-8">
@@ -147,8 +163,8 @@
           <!-- Links/Buttons -->
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-            <a href="/assets/pdf/Auto%20Encodeur%20de%20d%C3%A9bruitage%20pour%20la%20d%C3%A9tection%20d%E2%80%99anomalies%20vibratoires.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="https://github.com/antonin-lfv/DataScience_IoT_projects#d%C3%A9tection-danomalies-vibratoires-avec-capteur-acc%C3%A9l%C3%A9rom%C3%A8tre-et-auto-encodeur-de-d%C3%A9bruitage" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+            <a href="/assets/pdf/Auto_Encodeur_de_debruitage_pour_la_detection_danomalies_vibratoires.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
           </div>
           
           <div class="badges">
@@ -159,14 +175,6 @@
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
             <p>Ce projet permet de détecter les chocs en temps réel à l’aide d’un modèle d’autoencodeur de débruitage et d’un capteur d’accélération. L’objectif est d’identifier les chocs parmi les données du capteur en éliminant le bruit et les variations normales d’accélération. Nous utiliserons le capteur MPU-6050 (GY-521) et un Arduino Uno pour collecter les données d’accélération. L’interface pour visualiser les données en temps réel est développé avec Streamlit.</p>
-          </div>
-<!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex">  <span class="c">author = {L., Antonin},</span>
-  <span class="c">year = {2023},</span>
-  <span class="c">month = may,</span>
-  <span class="c">dimensions = {true},</span>
-<span class="c">}</span></code></pre></figure>
           </div>
         </div>
       </div>
