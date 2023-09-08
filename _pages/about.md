@@ -19,6 +19,6 @@ social: true  # includes social icons at the bottom of the page
 
 Welcome to my personal website! I am currently pursuing a Master's degree in Artificial Intelligence, having previously completed a Bachelor's degree in Computer Science 
 
-In addition to my studies, I serve as an administrator and moderator on [machinelearnia.com](https://machinelearnia.com), a thriving community dedicated to Data Sciences.
+In addition to my studies, I serve as an administrator and moderator on [machinelearnia.com](https://machinelearnia.com), a thriving community dedicated to Data Sciences. I am also a student ambassador for [Streamlit](https://streamlit.io/), a Python library that allows you to create beautiful web applications in a few lines of code. 
 
-Beyond computing, I am passionate about astronomy and astrophotography. To showcase my astrophotography, I have built a [photo gallery website](https://antonin-lfv.github.io/PhotographyWebsite/). Electronics is another area of interest for me. Feel free to explore my website to discover my projects, accomplishments, and learn more about me.
+Beyond computing, I am passionate about astronomy and astrophotography. To showcase my astrophotography, I have built a [photo gallery website](https://antonin-lfv.github.io/PhotographyWebsite/). Electronics, robotics and quantum ML are other areas of interest for me. Feel free to explore my website to discover my projects, accomplishments, and learn more about me.
