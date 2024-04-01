@@ -144,6 +144,9 @@
             {%- if entry.medium %}
             <a href="https://medium.com/{{ entry.medium }}" class="btn btn-sm z-depth-0" role="button">Medium</a>
           {%- endif %}
+            {%- if entry.preprint_easychair %}
+            <a href="https://easychair.org/publications/preprint/{{ entry.preprint_easychair }}" class="btn btn-sm z-depth-0" role="button">Preprint</a>
+          {%- endif %}
           {%- if entry.bibtex_show %}
             <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
           {%- endif %}
