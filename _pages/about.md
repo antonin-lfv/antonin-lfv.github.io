@@ -17,7 +17,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Welcome to my personal website! I am currently pursuing a Master's degree in Artificial Intelligence, having previously completed a Bachelor's degree in Computer Science 
+Welcome to my personal website! I am an engineer in Artificial Intelligence, holding a Master’s degree in AI and a Bachelor’s degree in Computer Science.
 
 In addition to my studies, I serve as an administrator and moderator on [machinelearnia.com](https://machinelearnia.com), a thriving community dedicated to Data Sciences. I am also a student ambassador for [Streamlit](https://streamlit.io/), a Python library that allows you to create beautiful web applications in a few lines of code. 
 
