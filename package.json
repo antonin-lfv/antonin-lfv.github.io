@@ -3,7 +3,7 @@
     "@shopify/prettier-plugin-liquid": "^1.4.0",
     "prettier": "^3.1.1"
   },
-  "name": "antoninlfv.github.io",
+  "name": "antonin-lfv.github.io",
   "version": "1.0.0",
   "description": "<div align=\"center\">",
   "main": "purgecss.config.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AntoninLfv/AntoninLfv.github.io.git"
+    "url": "git+https://github.com/antonin-lfv/antonin-lfv.github.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/AntoninLfv/AntoninLfv.github.io/issues"
+    "url": "https://github.com/antonin-lfv/antonin-lfv.github.io/issues"
   },
-  "homepage": "https://github.com/AntoninLfv/AntoninLfv.github.io#readme"
+  "homepage": "https://github.com/antonin-lfv/antonin-lfv.github.io#readme"
 }
