@@ -58,6 +58,11 @@ ninja.data = [{
           description: "Complete online NFT/Crypto ecosystem simulator",
           section: "Projects",handler: () => {
               window.location.href = "/projects/16_crypto_platform.html";
+            },},{id: "projects-basketball-animation-creator",
+          title: 'Basketball Animation Creator',
+          description: "App to create basketball system animations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/17_basketball_animation.html";
             },},{id: "projects-epidemic-simulation",
           title: 'Epidemic simulation',
           description: "Simulation of the spread of a virus in a population",
