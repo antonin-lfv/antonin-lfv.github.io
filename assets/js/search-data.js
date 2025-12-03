@@ -63,6 +63,11 @@ ninja.data = [{
           description: "App to create basketball system animations",
           section: "Projects",handler: () => {
               window.location.href = "/projects/17_basketball_animation.html";
+            },},{id: "projects-esp32-eliobot-voice-control-tinyml",
+          title: 'ESP32 ElioBot Voice Control (TinyML)',
+          description: "Embedded voice command system (Offline) on ESP32 via TinySpeech. Quantized model (Int8) for real-time robot piloting.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/18_tinyspeech_eliobot.html";
             },},{id: "projects-epidemic-simulation",
           title: 'Epidemic simulation',
           description: "Simulation of the spread of a virus in a population",
