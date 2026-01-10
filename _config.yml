@@ -70,7 +70,7 @@ serve_schema_org: false # Include Schema.org in the HTML head
 # For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
 # and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
 google_analytics: G-VNYYYW87VH
-cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
+cronitor_analytics: d2fc3713697282d515aa5406812bc104
 pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
