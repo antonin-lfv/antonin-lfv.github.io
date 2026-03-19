@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://machinelearnia.com'>Machine Learnia</a> staff. AI engineer.
+subtitle: <a href='www.machinelearnia.com'>Machine Learnia</a> staff. AI engineer.
 
 profile:
   align: right
