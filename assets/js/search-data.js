@@ -68,6 +68,11 @@ ninja.data = [{
           description: "Embedded voice command system (Offline) on ESP32 via TinySpeech. Quantized model (Int8) for real-time robot piloting.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/18_tinyspeech_eliobot.html";
+            },},{id: "projects-procompta",
+          title: 'ProCompta',
+          description: "Accounting document management local software",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/19_project_procompta.html";
             },},{id: "projects-epidemic-simulation",
           title: 'Epidemic simulation',
           description: "Simulation of the spread of a virus in a population",
