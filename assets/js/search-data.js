@@ -78,29 +78,29 @@ ninja.data = [{
           description: "Simulation of the spread of a virus in a population",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project_simulation_virus.html";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-eliobot-framework",
+          title: 'Eliobot Framework',
+          description: "Framework for the Eliobot robot (ESP32-S3): on-edge programs, real-time FastAPI dashboard over MQTT, MCP AI agent and fly-connectome driving.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/20_project_eliobot_framework.html";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-emarque-club",
+          title: 'eMarque Club',
+          description: "Basketball scoring table for internal and corporate tournaments: live score, clock, fouls, stats and CSV export.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/21_project_emarque_club.html";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-astrocapture",
+          title: 'AstroCapture',
+          description: "Astrophotography software for macOS and Linux: observation planning, capture, planetary and deep-sky stacking, mosaics.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/22_project_astrocapture.html";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-farm-simulator",
+          title: 'Farm Simulator',
+          description: "Farm management simulator on an interactive 3D map: plots, weather, dynamic market (Next.js, Three.js, FastAPI).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/23_project_farmer_simulator.html";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-ml-in-rust",
+          title: 'ML in Rust',
+          description: "Learning Rust by implementing Machine Learning from scratch: linear regression via SVD, K-Means, linear algebra.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/24_project_ml_in_rust.html";
             },},{id: "projects-dynamic-graph-neural-network",
