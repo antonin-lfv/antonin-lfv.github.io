@@ -5,7 +5,7 @@ permalink: /projects/
 description: A collection of my projects.
 nav: true
 nav_order: 2
-display_categories: [IA, Other, Tutorial]
+display_categories: [AI, Electronics, Software, Other, Tutorial]
 horizontal: false
 ---
 
