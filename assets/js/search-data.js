@@ -25,12 +25,12 @@ ninja.data = [{
           },
         },{id: "projects-vibration-anomaly-detection",
           title: 'Vibration anomaly detection',
-          description: "Vibration anomaly detection with ardunio and denoising autoencoder",
+          description: "Vibration anomaly detection with Arduino and a denoising autoencoder",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_project_anomalie_detection.html";
             },},{id: "projects-smart-weather-station",
           title: 'Smart Weather Station',
-          description: "Smart Weather Station with sensors and scikit-learn",
+          description: "Connected ESP32 weather station over MQTT, with a live Streamlit dashboard and polynomial regression forecast",
           section: "Projects",handler: () => {
               window.location.href = "/projects/11_project_weather_station.html";
             },},{id: "projects-arduino-tutorial",
@@ -78,6 +78,31 @@ ninja.data = [{
           description: "Simulation of the spread of a virus in a population",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project_simulation_virus.html";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/20_project_eliobot_framework.html";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/21_project_emarque_club.html";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/22_project_astrocapture.html";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/23_project_farmer_simulator.html";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/24_project_ml_in_rust.html";
             },},{id: "projects-dynamic-graph-neural-network",
           title: 'Dynamic graph neural network',
           description: "Clustering with dynamic neural networks",
